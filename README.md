@@ -1,4 +1,4 @@
-# www
+# practice-vue-js
 
 ## Project setup
 ```
