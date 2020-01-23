@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <title>Homework 1</title>
+    <style>
+        div {
+            background-color: dodgerblue;
+        }
+        #myId{
+            color: tomato;
+            background-color: cadetblue;
+            size: A3;
+        }
+        .myClass{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <i>
+        <ol>
+            <li>Implement a HTML page. Choose one of the following topics
+                <ul>
+                    <li>a.TOP 5 programming languages I would like to learn</li>
+                    <li>b.TOP 5 countries I would like to visit</li>
+                </ul>
+            </li>
+            <li>Requirements:
+                <ul>
+                    <li>- ‘Homework 1’ is title of the page</li>
+                    <li>- A page contains different ‘div’ sections. Each one starts with corresponding heading and ends with ‘hr’</li>
+                    <li>- Section 1. Copy this homework’s task and represent it as italic text. Preserve structure (lists) and line breaks</li>
+                    <li>- Section 2. Enumerate your items in a list. Name of each item should be a link to an article in the internet. A link should open in a new tab</li>
+                    <li>- Section 3. Pick one of items and provide some information for it, in 2-3 sentences in a paragraph. Highlight 3 important words/phrases with special color, ‘underline’ and ‘bold’ styles, accordingly. Put the paragraph in a new ‘div’ with maximum width 300px (set this style via CSS)</li>
+                    <li>- Section 4. Add button [Name](should output your first name in console).<br>
+                        Add 2 input fields with placeholders ‘a’ and ‘b’ accordingly.<br>
+                        Add button [Hypotenuse](should calculate hypotenuse from values, provided in the inputs and output result in an  ‘alert’ window).<br>
+                    </li>
+                    <li>- Section 5. Pick a palette, make picture of it, put it in the same directory as the HTML file and display it in this section of the page. Add ‘Palette’ title to the image</li>
+                </ul>
+            </li>
+            <li>
+                Style your page (including background color and text color) with colors of palette you’ve picked
+            </li>
+        </ol>
+    </i>
+</div>
+<hr/>
+<div>
+    <ol>
+        <li><a href="https://en.wikipedia.org/wiki/Scala_(programming_language)">Scala</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/TypeScript">Typescript</a></li>
+        <li><a href="https://thenewstack.io/dark-a-new-programming-language-for-deployless-deployments/">Dark</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Kotlin_(programming_language)">Kotlin</a></li>
+    </ol>
+</div>
+<hr/>
+<div class="myClass">
+    <br/>There are too many incrementalists in tech these days, according to Paul Biggar, who along with Ellen Chisa, is unveiling the Dark, a programming language aimed at making deploying software simpler.
+    <br/>“The <b>complexity</b> of building backends today is just out of control. It’s infrastructure, it’s deployment, it’s APIs… Dark is about removing all this complexity,” Biggar said.
+    <br/>The technology involves a holistic programming language, structured editor and infrastructure for building backend web services.
+    <br/>“We keep adding things, but we never take things away. AWS has 200 services and never takes any away,” he said, calling garbage collection the last really good innovation in the industry.
+</div>
+<button id="myId" onclick="alllert()">Check if you are a bad tester!</button>
+</body>
+<script>
+    function alllert(){
+        alert ('You are!')
+    }
+</script>
+</html>
