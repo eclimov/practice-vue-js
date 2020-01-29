@@ -1,4 +1,11 @@
 version: 2
+
+general:
+  branches:
+    only:
+      - master # list of branches to build
+      # - /feature-.*/ # or regexes
+
 jobs:
   build:
     working_directory: /dockerapp
