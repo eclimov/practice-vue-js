@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Homework1</title>
+    <style>
+        #section1 {
+            background-color: #F2E85E;
+        }
+
+        #section2 {
+            background-color: #D9A74A;
+        }
+
+        #section3 {
+            background-color: #F24444;
+        }
+
+        #section4 {
+            background-color: #732222;
+        }
+
+        #section5 {
+            background-color: #F26363;
+        }
+
+        #section31 {
+            max-width: 300px;
+        }
+
+        .text-red {
+            color: red;
+        }
+
+    </style>
 </head>
+
 <body>
-<div>
+<div id="section1">
     <h1>Monaco</h1>
     <ol>
         <li>
@@ -39,33 +70,67 @@
 </div>
 
 
-<div>
+<div id="section2">
     <h1>Lista</h1>
         <ul>
-            <li>Ungaria</li>
-            <li>Austria</li>
-            <li>Monaco</li>
-            <li>Argentina</li>
-            <li>Chili</li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Hungary" target="_blank">Hungary</a>
+            </li>
+
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Austria" target="_blank">Austria</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Monaco" target="_blank">Monaco</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Argentina" target="_blank">Argentina</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Chili" target="_blank">Chili</a>
+            </li>
+        </ul>
     <hr>
 </div>
 
-
-<div>
-    <h1>Ungaria</h1>
+<div id="section3">
+    <h1>Hello World!</h1>
+    <div id="section31">
+        <b><u>Hungary</u></b> (Hungarian: Magyarország [ˈmɒɟɒrorsaːɡ] (About this soundlisten)) is a landlocked country in Central Europe.[2]
+        Spanning <b>93,030 square kilometres</b> (35,920 sq mi) in the Carpathian Basin, it borders Slovakia to the north,
+        Ukraine to the northeast, <b>Romania</b> to the east and southeast, Serbia to the south, Croatia and Slovenia to the southwest,
+        and Austria to the west.[12] With about 10 million inhabitants, <u>Hungary</u> is a medium-sized member state of the <u>European Union</u>.[13]
+        <span class="text-red">The official language is Hungarian, which is the most widely spoken Uralic language in the world, and among the few non-Indo-European
+            languages to be widely spoken in Europe.[14]</span>> Hungary's capital and largest city is Budapest; other major urban areas include Debrecen, Szeged, Miskolc, Pécs and Győr.
+    </div>
     <hr>
 </div>
 
-<div>
-    <h1>Grecia</h1>
+<div id="section4">
+    <h1>Buttons</h1>
+    <button type="button" onclick="console.log('Sanda!')">Name</button>
+
+    <br>
+    <br>
+    <input type="number" placeholder="a" id="a"><br>
+    <input type="number" placeholder="b" id="b"><br>
+    <button type="button" onclick="getHypotenuse()">Hypotenuse</button>
     <hr>
 </div>
 
-<div>
-    <h1>Austria</h1>
+<div id="section5">
+    <h1>Palette</h1>
+    <img title="colorpalette" src="palette.png" alt="You have Internet Explorer, sorry">
     <hr>
 </div>
 
-
+<script>
+    function getHypotenuse () {
+        let a = document.getElementById('a').value
+        let b = document.getElementById('b').value
+        let c = Math.sqrt (a * a + b * b)
+        alert(c)
+    }
+</script>
 </body>
 </html>
