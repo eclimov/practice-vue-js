@@ -1,6 +1,10 @@
 version: 2
 jobs:
   build:
+    branches:
+      only:
+        - master # list of branches to build
+        # - /feature-.*/ # or regexes
     working_directory: /dockerapp
     docker:
       - image: docker:18.05.0-ce-git
