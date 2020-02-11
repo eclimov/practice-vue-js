@@ -11,7 +11,7 @@
             border-collapse: collapse;
             border-spacing: 0;
             width: 100%;
-            border: 1px solid #ddd;
+            border: 5px solid #ddd;
         }
 
         th, td {
@@ -19,21 +19,22 @@
             padding: 16px;
         }
 
-        tr:nth-child(odd) {
-            background-color: #D92E1E;
+        tr:nth-child(n+2) {
+            background-color: #F2F2F2;
         }
 
         tr:nth-child(even) {
-            background-color: #3B668C;
+            background-color: #8BBBD9;
         }
 
+        tr:not(:first-child):hover {
+            background-color: #658DA6;
+        }
 
-        tr:hover {
-            background-color: #F2C53D;
+        img {
+            max-height: 100px;
         }
     </style>
-
-
 </head>
 
 <body>
