@@ -54,3 +54,19 @@ Add 2 input fields with placeholders ‘a’ and ‘b’ accordingly.
 Add button [Hypotenuse](should calculate hypotenuse from values, provided in the inputs and output result in an  ‘alert’ window). 
 - Section 5. Pick a palette, make picture of it, put it in the same directory as the HTML file and display it in this section of the page. Add ‘Palette’ title to the image
 Style your page (including background color and text color) with colors of palette you’ve picked
+
+## Homework3
+- Create branch ‘<username>-hw3’. Make the following changes:
+- Update 'README.md' with task of this homework
+- Implement a HTML page with table of TOP 5 favorite flowers. 
+Columns: 
+    - № (just an index number from 1 to 5)
+    - Name
+    - Picture (store pictures locally, - create a folder called ‘assets’)
+    - Description (a short description of the flower)
+- Make a ‘zebra’ view of the table
+- Add a CSS style that changes background color of a table row’s on hover
+- Use palette when picking colors
+- Create pull request, where source branch is ‘<username>-hw3’, and target branch is ‘master’ 
+- Follow the reviewer's suggestions (if any) until the branch is merged
+
