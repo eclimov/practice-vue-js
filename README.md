@@ -56,17 +56,15 @@ Add button [Hypotenuse](should calculate hypotenuse from values, provided in the
 Style your page (including background color and text color) with colors of palette you’ve picked
 
 ## Homework3
-- Create branch ‘<username>-hw3’. Make the following changes:
-- Update 'README.md' with task of this homework
-- Implement a HTML page with table of TOP 5 favorite flowers. 
-Columns: 
-    - № (just an index number from 1 to 5)
-    - Name
-    - Picture (store pictures locally, - create a folder called ‘assets’)
-    - Description (a short description of the flower)
-- Make a ‘zebra’ view of the table
-- Add a CSS style that changes background color of a table row’s on hover
-- Use palette when picking colors
-- Create pull request, where source branch is ‘<username>-hw3’, and target branch is ‘master’ 
-- Follow the reviewer's suggestions (if any) until the branch is merged
-
+1. Create branch ‘<username>-hw3’. Make the following changes:
+    1. Update 'README.md' with task of this homework
+    2. Implement a HTML page with table of TOP 5 favorite flowers. Columns: 
+        - № (just an index number from 1 to 5)
+        - Name
+        - Picture (store pictures locally, - create a folder called ‘assets’)
+        - Description (a short description of the flower)
+    3. Make a ‘zebra’ view of the table
+    4. Add a CSS style that changes background color of a table row’s on hover
+    5. Use palette when picking colors
+2. Create pull request, where source branch is ‘<username>-hw3’, and target branch is ‘master’ 
+3. Follow the reviewer's suggestions (if any) until the branch is merged
