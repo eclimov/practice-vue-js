@@ -86,24 +86,28 @@
 </div>
 
 <div class="w3-bar w3-black">
-    <button class="w3-bar-item w3-button" onclick="openHeaderTab('London')">London</button>
-    <button class="w3-bar-item w3-button" onclick="openHeaderTab('Paris')">Paris</button>
-    <button class="w3-bar-item w3-button" onclick="openHeaderTab('Tokyo')">Tokyo</button>
+    <button class="w3-bar-item w3-button" onclick="openHeaderTab('Home')">HOMEPAGE</button>
+    <button class="w3-bar-item w3-button" onclick="openHeaderTab('About')">ABOUT PROJECT</button>
+    <button class="w3-bar-item w3-button" onclick="openHeaderTab('Blog')">BLOG</button>
+    <button class="w3-bar-item w3-button" onclick="openHeaderTab('Community')">COMMUNITY</button>
 </div>
 
-<div id="London" class="w3-container city">
-    <h2>London</h2>
-    <p>London is the capital city of England.</p>
+<div id="Home" class="w3-container categorymenu">
+    <p>Hello World!</p>
 </div>
 
-<div id="Paris" class="w3-container city" style="display:none">
+<div id="About" class="w3-container categorymenu" style="display:none">
     <h2>Paris</h2>
     <p>Paris is the capital of France.</p>
 </div>
 
-<div id="Tokyo" class="w3-container city" style="display:none">
+<div id="Blog" class="w3-container categorymenu" style="display:none">
     <h2>Tokyo</h2>
     <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Community" class="w3-container categorymenu" style="display:none">
+    <h2>Tokyo</h2>
 </div>
 
 <div class="about-section">
@@ -140,13 +144,13 @@
     </div>
 
 <script>
-    function openHeaderTab(cityName) {
+    function openHeaderTab(tabName) {
         let i;
-        let x = document.getElementsByClassName("city");
+        let x = document.getElementsByClassName("categorymenu");
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
         }
-        document.getElementById(cityName).style.display = "block";
+        document.getElementById(tabName).style.display = "block";
     }
 </script>
 
