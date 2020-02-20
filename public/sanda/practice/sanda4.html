@@ -6,8 +6,8 @@
 </head>
 <body>
 
-
 <script>
+
     function myFunction1() {
         console.log('Hello humans!')
     }
@@ -21,8 +21,26 @@
         myFunction2(87);
     }
 
-    myFunction3();
+    function currentDate() {
+        console.log(new Date().toLocaleDateString());
+    }
+    currentDate();
 
+
+    function getPow(numb) {
+        console.log(Math.pow(numb, 5));
+    }
+    getPow(4);
+
+    function sumdiv(a, b) {
+        console.log(a, b);
+        console.log(a + b);
+    }
+    sumdiv(5, 13);
+
+    function finalCalculations() {
+
+    }
 </script>
 </body>
 </html>
