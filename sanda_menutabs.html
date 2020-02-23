@@ -113,6 +113,39 @@
                 background-color: #666;
                 color: white;
             }
+
+        {
+
+            form.example input[type=text] {
+                padding: 10px;
+                font-size: 17px;
+                border: 1px solid grey;
+                float: left;
+                width: 80%;
+                background: #f1f1f1;
+            }
+
+            form.example button {
+                float: left;
+                width: 20%;
+                padding: 10px;
+                background: #2196F3;
+                color: white;
+                font-size: 17px;
+                border: 1px solid grey;
+                border-left: none;
+                cursor: pointer;
+            }
+
+            form.example button:hover {
+                background: #0b7dda;
+            }
+
+            form.example::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
         }
     </style>
 </head>
@@ -290,7 +323,23 @@
 
         <br>
 
-<script>
+        <h2>Search Button</h2>
+
+        <p>Full width:</p>
+        <form class="example" action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+        <h1>The footer element</h1>
+
+        <footer>
+            <p>Posted by: Hege Refsnes</p>
+            <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+        </footer>
+
+
+        <script>
     function openHeaderTab(tabName) {
         let i;
         let x = document.getElementsByClassName("categorymenu");
@@ -299,7 +348,39 @@
         }
         document.getElementById(tabName).style.display = "block";
     }
+
+    // Get the elements with class="column"
+    let elements = document.getElementsByClassName("columngrid");
+
+    // Declare a loop variable
+    let i;
+
+    // List View
+    function listView() {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].style.width = "100%";
+        }
+    }
+
+    // Grid View
+    function gridView() {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].style.width = "50%";
+        }
+    }
+
+    /* Optional: Add active class to the current button (highlight it) */
+    let container = document.getElementById("btnContainer");
+    let btns = container.getElementsByClassName("btn");
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            let current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
 </script>
 
 </body>
 </html>
+
