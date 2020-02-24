@@ -4,29 +4,21 @@
     <title>Practice 4</title>
 </head>
 <body>
-<!--<button onclick="instruction1()">Open console and click me</button>-->
 </body>
 <script>
     function getDatetime() {
         console.log(new Date());
     }
-    //getDatetime();
     function getPowFive(z) {
         console.log(Math.pow(z,5));
     }
-    let z = prompt("z = ", " ");
-    //getPowFive(z);
     function getSumAndDivide(a, b) {
         console.log((a+b)/b);
     }
-    let a = prompt("a = ", " "), b = prompt("b = ", " ");
-    //getSumAndDivide(a, b);
     function finalCalculations(m, n, l, p) {
         getPowFive(m);
         getSumAndDivide(n, l);
         console.log(Math.sqrt(p));
     }
-    let m = prompt("m = ", " "), n = prompt("n = ", " "), l = prompt("l = ", " "), p = prompt("p = ", " ");
-    finalCalculations(m, n, l, p);
 </script>
 </html>
