@@ -8,39 +8,31 @@
 
 <script>
 
-    function myFunction1() {
-        console.log('Hello humans!')
-    }
-
-    function myFunction2(x) {
-        console.log(x)
-    }
-
-    function myFunction3() {
-        myFunction1();
-        myFunction2(87);
-    }
-
     function currentDate() {
         console.log(new Date().toLocaleDateString());
     }
     currentDate();
 
 
-    function getPow(numb) {
+    function getPowFive(numb) {
         console.log(Math.pow(numb, 5));
     }
-    getPow(4);
+    getPowFive(4);
 
-    function sumdiv(a, b) {
-        console.log(a, b);
-        console.log(a + b);
+    function getSumAndDivide(a, b) {
+        console.log(a + b)/b;
     }
-    sumdiv(5, 13);
+    getSumAndDivide(5, 13);
 
-    function finalCalculations() {
-
+    function finalCalculations(c, d, e, f) {
+        getPowFive(c);
+        getSumAndDivide(d, e);
+        console.log(Math.sqrt(f));
     }
+    let c = prompt("c = ", " "), d = prompt("d = ", " "), e = prompt("e= ", " "), f = prompt("f = ", " ");
+
+    finalCalculations(c, d, e, f);
+
 </script>
 </body>
 </html>
