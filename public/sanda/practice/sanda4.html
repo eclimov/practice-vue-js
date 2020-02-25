@@ -6,22 +6,25 @@
 </head>
 <body>
 
-
 <script>
-    function myFunction1() {
-        console.log('Hello humans!')
+
+    function currentDate() {
+        console.log(new Date().toLocaleDateString());
     }
 
-    function myFunction2(x) {
-        console.log(x)
+    function getPowFive(numb) {
+        console.log(Math.pow(numb, 5));
     }
 
-    function myFunction3() {
-        myFunction1();
-        myFunction2(87);
+    function getSumAndDivide(a, b) {
+        console.log((a + b) / b);
     }
 
-    myFunction3();
+    function finalCalculations(c, d, e, f) {
+        getPowFive(c);
+        getSumAndDivide(d, e);
+        console.log(Math.sqrt(f));
+    }
 
 </script>
 </body>
