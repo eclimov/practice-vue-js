@@ -70,6 +70,13 @@
             color: white;
         }
 
+        .quote {
+            padding: 50px;
+            text-align: center;
+            background-color: indigo;
+            color: white;
+        }
+
         .about-me-section {
             padding: 50px;
             text-align: center;
@@ -77,9 +84,81 @@
             color: white;
         }
 
-        .container {
-            padding: 0 16px;
+        {
+            box-sizing: border-box;
         }
+
+        .container {
+            position: relative;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .columnslide {
+            float: left;
+            width: 16.66%;
+        }
+
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
 
         .container::after, .row::after {
             content: "";
@@ -219,38 +298,66 @@
         <p>My name is Sanda blah-blah</p>
     </div>
 
-<h2>List View or Grid View</h2>
+        <div class="container">
 
-<p>Click on a button to choose list view or grid view.</p>
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="img_woods_wide.jpg" style="width:100%">
+            </div>
 
-<div id="btnContainer">
-    <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button>
-    <button class="btn" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
-</div>
-<br>
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="img_5terre_wide.jpg" style="width:100%">
+            </div>
 
-<div class="rowgrid">
-    <div class="columngrid" style="background-color:#aaa;">
-        <h2>Column 1</h2>
-        <p>Some text..</p>
-    </div>
-    <div class="columngrid" style="background-color:#bbb;">
-        <h2>Column 2</h2>
-        <p>Some text..</p>
-    </div>
-</div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="img_mountains_wide.jpg" style="width:100%">
+            </div>
 
-<div class="rowgrid">
-    <div class="columngrid" style="background-color:#ccc;">
-        <h2>Column 3</h2>
-        <p>Some text..</p>
-    </div>
-    <div class="columngrid" style="background-color:#ddd;">
-        <h2>Column 4</h2>
-        <p>Some text..</p>
-    </div>
-</div>
-</div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="img_lights_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="img_nature_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="img_snow_wide.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <div class="row">
+                <div class="columnslide">
+                    <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                </div>
+                <div class="columnslide">
+                    <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                </div>
+                <div class="columnslide">
+                    <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="columnslide">
+                    <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+                <div class="columnslide">
+                    <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+                </div>
+                <div class="columnslide">
+                    <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+                </div>
+            </div>
+        </div>
 
 <div class="location">
     <h1>Current location</h1>
@@ -388,6 +495,36 @@
             this.className += " active";
         });
     }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
 </script>
 
 </body>
