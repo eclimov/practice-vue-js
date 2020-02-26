@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
+        /* Header */
 
         .header {
             overflow: hidden;
@@ -14,6 +15,7 @@
             padding: 20px 10px;
         }
 
+        /* Navigation bar for menu tabs */
         .topnav {
             overflow: hidden;
         }
@@ -37,6 +39,8 @@
             color: white;
         }
 
+        /* Menu tabs */
+
         .flex-container {
             display: flex;
             justify-content: space-between;
@@ -51,18 +55,7 @@
             box-sizing: border-box;
         }
 
-        .column {
-            float: left;
-            width: 33.3%;
-            margin-bottom: 16px;
-            padding: 0 8px;
-        }
-
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            margin: 8px;
-        }
-
+        /* Section with information about the project / website */
         .about-section {
             padding: 50px;
             text-align: center;
@@ -70,6 +63,7 @@
             color: white;
         }
 
+        /* Section with motivational quote*/
         .quote {
             padding: 50px;
             text-align: center;
@@ -77,19 +71,51 @@
             color: white;
         }
 
+        /* Section with information about me*/
         .about-me-section {
             padding: 50px;
             text-align: center;
-            background-color: #474e5d;
+            background-color: lightpink;
             color: white;
         }
 
+        /* Styles for block with information about freelance services provided*/
         {
             box-sizing: border-box;
         }
 
-        .container {
+        .container-service {
             position: relative;
+        }
+
+        .column-service {
+            float: left;
+            width: 50%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card-service {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .container-service::after, .row-service::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+
+
+
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
         }
 
         .mySlides {
@@ -160,12 +186,6 @@
         .demo:hover {
             opacity: 1;
 
-        .container::after, .row::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
         .title {
             color: grey;
         }
@@ -201,12 +221,6 @@
                 padding: 10px;
             }
 
-            .rowgrid:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-
             .btn {
                 border: none;
                 outline: none;
@@ -222,9 +236,7 @@
             .btn.active {
                 background-color: #666;
                 color: white;
-            }
-
-        {
+            } {
 
             form.example input[type=text] {
                 padding: 10px;
@@ -264,10 +276,10 @@
 
     <div class="header">
         <h1>SANDA test</h1>
-        <p><h7>Sugar. <br>
+        <p><h6>Sugar. <br>
         Spice. <br>
         Nothing nice.<br>
-        Test.</h7></p>
+        Test.</h6></p>
         <div class="topnav flex-container">
             <div>
             </div>
@@ -296,7 +308,55 @@
         <h1>About Me</h1>
         <p>Let me introduce myself. :) </p>
         <p>My name is Sanda blah-blah</p>
-    </div>
+
+        <h2 style="text-align:center">Are you interested in...?</h2>
+        <div class="row-service">
+            <div class="column-service">
+                <div class="card-service">
+                    <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+                    <div class="container-service">
+                        <h3>QA & Testing</h3>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-service">
+                <div class="card-service">
+                    <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+                    <div class="container-service">
+                        <h3>Translations</h3>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-service">
+                <div class="card-service">
+                    <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+                    <div class="container-service">
+                        <h3>Content Marketing & Content Management</h3>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-service">
+                <div class="card-service">
+                    <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+                    <div class="container-service">
+                        <h3>Project Management</h3>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
 
         <div class="container">
 
@@ -358,6 +418,8 @@
                 </div>
             </div>
         </div>
+
+    </div>
 
 <div class="location">
     <h1>Current location</h1>
