@@ -25,14 +25,11 @@
         console.log(Math.sqrt(p));
     }
 
-    let goods = prompt("Enter the name of the object you want to own here:");
-
     function randomizePrice(min, max) {
-        // min = Math.ceil(min);
-        // max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+    let goods = prompt("Enter the name of the object you want to own here:");
     let price = randomizePrice(5, 500);
 
     alert(`Congratulations! You can buy just a regular ${goods} with a word "Agile" on it for ${price} $. Otherwise you will have no luck for ${price} years.`);
