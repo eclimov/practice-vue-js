@@ -81,7 +81,7 @@
             color: white;
         }
 
-        /* Styles for block with information about freelance services provided*/
+        /* Styles for block with information about freelance services provided */
         {
             box-sizing: border-box;
         }
@@ -110,15 +110,16 @@
         }
 
         /* Slide-show*/
-        .slideshow-container {
+
+        * {box-sizing: border-box}
+        .slide-show {display: none}
+        img {vertical-align: middle;}
+
+
+        .container-slideshow {
             max-width: 1000px;
             position: relative;
             margin: auto;
-        }
-
-        /* Hide the images by default */
-        .slide-show {
-            display: inline;
         }
 
         /* Next & previous buttons */
@@ -127,8 +128,8 @@
             position: absolute;
             top: 50%;
             width: auto;
-            margin-top: -22px;
             padding: 16px;
+            margin-top: -22px;
             color: white;
             font-weight: bold;
             font-size: 18px;
@@ -202,6 +203,12 @@
             to {opacity: 1}
         }
 
+        /* On smaller screens, decrease text size */
+
+        @media only screen and (max-width: 300px) {
+            .prev, .next,.text {font-size: 11px}
+        }
+
 
         .column {
             float: left;
@@ -210,35 +217,13 @@
             padding: 0 8px;
         }
 
-        .cursor {
-            cursor: pointer;
-        }
-
-        .caption-container {
-            text-align: center;
-            background-color: #222;
-            padding: 2px 16px;
-            color: white;
-        }
-
         .row:after {
             content: "";
             display: table;
             clear: both;
         }
 
-        .columnslide {
-            float: left;
-            width: 16.66%;
-        }
-
-        .demo {
-            opacity: 0.6;
-        }
-
         .active,
-        .demo:hover {
-            opacity: 1;
 
             .title {
                 color: grey;
@@ -406,28 +391,28 @@
 
 <div class="container-slideshow">
 
-    <div class="slide-show">
-        <div class="number-slide fade">1 / 3</div>
+    <div class="slide-show fade">
+        <div class="numbertext">1 / 3</div>
         <img src="locals/barcelona.jpeg" style="width:100%">
-        <div class="text-slide">Barcelona</div>
+        <div class="text">Barcelona</div>
     </div>
 
-    <div class="slide-show">
-        <div class="number-slide fade">2 / 3</div>
+    <div class="slide-show fade">
+        <div class="numbertext">2 / 3</div>
         <img src="locals/ciocana.jpg" style="width:100%">
-        <div class="text-slide">Chisinau</div>
+        <div class="text">Chisinau</div>
     </div>
 
-    <div class="slide-show">
-        <div class="number-slide fade">3 / 3</div>
+    <div class="slide-show fade">
+        <div class="numbertext">3 / 3</div>
         <img src="locals/odessa.jpg" style="width:100%">
-        <div class="text-slide">Odessa</div>
+        <div class="text">Odessa</div>
     </div>
 
-    <a class="prev-slide" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next-slide" onclick="plusSlides(1)">&#10095;</a>
-</div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
+</div>
 <br>
 
 <div style="text-align:center">
@@ -436,16 +421,6 @@
     <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 
-    </div>
-</div>
-
-</div>
-
-<div class="location">
-    <h1>Current location</h1>
-    <p>Test</p>
-    <p>Test</p>
-</div>
 
 <h2 style="text-align:center">Check the blog:</h2>
 <div class="row">
@@ -533,13 +508,6 @@
 
     <br>
 
-    <h2>Search Button</h2>
-
-    <p>Full width:</p>
-    <form class="example" action="/action_page.php">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
 
     <h1>The footer element</h1>
 
@@ -576,12 +544,10 @@
         var slideIndex = 1;
         showSlides(slideIndex);
 
-        // Next/previous controls
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
 
-        // Thumbnail image controls
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
@@ -601,7 +567,6 @@
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
         }
-
 
     </script>
 
