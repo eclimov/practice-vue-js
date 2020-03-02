@@ -28,34 +28,37 @@
         console.log(Math.sqrt(f));
     }
 
-    let bads = prompt('Please gimme your money: ', );
-    let price = Math.floor(Math.random() * 10 + 1);
-    alert(`You must buy ${bads} with following price: ${price} lei`);
-
 
     /* Real homework - list of disciplines */
+    let favoriteDisciplines = [
+        'Anorganic Chemistry',
+        'Organic Chemistry',
+        'Chemistry Practical',
+        'Informatics'
+    ];
 
-    let favoriteDiscipline1 = 'Anorganic Chemistry';
-    let favoriteDiscipline2 = 'Organic Chemistry';
-    let favoriteDiscipline3 = 'Chemistry Practical';
-    let favoriteDiscipline4 = 'Informatics';
+    favoriteDisciplines.push('Physics');
+    console.log(favoriteDisciplines);
+
+    console.log(favoriteDisciplines.join(', '));
 
     /* Real homework - fictional character */
-
     let fictionCharacter = {
         "name": "Pantdorra",
         "age": 20,
         "sex": "Female",
         "isFictional": true,
-        "languages": [English, Russian, French, German, Spanish],
-        "bookCharacter": true,
-        "movieCharacter": false,
+        "languages": ["English", "Russian", "French", "German", "Spanish"],
+        "isBookCharacter": true,
+        "isMovieCharacter": false,
         "hasMagicalPowers": false,
-        "hasArm": true,
-        "phone-number": 67386566639304030505094595
+        "hasWeapons": true,
+        "phone-number": "67386566639304030505094595",
         "hatesPeople": true
     };
 
+    fictionCharacter["isStudent"] = true;
+    console.log(fictionCharacter);
 
 </script>
 </body>
