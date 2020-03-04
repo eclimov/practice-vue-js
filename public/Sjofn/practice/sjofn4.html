@@ -29,32 +29,38 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    var genres = ['Horror', 'Detective', 'Adventure', 'Romance']
-    var disciplines = ['Chemistry', 'Mathematics', 'Literature', 'English']
+    let genres = ['Horror', 'Detective', 'Adventure', 'Romance'];
+    genres.push("Humour");
+    let disciplines = ['Chemistry', 'Mathematics', 'Literature', 'English'];
+    disciplines.push("Drawing");
+    console.log(genres.join(', ')+', '+ disciplines.join(', '));
 
-    var livingRoomDesign = new Object();
+    let livingRoomDesign = {};
     livingRoomDesign.style = 'Minimalism';
     livingRoomDesign.shape = 'Square';
     livingRoomDesign.area = 20;
     livingRoomDesign.mainColor = 'beige';
-    livingRoomDesign.accentColor = 'dark green';
+    livingRoomDesign.accentColors = ['dark green', 'dark orange'];
     livingRoomDesign.windows = 3;
-    livingRoomDesign.panoramicView = true;
+    livingRoomDesign.hasPanoramicView = true;
     livingRoomDesign.isParquet = true;
     livingRoomDesign.isFireplace = true;
     livingRoomDesign.ceilingsMinHeight = 5;
 
-    var fictionCharacter = { gender:   male,
-        age:            25,
-        firstName : 'Martin',
-        lastName : 'Corrigan',
+    let fictionCharacter = {
+        gender: 'male',
+        age: 25,
+        firstName: 'Martin',
+        lastName: 'Corrigan',
         author:	'James Hadley Chase',
         country: 'United States',
         language: 'English',
-        specialty : 'special agent',
-        isGood : true
-        isSuccessful : true}
-
+        specialties: ['special agent', 'detective'],
+        isGood: true,
+        isSuccessful: true
+    };
+    fictionCharacter['dischipline'] = 'physical education';
+    console.log(fictionCharacter);
 
 </script>
 </html>
