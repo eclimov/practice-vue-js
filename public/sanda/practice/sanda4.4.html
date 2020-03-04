@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 4</title>
+</head>
+<body>
+
+<script>
+
+    /* Function definitions actually unnecessary here but anyway */
+
+    function currentDate() {
+        console.log(new Date().toLocaleDateString());
+    }
+
+    function getPowFive(numb) {
+        console.log(Math.pow(numb, 5));
+    }
+
+    function getSumAndDivide(a, b) {
+        console.log((a + b) / b);
+    }
+
+    function finalCalculations(c, d, e, f) {
+        getPowFive(c);
+        getSumAndDivide(d, e);
+        console.log(Math.sqrt(f));
+    }
+
+
+    /* Real homework - list of disciplines */
+    let favoriteDisciplines = [
+        'Anorganic Chemistry',
+        'Organic Chemistry',
+        'Chemistry Practical',
+        'Informatics'
+    ];
+
+    favoriteDisciplines.push('Physics');
+    console.log(favoriteDisciplines);
+
+    console.log(favoriteDisciplines.join(', '));
+
+    /* Real homework - fictional character */
+    let fictionCharacter = {
+        "name": "Pantdorra",
+        "age": 20,
+        "sex": "Female",
+        "isFictional": true,
+        "languages": ["English", "Russian", "French", "German", "Spanish"],
+        "isBookCharacter": true,
+        "isMovieCharacter": false,
+        "hasMagicalPowers": false,
+        "hasWeapons": true,
+        "phone-number": "67386566639304030505094595",
+        "hatesPeople": true
+    };
+
+    fictionCharacter["isStudent"] = true;
+    console.log(fictionCharacter);
+
+</script>
+</body>
+</html>
