@@ -29,9 +29,32 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    let goods = prompt("Enter the name of the object you want to own here:");
-    let price = randomizePrice(5, 500);
+    var genres = ['Horror', 'Detective', 'Adventure', 'Romance']
+    var disciplines = ['Chemistry', 'Mathematics', 'Literature', 'English']
 
-    alert(`Congratulations! You can buy just a regular ${goods} with a word "Agile" on it for ${price} $. Otherwise you will have no luck for ${price} years.`);
+    var livingRoomDesign = new Object();
+    livingRoomDesign.style = 'Minimalism';
+    livingRoomDesign.shape = 'Square';
+    livingRoomDesign.area = 20;
+    livingRoomDesign.mainColor = 'beige';
+    livingRoomDesign.accentColor = 'dark green';
+    livingRoomDesign.windows = 3;
+    livingRoomDesign.panoramicView = true;
+    livingRoomDesign.isParquet = true;
+    livingRoomDesign.isFireplace = true;
+    livingRoomDesign.ceilingsMinHeight = 5;
+
+    var fictionCharacter = { gender:   male,
+        age:            25,
+        firstName : 'Martin',
+        lastName : 'Corrigan',
+        author:	'James Hadley Chase',
+        country: 'United States',
+        language: 'English',
+        specialty : 'special agent',
+        isGood : true
+        isSuccessful : true}
+
+
 </script>
 </html>
