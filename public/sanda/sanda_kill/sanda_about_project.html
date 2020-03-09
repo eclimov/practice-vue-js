@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sanda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        /* Header */
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            padding: 20px 10px;
+        }
+
+        /* Navigation bar for menu tabs */
+        .topnav {
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: pink;
+            color: white;
+        }
+
+        /* Menu tabs */
+
+        #header-links {
+            margin-top: 102px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        /* Section with information about the project / website */
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #474e5d;
+            color: white;
+        }
+
+        /* Section with motivational quote*/
+        .quote {
+            padding: 50px;
+            text-align: center;
+            background-color: indigo;
+            color: white;
+        }
+
+        /* Section with information about me*/
+        .about-me-section {
+            padding: 50px;
+            text-align: center;
+            background-color: lightpink;
+            color: white;
+        }
+
+        /* Styles for block with information about freelance services provided */
+        {
+            box-sizing: border-box;
+        }
+
+        .container-service {
+            position: relative;
+        }
+
+        .column-service {
+            float: left;
+            width: 50%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card-service {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 500px;
+            margin: 8px;
+        }
+
+        .container-service::after, .row-service::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Slide-show*/
+
+        * {box-sizing: border-box}
+        .slide-show {display: none}
+        img {vertical-align: middle;}
+
+        .container-slideshow {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+
+        @media only screen and (max-width: 300px) {
+            .prev, .next,.text {font-size: 11px}
+        }
+
+        /*Blog*/
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .active,
+
+        .title {
+            color: grey;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        /*Search bar*/
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 30%;
+            background: #f1f1f1;
+        }
+
+        /* Style the submit button */
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #000000;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none; /* Prevent double borders */
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            background: #000000;
+        }
+
+        /* Clear floats */
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <div>
+        <img src="header/hi.jpg" alt="IT-Sanda" height="160" width="160">
+    </div>
+
+    <div class="topnav" id="header-links">
+        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_menutabs.html?_ijt=rqljlh1e0ous68ldfjq1ppab43">HOMEPAGE</a>
+        <a class="active" href="project">ABOUT PROJECT</a>
+        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5">BLOG</a>
+        <a class="active" href="community">COMMUNITY</a>
+    </div>
+</div>
+
+<div class="about-section">
+    <h1>About Page</h1>
+    <p>Our vision is career fulfillment for all women, whether that is working for a company, running your own business or running your home.
+        What we believe:
+        We believe that the more women we have in this world who are doing what they love and are doing what they were born to do (like jumping out of bed to get to work), our world will be filled with happier and more successful women.
+        We believe it is crucial to understand yourself and your calling first in your career transition or business start-up process. We also believe in breaking the barriers of cost to get personalized career and business coaching. We offer low-priced online training for women to get the career and business help they need.
+        We have members around the world in our two membership sites. Corporate Rescue Plan is the most comprehensive side hustle to business launch program for women out there. Love Your Career Formula is an accelerated dream job launch program, where you get training, inspiration and a group community for as long as you need it. We are a life-changing program and our aim is to change your work and your life, not just get you a new paycheck or make you a lot of money. </p>
+    <p>Lose yourself in finding this!</p>
+</div>
+
+<h1>The footer element</h1>
+
+<footer>
+    <p>IT-Sanda</p>
+    <p>Contact information: </p>
+</footer>
+
+</body>
+</html>
