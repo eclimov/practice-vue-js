@@ -116,7 +116,6 @@
         img {vertical-align: middle;}
 
         .container-slideshow {
-            max-width: 1000px;
             position: relative;
             margin: auto;
         }
@@ -513,6 +512,16 @@
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
+
+        /*
+        setInterval(function () {
+            slideIndex = slideIndex + 1;
+            if (slideIndex > 3) {
+                slideIndex = 1;
+            }
+            plusSlides(slideIndex);
+        }, 2000);
+        */
 
         function currentSlide(n) {
             showSlides(slideIndex = n);
