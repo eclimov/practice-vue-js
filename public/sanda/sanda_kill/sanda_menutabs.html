@@ -513,15 +513,9 @@
             showSlides(slideIndex += n);
         }
 
-        /*
         setInterval(function () {
-            slideIndex = slideIndex + 1;
-            if (slideIndex > 3) {
-                slideIndex = 1;
-            }
-            plusSlides(slideIndex);
-        }, 2000);
-        */
+            plusSlides(slideIndex + 1);
+        }, 5000);
 
         function currentSlide(n) {
             showSlides(slideIndex = n);
