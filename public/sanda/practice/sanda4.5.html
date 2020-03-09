@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 4-5</title>
+</head>
+<body>
+
+    <script>
+        function sayHello(name) {
+            console.log(`Hello, ${name}!`);
+        }
+        sayHello("Tanya");
+
+        /*Random number */
+        function generateRandomInt() {
+            let n = Math.floor(Math.random() * Math.floor(20));
+            console.log(`Random integer: ${n}`);
+            return n;
+        }
+        generateRandomInt();
+
+        //Random min/max
+
+        function generateRandomIntInRange(min, max) {
+            let n = Math.floor(Math.random() * (max - min) + min) ;
+            console.log(`Random integer in range ${min} and ${max}: ${n}`);
+            return n;
+        }
+        generateRandomIntInRange(56, 72);
+
+        /* is Even*/
+        function isEven(value) {
+            if (value % 2 === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        let m =  generateRandomInt();
+        if (isEven(m)) {
+            console.log(`${m} is even`);
+        }
+        else {
+            console.log(`${m} is odd`);
+        }
+
+
+        /* List of districts */
+        function getTheBestDistrict() {
+            let districts = [
+                'Ciocana',
+                'Riscani',
+                'Centru',
+                'Buiucani',
+                'Botanica'
+            ];
+            return districts[generateRandomIntInRange(0, 5)];
+        }
+        let thebestDistrict = getTheBestDistrict();
+        console.log(thebestDistrict);
+
+//
+// generateRandomIntInRange = function (getTheBestDistrict) {
+// return list[Math.floor((Math.random()*getTheBestDistrict.length))];
+// }
+</script>
+</body>
+</html>
