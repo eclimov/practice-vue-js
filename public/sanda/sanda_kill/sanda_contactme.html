@@ -1,134 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>It's Sanda!</title>
+
     <style>
-        * {box-sizing: border-box;}
-        body {font-family: Verdana, sans-serif;}
-        .mySlides {display: none;}
-        img {vertical-align: middle;}
-
-        /* Slideshow container */
-        .container-slideshow {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
+        h1 {
+            display: block;
+            font-size: 2em;
+            margin-top: 0.67em;
+            margin-bottom: 0.67em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold;
         }
 
-        /* Caption text */
-        .text {
-            color: #f2f2f2;
-            font-size: 15px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            text-align: center;
+        h2 {
+            display: block;
+            font-size: 1.5em;
+            margin-top: 0.83em;
+            margin-bottom: 0.83em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold;
         }
 
-        /* Number text (1/3 etc) */
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
+        h3 {
+            display: block;
+            font-size: 1.17em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold;
         }
 
-        /* The dots/bullets/indicators */
-        .dot {
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
+        hr {
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
-        .active {
-            background-color: #717171;
-        }
-
-        /* Fading animation */
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @-webkit-keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
-        }
-
-        @keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
-        }
-
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-            .text {font-size: 11px}
-        }
     </style>
 </head>
 <body>
-
-<h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p>
-
-<div class="slideshow-container">
-
-    <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="locals/barcelona.jpeg" style="width:100%">
-        <div class="text">Caption Text</div>
-    </div>
-
-    <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="locals/ciocana.jpg" style="width:100%">
-        <div class="text">Caption Two</div>
-    </div>
-
-    <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="locals/odessa.jpg" style="width:100%">
-        <div class="text">Caption Three</div>
-    </div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-</div>
+<p id="demo"></p>
 
 <script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
+    document.getElementById("demo").innerHTML = "Welcome to MyWebsite!";
 </script>
+
+<h1>About MyWebsite</h1>
+
+<p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
+
+<div>
+    <h2>MyWebsite</h2>
+
+    <p>Hello World! Let me introduce myself. :) <ul>
+    <li>My name is Sanda</li>
+    <li>I am currently working in IT company as Quality Assurance Specialist</li>
+    <li>Passionated about</li>
+</ul>
+    </p>
+</div>
+
+<div>
+    <h2>Freelance services proposed by MyWebsite</h2>
+
+    <p>Following services are proposed: <ol>
+    <hr />
+    <li>Quality Assurance</li><br><img src="image1.webp" alt />
+    <hr />
+    <li>Content Marketing & Management</li><br><img src="image2.webp" alt />
+    <hr />
+    <li>Translations</li><br><img src="image3.webp" alt />
+</ol>
+    </p>
+</div>
+
+<div>
+    <h2>BLOG</h2>
+
+    <p>Check your favorite category: <ol>
+    <li><span style="color:goldenrod">IT&Tech</span></li>
+    <li><span style="color:goldenrod">Marketing</span></li>
+    <li><span style="color:goldenrod">Project Management</span></li>
+    <li><span style="color:goldenrod">Empowerment</span></li>
+</ol>
+    </p>
+</div>
+
+<div>
+    <h2>Community "MyWebsite"</h2>
+
+    <p>Follow us on: <ul>
+    <li><button>Facebook</button></li><br>
+    <li><button>Instagram</button></li>
+</ul>
+
+    <button id="myId" onclick=""
+
+    <button onclick="myFunction()">E-mail</button>
+
+    </p>
+</div>
+
+<div>
+    <h3>Current freelance destination - Chisinau, Moldova</h3>
+</div>>
 
 </body>
 </html>

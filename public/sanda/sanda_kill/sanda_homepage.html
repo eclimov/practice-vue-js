@@ -1,113 +1,542 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>It's Sanda!</title>
+    <title>Sanda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
-        h1 {
-            display: block;
-            font-size: 2em;
-            margin-top: 0.67em;
-            margin-bottom: 0.67em;
-            margin-left: 0;
-            margin-right: 0;
-            font-weight: bold;
+        /* Header */
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            padding: 20px 10px;
         }
 
-        h2 {
-            display: block;
-            font-size: 1.5em;
-            margin-top: 0.83em;
-            margin-bottom: 0.83em;
-            margin-left: 0;
-            margin-right: 0;
-            font-weight: bold;
+        /* Navigation bar for menu tabs */
+        .topnav {
+            overflow: hidden;
         }
 
-        h3 {
-            display: block;
-            font-size: 1.17em;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            margin-left: 0;
-            margin-right: 0;
-            font-weight: bold;
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
         }
 
-        hr {
-            margin-top: 30px;
-            margin-bottom: 30px;
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: pink;
+            color: white;
+        }
+
+        /* Menu tabs */
+
+        #header-links {
+            margin-top: 102px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        /* Section with information about the project / website */
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #474e5d;
+            color: white;
+        }
+
+        /* Section with motivational quote*/
+        .quote {
+            padding: 50px;
+            text-align: center;
+            background-color: indigo;
+            color: white;
+        }
+
+        /* Section with information about me*/
+        .about-me-section {
+            padding: 50px;
+            text-align: center;
+            background-color: lightpink;
+            color: white;
+        }
+
+        /* Styles for block with information about freelance services provided */
+        {
+            box-sizing: border-box;
+        }
+
+        .container-service {
+            position: relative;
+        }
+
+        .column-service {
+            float: left;
+            width: 50%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card-service {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 500px;
+            margin: 8px;
+        }
+
+        .container-service::after, .row-service::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Slide-show*/
+
+        * {box-sizing: border-box}
+        .slide-show {display: none}
+        img {vertical-align: middle;}
+
+        .container-slideshow {
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+
+        @media only screen and (max-width: 300px) {
+            .prev, .next,.text {font-size: 11px}
+        }
+
+        /*Blog*/
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .active,
+
+            .title {
+                color: grey;
+            }
+
+            .button {
+                border: none;
+                outline: 0;
+                display: inline-block;
+                padding: 8px;
+                color: white;
+                background-color: #000;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            .button:hover {
+                background-color: #555;
+            }
+
+        /*Search bar*/
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 30%;
+            background: #f1f1f1;
+        }
+
+        /* Style the submit button */
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #000000;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none; /* Prevent double borders */
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            background: #000000;
+        }
+
+        /* Clear floats */
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
         }
 
     </style>
 </head>
+
 <body>
-<p id="demo"></p>
 
-<script>
-    document.getElementById("demo").innerHTML = "Welcome to MyWebsite!";
-</script>
+<div class="header">
+    <div>
+        <img src="header/hi.jpg" alt="IT-Sanda" height="160" width="160">
+    </div>
 
-<h1>About MyWebsite</h1>
-
-<p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
-
-<div>
-    <h2>MyWebsite</h2>
-
-    <p>Hello World! Let me introduce myself. :) <ul>
-    <li>My name is Sanda</li>
-    <li>I am currently working in IT company as Quality Assurance Specialist</li>
-    <li>Passionated about</li>
-</ul>
-    </p>
+    <div class="topnav" id="header-links">
+        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_menutabs.html?_ijt=rqljlh1e0ous68ldfjq1ppab43">HOMEPAGE</a>
+        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_about_project.html?_ijt=mhbmod29nu4d0cp0qds1r36dcl">ABOUT PROJECT</a>
+        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5">BLOG</a>
+        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_community.html?_ijt=qf4sj4g53mvg0tebsms57s1i4k">COMMUNITY</a>
+    </div>
 </div>
 
-<div>
-    <h2>Freelance services proposed by MyWebsite</h2>
-
-    <p>Following services are proposed: <ol>
-    <hr />
-    <li>Quality Assurance</li><br><img src="image1.webp" alt />
-    <hr />
-    <li>Content Marketing & Management</li><br><img src="image2.webp" alt />
-    <hr />
-    <li>Translations</li><br><img src="image3.webp" alt />
-</ol>
-    </p>
+<div class="about-section">
+    <h1>About Page</h1>
+    <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
+    <p>Lose yourself in finding this!</p>
 </div>
 
-<div>
-    <h2>BLOG</h2>
-
-    <p>Check your favorite category: <ol>
-    <li><span style="color:goldenrod">IT&Tech</span></li>
-    <li><span style="color:goldenrod">Marketing</span></li>
-    <li><span style="color:goldenrod">Project Management</span></li>
-    <li><span style="color:goldenrod">Empowerment</span></li>
-</ol>
-    </p>
+<div class="quote">
+    <h1>Quote</h1>
+    <p>Test</p>
+    <p>Test</p>
 </div>
 
-<div>
-    <h2>Community "MyWebsite"</h2>
+<div class="about-me-section">
+    <h1>About Me</h1>
+    <p>Let me introduce myself. :) </p>
+    <p>My name is Sanda blah-blah</p>
 
-    <p>Follow us on: <ul>
-    <li><button>Facebook</button></li><br>
-    <li><button>Instagram</button></li>
-</ul>
+    <h2 style="text-align:center">Are you interested in...?</h2>
+    <div class="row-service">
+        <div class="column-service">
+            <div class="card-service">
+                <img src="images/qa.jpg" alt="QA" style="width: 100%">
+                <div class="container-service">
+                    <h3>QA & Testing</h3>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>
+                        <button class="button">Contact</button>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    <button id="myId" onclick=""
+        <div class="column-service">
+            <div class="card-service">
+                <img src="images/translations.JPG" alt="Translations" style="width: 100%">
+                <div class="container-service">
+                    <h3>Translations</h3>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>
+                        <button class="button">Contact</button>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    <button onclick="myFunction()">E-mail</button>
+        <div class="column-service">
+            <div class="card-service">
+                <img src="images/marketing.JPG" alt="Marketing" style="width: 100%">
+                <div class="container-service">
+                    <h3>Content Marketing & Content Management</h3>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>
+                        <button class="button">Contact</button>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    </p>
+        <div class="column-service">
+            <div class="card-service">
+                <img src="images/projectmanagement.JPG" alt="Project Management" style="width: 100%">
+                <div class="container-service">
+                    <h3>Project Management</h3>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>
+                        <button class="button">Contact</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
 
-<div>
-    <h3>Current freelance destination - Chisinau, Moldova</h3>
-</div>>
+<div class="container-slideshow">
 
+    <div class="slide-show fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="locals/barcelona.png" style="width:100%" alt="Barcelona">
+        <div class="text">Barcelona</div>
+    </div>
+
+    <div class="slide-show fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="locals/ciocana.png" style="width:100%" alt="Chisinau">
+        <div class="text">Chisinau</div>
+    </div>
+
+    <div class="slide-show fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="locals/odessa.jpg" style="width:100%" alt="Odessa">
+        <div class="text">Odessa</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<h2 style="text-align:center">Check the blog:</h2>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="blog_images/veronica.png" alt="QA" style="width:90%">
+            <div class="container">
+                <h2>QA</h2>
+                <p class="title">Test</p>
+                <p>
+                    <button class="button">BLOG</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="blog_images/blair.png" alt="Project management" style="width:99%">
+            <div class="container">
+                <h2>Project management</h2>
+                <p class="title">Test</p>
+                <p>
+                    <button class="button">BLOG</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="blog_images/andy.jpeg" alt="Marketing" style="width:99%">
+            <div class="container">
+                <h2>Marketing</h2>
+                <p class="title">Test</p>
+                <p>
+                    <button class="button">BLOG</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="blog_images/gina.jpg" alt="Tech News" style="width: 100%">
+            <div class="container">
+                <h2>Tech News</h2>
+                <p class="title">Test</p>
+                <p>
+                    <button class="button">BLOG</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="column">
+        <div class="card">
+            <img src="blog_images/skye.jpg" alt="Tech Events" style="width:100%">
+            <div class="container">
+                <h2>Tech Events</h2>
+                <p class="title">Test</p>
+                <p>
+                    <button class="button">BLOG</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="column">
+        <div class="card">
+            <img src="blog_images/elle.jpg" alt="Empowerment" style="width:99.5%">
+            <div class="container">
+                <h2>Empowerment</h2>
+                <p class="title">Test</p>
+                <p>
+                    <button class="button">BLOG</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <h1>Search bar</h1>
+    <form class="example" action="action_page.php">
+        <label>
+            <input type="text" placeholder="Search." name="search">
+        </label>
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+    <h1>The footer element</h1>
+
+    <footer>
+        <p>IT-Sanda</p>
+        <p>Contact information: </p>
+    </footer>
+
+    <script>
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        setInterval(function () {
+            plusSlides(slideIndex + 1);
+        }, 5000);
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide-show");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+    </script>
 </body>
 </html>
