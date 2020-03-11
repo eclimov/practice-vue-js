@@ -50,7 +50,7 @@
         function getTheBestDistrict() {
             let districts = [
                 'Ciocana',
-                'Riscani',
+                'Rascani',
                 'Centru',
                 'Buiucani',
                 'Botanica'
@@ -60,6 +60,25 @@
         let thebestDistrict = getTheBestDistrict();
         console.log(thebestDistrict);
 
+        function sayHello(name) {
+            switch (getTheBestDistrict()) {
+        case "Ciocana":
+            alert("Hello, Sanda");
+            break;
+        case "Rascani":
+            alert("Hello, Sanda");
+            break;
+
+            case "Centru":
+                    alert("Hello, Sanda");
+                    break;
+                case "Botanica":
+                    alert("Hello, Sanda");
+                    break;
+                case "Buiucani":
+                    alert("Hello, Sanda");
+                    break;
+            }
 //
 // generateRandomIntInRange = function (getTheBestDistrict) {
 // return list[Math.floor((Math.random()*getTheBestDistrict.length))];
