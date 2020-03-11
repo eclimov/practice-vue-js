@@ -28,5 +28,25 @@
     function generateRandomIntInRange(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
+
+    function getTheBestDistrict() {
+        let districts = [
+            'Ciocana',
+            'Rascani',
+            'Botanica'
+        ];
+        console.log(districts [generateRandomIntInRange(0, districts.length - 1)]);
+    }
+
+    switch(getTheBestDistrict()) {
+        case 'Ciocana':
+            sayHello('Sanda');
+            break;
+        case 'Rascani':
+            sayHello('Tanya');
+            break;
+        default:
+            console.log('Who are you?');
+    }
 </script>
 </html>
