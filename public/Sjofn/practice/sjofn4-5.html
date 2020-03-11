@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 4</title>
+</head>
+<body>
+</body>
+<script>
+
+    function sayHello(name) {
+        console.log(`Hello ${name}!`);
+    }
+
+    function generateRandomInt() {
+        let randomNum = Math.floor(Math.random()*10);
+        console.log(`Random integer: ${randomNum}`);
+        return randomNum;
+    }
+
+    function isEven(a) {
+        return a % 2 === 0;
+
+    }
+
+    let yourGeneratedNumber = generateRandomInt();
+    console.log(`${yourGeneratedNumber} is ${isEven(yourGeneratedNumber) ? 'Even' : 'Odd'}`);
+
+    function generateRandomIntInRange(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+</script>
+</html>
