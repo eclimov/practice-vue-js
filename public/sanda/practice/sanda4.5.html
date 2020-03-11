@@ -21,7 +21,6 @@
         generateRandomInt();
 
         //Random min/max
-
         function generateRandomIntInRange(min, max) {
             let n = Math.floor(Math.random() * (max - min) + min) ;
             console.log(`Random integer in range ${min} and ${max}: ${n}`);
@@ -45,7 +44,6 @@
             console.log(`${m} is odd`);
         }
 
-
         /* List of districts */
         function getTheBestDistrict() {
             let districts = [
@@ -60,29 +58,17 @@
         let thebestDistrict = getTheBestDistrict();
         console.log(thebestDistrict);
 
-        function sayHello(name) {
-            switch (getTheBestDistrict()) {
-        case "Ciocana":
-            alert("Hello, Sanda");
-            break;
-        case "Rascani":
-            alert("Hello, Sanda");
-            break;
+        switch (thebestDistrict) {
+            case "Ciocana":
+                sayHello("Sanda");
+                break;
+            case "Rascani":
+                sayHello("Tanya");
+                break;
+            default:
+                console.log("Who the hell are you?");
+        }
 
-            case "Centru":
-                    alert("Hello, Sanda");
-                    break;
-                case "Botanica":
-                    alert("Hello, Sanda");
-                    break;
-                case "Buiucani":
-                    alert("Hello, Sanda");
-                    break;
-            }
-//
-// generateRandomIntInRange = function (getTheBestDistrict) {
-// return list[Math.floor((Math.random()*getTheBestDistrict.length))];
-// }
-</script>
+    </script>
 </body>
 </html>
