@@ -13,7 +13,7 @@
 
     function generateRandomInt() {
         let randomNum = Math.floor(Math.random()*10);
-        console.log(`Random integer: ${randomNum}`);
+        console.log(`${randomNum} is ${isEven(randomNum) ? 'Even' : 'Odd'}`);
         return randomNum;
     }
 
@@ -21,9 +21,6 @@
         return a % 2 === 0;
 
     }
-
-    let yourGeneratedNumber = generateRandomInt();
-    console.log(`${yourGeneratedNumber} is ${isEven(yourGeneratedNumber) ? 'Even' : 'Odd'}`);
 
     function generateRandomIntInRange(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
