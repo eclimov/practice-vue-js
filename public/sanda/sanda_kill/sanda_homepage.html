@@ -10,9 +10,9 @@
         /* Header */
         .header {
             display: flex;
-            background-color: #B952EB;
             justify-content: space-between;
             overflow: hidden;
+            background-color: #A35CFF;
         }
 
         #logo {
@@ -20,80 +20,78 @@
         }
 
         /* Navigation bar for menu tabs */
+        {
+            box-sizing: border-box
+        }
+        body, html {
+            height: 100%;
+            margin: 20;
+            font-family: Arial,serif;
+        }
+
         .topnav {
             overflow: hidden;
         }
 
         .topnav a {
             float: left;
-            color: #B952EB;
             padding: 28px 16px;
+            color: #A35CFF;
             text-align: center;
             text-decoration: none;
             font-size: 17px;
         }
 
         .topnav a:hover {
-            background-color: #B952EB;
+            background-color: #A35CFF;
             color: black;
         }
 
         .topnav a.active {
-            background-color: #B952EB;
+            background-color: #A35CFF;
             color: black;
         }
 
-        /* Menu tabs */
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 20px;
-        }
-
-        html {
-            box-sizing: border-box;
-        }
-
         /* Section with information about the project / website */
-
         .about-section {
             padding: 50px;
-            text-align: center;
             background-color: #EF81FF;
-            color: white;
+            color: black;
+            text-align: center;
         }
 
         /* Section with motivational quote*/
         .quote {
             padding: 50px;
-            text-align: center;
             background-color: #B952EB;
-            color: white;
+            color: black;
+            text-align: center;
         }
 
         /* Section with information about me*/
         .about-me-section {
             padding: 50px;
+            background-color: #6D50EB;
+            color: black;
             text-align: center;
-            background-color: #A35CFF;
-            color: white;
         }
 
         /* Styles for block with information about freelance services provided */
         {
-            box-sizing: border-box;
+            box-sizing: border-box  ;
         }
 
         .container-service {
             position: relative;
-            background-color: #6D50EB;
+            background-color: #4F58FF;
         }
 
         .column-service {
             float: left;
             width: 50%;
-            margin-bottom: 16px;
             padding: 0 8px;
-            background-color: #A35CFF;
+            background-color: #4F58FF;
+            margin-bottom: 16px;
         }
 
         .card-service {
@@ -106,18 +104,27 @@
             content: "";
             clear: both;
             display: table;
+            background-color: #4F58FF;
         }
 
         /* Slide-show*/
 
-        * {box-sizing: border-box}
-        .slide-show {display: none}
-        img {vertical-align: middle;}
+        * {
+            box-sizing: border-box
+        }
+
+        .slide-show {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
 
         .container-slideshow {
             position: relative;
             margin: auto;
-            background-color: #A35CFF;
+            background-color: #6D50EB;
         }
 
         /* Next & previous buttons */
@@ -144,38 +151,38 @@
 
         /* On hover, add a black background color with a little bit see-through */
         .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         /* Caption text */
         .text {
-            color: #f2f2f2;
-            font-size: 15px;
-            padding: 8px 12px;
             position: absolute;
-            bottom: 8px;
+            padding: 8px 12px;
             width: 100%;
+            bottom: 8px;
+            color: #000;
+            font-size: 15px;
             text-align: center;
         }
 
         /* Number text (1/3 etc) */
         .numbertext {
+            position: absolute;
+            padding: 8px 12px;
+            top: 0;
             color: #f2f2f2;
             font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
         }
 
         /* The dots/bullets/indicators */
         .dot {
+            display: inline-block;
             cursor: pointer;
             height: 15px;
             width: 15px;
             margin: 0 2px;
             background-color: #bbb;
             border-radius: 50%;
-            display: inline-block;
             transition: background-color 0.6s ease;
         }
 
@@ -192,23 +199,32 @@
         }
 
         @-webkit-keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
         }
 
         @keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
         }
 
         /* On smaller screens, decrease text size */
 
         @media only screen and (max-width: 300px) {
-            .prev, .next,.text {font-size: 11px}
+            .prev, .next, .text {
+                font-size: 11px
+            }
         }
 
         /*Blog*/
-
         .column {
             float: left;
             width: 33.3%;
@@ -224,66 +240,60 @@
         }
 
         .active,
+        .title {
+            color: #000;
+        }
 
-            .title {
-                color: grey;
-            }
+        .button {
+            display: inline-block;
+            padding: 8px;
+            border: none;
+            outline: 0;
+            background-color: #000;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
 
-            .button {
-                border: none;
-                outline: 0;
-                display: inline-block;
-                padding: 8px;
-                color: white;
-                background-color: #000;
-                text-align: center;
-                cursor: pointer;
-                width: 100%;
-            }
+        .button:hover {
+            background-color: #555;
+        }
 
-            .button:hover {
-                background-color: #555;
-            }
-
-        /* Facebook Page link */
+        /* Facebook Page */
         .facebook {
             padding: 50px;
-            text-align: center;
             background-color: #4F58FF;
-            color: white;
+            text-align: left;
+            color: #000;
         }
 
         /* Instagram */
         .instagram {
             padding: 50px;
-            text-align: center;
             background-color: #EF81FF;
-            color: white;
+            text-align: left;
+            color: #000;
         }
+
         /*Search bar*/
+        .containter-search {
+            padding: 50px;
+            background-color: #B952EB;
+            text-align: left;
+            color: #000;
+        }
 
         form.example input[type=text] {
-            padding: 10px;
-            font-size: 17px;
-            border: 1px solid grey;
             float: left;
             width: 30%;
+            padding: 10px;
             background: #f1f1f1;
+            font-size: 17px;
+            border: 1px solid grey;
         }
 
         /* Style the submit button */
-        form.example button {
-            float: left;
-            width: 20%;
-            padding: 10px;
-            background: #000000;
-            color: white;
-            font-size: 17px;
-            border: 1px solid grey;
-            border-left: none; /* Prevent double borders */
-            cursor: pointer;
-        }
-
         form.example button:hover {
             background: #000000;
         }
@@ -295,270 +305,292 @@
             display: table;
         }
 
+        /*Search bar*/
+        .footer {
+            padding: 50px;
+            text-align: left;
+            background-color: #A35CFF;
+            color: #000;
+        }
+
     </style>
 </head>
 
 <body>
 
-<div class="header">
-    <div>
-        <img id="logo" src="header/hi.jpg" alt="IT-Sanda">
-        <span>Test</span>
+    <div class="header">
+        <div>
+            <img id="logo" src="header/hi.jpg" alt="IT-Sanda">
+            <span>Test</span>
+        </div>
+
+        <div class="topnav" id="header-links">
+            <a class="active"
+               href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_homepage.html?_ijt=kri050rl4hacliis39dlo0s6e4">HOMEPAGE</a>
+            <a class="active"
+               href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_about_project.html?_ijt=mhbmod29nu4d0cp0qds1r36dcl">ABOUT
+                PROJECT</a>
+            <a class="active"
+               href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5">BLOG</a>
+            <a class="active"
+               href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_community.html?_ijt=qf4sj4g53mvg0tebsms57s1i4k">COMMUNITY</a>
+        </div>
     </div>
 
-    <div class="topnav" id="header-links">
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_homepage.html?_ijt=kri050rl4hacliis39dlo0s6e4">HOMEPAGE</a>
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_about_project.html?_ijt=mhbmod29nu4d0cp0qds1r36dcl">ABOUT PROJECT</a>
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5">BLOG</a>
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_community.html?_ijt=qf4sj4g53mvg0tebsms57s1i4k">COMMUNITY</a>
+    <div class="about-section">
+        <h1>About Page</h1>
+        <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
+        <img src="blog_images/womenintech.png" style="width:60%" alt="Digital_platform">
     </div>
-</div>
 
-<div class="about-section">
-    <h1>About Page</h1>
-    <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
-    <p>Lose yourself in finding this!</p>
-</div>
+    <div class="quote">
+        <h1>Quote</h1>
+        <p>Test</p>
+        <p>Test</p>
+    </div>
 
-<div class="quote">
-    <h1>Quote</h1>
-    <p>Test</p>
-    <p>Test</p>
-</div>
+    <div class="about-me-section">
+        <h1>About Me</h1>
+        <p>Let me introduce myself. :) </p>
+        <p>My name is Sanda blah-blah</p>
+    </div>
 
-<div class="about-me-section">
-    <h1>About Me</h1>
-    <p>Let me introduce myself. :) </p>
-    <p>My name is Sanda blah-blah</p>
-</div>
+    <div class="container-service">
+        <h2 style="text-align:center">Are you interested in...?</h2>
+        <div class="row-service">
+            <div class="column-service">
+                <div class="card-service">
+                    <img src="images/qa.jpg" alt="QA" style="width: 100%">
+                    <div class="container-service">
+                        <h3>QA & Testing</h3>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>
+                            <button class="button">Contact</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-    <h2 style="text-align:center">Are you interested in...?</h2>
-    <div class="row-service">
-        <div class="column-service">
-            <div class="card-service">
-                <img src="images/qa.jpg" alt="QA" style="width: 100%">
-                <div class="container-service">
-                    <h3>QA & Testing</h3>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <div class="column-service">
+                <div class="card-service">
+                    <img src="images/translations.JPG" alt="Translations" style="width: 100%">
+                    <div class="container-service">
+                        <h3>Translations</h3>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>
+                            <button class="button">Contact</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-service">
+                <div class="card-service">
+                    <img src="images/marketing.JPG" alt="Marketing" style="width: 100%">
+                    <div class="container-service">
+                        <h3>Content Marketing & Content Management</h3>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>
+                            <button class="button">Contact</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-service">
+                <div class="card-service">
+                    <img src="images/projectmanagement.JPG" alt="Project Management" style="width: 100%">
+                    <div class="container-service">
+                        <h3>Project Management</h3>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>
+                            <button class="button">Contact</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-slideshow">
+
+        <div class="slide-show fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="locals/barcelona.png" style="width:100%" alt="Barcelona">
+            <div class="text">Barcelona</div>
+        </div>
+
+        <div class="slide-show fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="locals/ciocana.png" style="width:100%" alt="Chisinau">
+            <div class="text">Chisinau</div>
+        </div>
+
+        <div class="slide-show fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="locals/odessa.jpg" style="width:100%" alt="Odessa">
+            <div class="text">Odessa</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <h2 style="text-align:center">Check the blog:</h2>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="blog_images/veronica.png" alt="QA" style="width:90%">
+                <div class="container">
+                    <h2>QA</h2>
+                    <p class="title">Test</p>
                     <p>
-                        <button class="button">Contact</button>
+                        <button class="button">BLOG</button>
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="column-service">
-            <div class="card-service">
-                <img src="images/translations.JPG" alt="Translations" style="width: 100%">
-                <div class="container-service">
-                    <h3>Translations</h3>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div class="column">
+            <div class="card">
+                <img src="blog_images/blair.png" alt="Project management" style="width:99%">
+                <div class="container">
+                    <h2>Project management</h2>
+                    <p class="title">Test</p>
                     <p>
-                        <button class="button">Contact</button>
+                        <button class="button">BLOG</button>
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="column-service">
-            <div class="card-service">
-                <img src="images/marketing.JPG" alt="Marketing" style="width: 100%">
-                <div class="container-service">
-                    <h3>Content Marketing & Content Management</h3>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div class="column">
+            <div class="card">
+                <img src="blog_images/andy.jpeg" alt="Marketing" style="width:99%">
+                <div class="container">
+                    <h2>Marketing</h2>
+                    <p class="title">Test</p>
                     <p>
-                        <button class="button">Contact</button>
+                        <button class="button">BLOG</button>
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="column-service">
-            <div class="card-service">
-                <img src="images/projectmanagement.JPG" alt="Project Management" style="width: 100%">
-                <div class="container-service">
-                    <h3>Project Management</h3>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <div class="column">
+            <div class="card">
+                <img src="blog_images/gina.jpg" alt="Tech News" style="width: 100%">
+                <div class="container">
+                    <h2>Tech News</h2>
+                    <p class="title">Test</p>
                     <p>
-                        <button class="button">Contact</button>
+                        <button class="button">BLOG</button>
                     </p>
                 </div>
             </div>
         </div>
 
-    </div>
-</div>
+        <div class="column">
+            <div class="card">
+                <img src="blog_images/skye.jpg" alt="Tech Events" style="width:100%">
+                <div class="container">
+                    <h2>Tech Events</h2>
+                    <p class="title">Test</p>
+                    <p>
+                        <button class="button">BLOG</button>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-<div class="container-slideshow">
-
-    <div class="slide-show fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="locals/barcelona.png" style="width:100%" alt="Barcelona">
-        <div class="text">Barcelona</div>
-    </div>
-
-    <div class="slide-show fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="locals/ciocana.png" style="width:100%" alt="Chisinau">
-        <div class="text">Chisinau</div>
-    </div>
-
-    <div class="slide-show fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="locals/odessa.jpg" style="width:100%" alt="Odessa">
-        <div class="text">Odessa</div>
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-
-<div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
-<h2 style="text-align:center">Check the blog:</h2>
-<div class="row">
-    <div class="column">
-        <div class="card">
-            <img src="blog_images/veronica.png" alt="QA" style="width:90%">
-            <div class="container">
-                <h2>QA</h2>
-                <p class="title">Test</p>
-                <p>
-                    <button class="button">BLOG</button>
-                </p>
+        <div class="column">
+            <div class="card">
+                <img src="blog_images/elle.jpg" alt="Empowerment" style="width:99.5%">
+                <div class="container">
+                    <h2>Empowerment</h2>
+                    <p class="title">Test</p>
+                    <p>
+                        <button class="button">BLOG</button>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="column">
-        <div class="card">
-            <img src="blog_images/blair.png" alt="Project management" style="width:99%">
-            <div class="container">
-                <h2>Project management</h2>
-                <p class="title">Test</p>
-                <p>
-                    <button class="button">BLOG</button>
-                </p>
-            </div>
-        </div>
+    <div class="facebook">
+        <h1>Facebook Page</h1>
+        <p>https://www.facebook.com/sandaitsanda/</p>
     </div>
 
-    <div class="column">
-        <div class="card">
-            <img src="blog_images/andy.jpeg" alt="Marketing" style="width:99%">
-            <div class="container">
-                <h2>Marketing</h2>
-                <p class="title">Test</p>
-                <p>
-                    <button class="button">BLOG</button>
-                </p>
-            </div>
-        </div>
+    <div class="instagram">
+        <h1>Instagram Grid</h1>
+        <p>https://www.instagram.com/it_sanda/</p>
     </div>
 
-    <div class="column">
-        <div class="card">
-            <img src="blog_images/gina.jpg" alt="Tech News" style="width: 100%">
-            <div class="container">
-                <h2>Tech News</h2>
-                <p class="title">Test</p>
-                <p>
-                    <button class="button">BLOG</button>
-                </p>
-            </div>
-        </div>
+    <div class="containter-search">
+        <h1>Search bar</h1>
+        <form class="example" action="action_page.php">
+            <label>
+                <input type="text" placeholder="Search." name="search">
+            </label>
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
     </div>
 
-    <div class="column">
-        <div class="card">
-            <img src="blog_images/skye.jpg" alt="Tech Events" style="width:100%">
-            <div class="container">
-                <h2>Tech Events</h2>
-                <p class="title">Test</p>
-                <p>
-                    <button class="button">BLOG</button>
-                </p>
-            </div>
-        </div>
+    <div class="footer">
+        <h1>The footer element</h1>
+
+        <footer>
+            <p>IT-Sanda</p>
+            <p>Contact information: </p>
+        </footer>
     </div>
 
-    <div class="column">
-        <div class="card">
-            <img src="blog_images/elle.jpg" alt="Empowerment" style="width:99.5%">
-            <div class="container">
-                <h2>Empowerment</h2>
-                <p class="title">Test</p>
-                <p>
-                    <button class="button">BLOG</button>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+<script>
 
-<div class="facebook">
-    <h1>Facebook Page</h1>
-    <p>https://www.facebook.com/sandaitsanda/</p>
-</div>
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-<div class="instagram">
-    <h1>Instagram Grid</h1>
-    <p>https://www.instagram.com/it_sanda/</p>
-</div>
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
 
-    <h1>Search bar</h1>
-    <form class="example" action="action_page.php">
-        <label>
-            <input type="text" placeholder="Search." name="search">
-        </label>
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
+    setInterval(function () {
+        plusSlides(slideIndex + 1);
+    }, 5000);
 
-    <h1>The footer element</h1>
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
 
-    <footer>
-        <p>IT-Sanda</p>
-        <p>Contact information: </p>
-    </footer>
-
-    <script>
-
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide-show");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
         }
-
-        setInterval(function () {
-            plusSlides(slideIndex + 1);
-        }, 5000);
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
+        if (n < 1) {
+            slideIndex = slides.length
         }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slide-show");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
 
-    </script>
+</script>
 </body>
 </html>
