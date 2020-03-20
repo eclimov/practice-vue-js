@@ -13,7 +13,13 @@
 
     function generateRandomInt() {
         let randomNum = Math.floor(Math.random()*10);
-        console.log(`${randomNum} is ${isEven(randomNum) ? 'Even' : 'Odd'}`);
+        console.log(`Random integer: ${randomNum}`);
+        return randomNum;
+    }
+
+    function generateRandomIntInRange(min, max) {
+        let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(`Random integer in range ${min} and ${max}: ${randomNum}`);
         return randomNum;
     }
 
@@ -22,9 +28,8 @@
 
     }
 
-    function generateRandomIntInRange(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    let randomNum = generateRandomInt();
+    console.log(`${randomNum} is ${isEven(randomNum) ? 'Even' : 'Odd'}`);
 
     function getTheBestDistrict() {
         let districts = [
