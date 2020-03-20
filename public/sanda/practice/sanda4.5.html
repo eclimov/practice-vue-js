@@ -53,8 +53,11 @@
                 'Buiucani',
                 'Botanica'
             ];
-            return districts[generateRandomIntInRange(0, length)];
+
+            let myVar = districts.length;
+            return districts[generateRandomIntInRange(0, myVar)];
         }
+
         let thebestDistrict = getTheBestDistrict();
         console.log(thebestDistrict);
 
