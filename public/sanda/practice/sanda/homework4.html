@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homework3</title>
+
+    <style>
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 16px;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #D92E1E;
+        }
+
+        tr:nth-child(even) {
+            background-color: #3B668C;
+        }
+
+        tr:hover {
+            background-color: #F2C53D;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+    /* List of flowers */
+    function getFlower() {
+        let flowers = [
+            'Castor oil plant Palm of Christ',
+            'The poison queen',
+            'Sweetly scented killer',
+            'Dracula’s flower Voodoo lily',
+            'Round leaved Sundew Drosera rotundifolia'
+        ];
+
+        let theRandomFlower = getFlower();
+        console.log(theRandomFlower);
+    }
+
+    /* Function Negate */
+
+    let isStayingIsolatedDuringQuarantine = false;
+    console.log('The citizen is respecting quarantine measure and is staying isolated',
+        isStayingIsolatedDuringQuarantine);
+    function negate() {
+        isStayingIsolatedDuringQuarantine = !isStayingIsolatedDuringQuarantine;
+        console.log('The citizen is respecting quarantine measure and is staying isolated',
+            isStayingIsolatedDuringQuarantine);
+    }
+
+    /* Function printTitle */
+    function generateTitleDate(adjec, nameCharacter) {
+        let adjec = string;
+        let nameCharacter = string;
+        console.log(adj);
+        console.log(nameCharacter);
+    }
+
+    console.log(`$(adj) + 'adventures of' + $(nameCharacter)`);
+
+    /* User Model */
+    function buildUserModel(name, age, gender, eyeColor, hobbies) {
+        let userInfo = {
+            name: Sanda,
+            age: 20,
+            gender: fem,
+            eyeColor: brown,
+            hobbies: hating people
+        };
+            return userInfo;
+        }
+
+    /* Comparison */
+
+    let age = 24;
+    alert(age < 50);
+    </script>
+</body>
+</html>
