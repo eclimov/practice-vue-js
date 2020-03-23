@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
-        /* Header */
+        /* Header - inclusively logo */
         .header {
             display: flex;
             justify-content: space-between;
@@ -16,63 +16,106 @@
         }
 
         #logo {
-            height: 90px;
+            height: 85px;
         }
 
         /* Navigation bar for menu tabs */
         {
             box-sizing: border-box
         }
-        body, html {
+
+        .navigation-bar {
             height: 100%;
             margin: 0;
-            font-family: Laila,serif;
+            line-height: initial;
+            font-family: Laila, serif;
         }
 
-        .topnav {
-            overflow: hidden;
-        }
-
-        .topnav a {
+        .tabnav {
             float: left;
-            padding: 28px 16px;
-            color: #af7ca0;
-            text-align: center;
-            text-decoration: none;
+            margin: 0;
+            border: none;
+            padding: 15px;
+            background-color: #af7ca0;
+            color: black;
+            cursor: pointer;
+            font-family: Laila, serif;
             font-size: 20px;
         }
 
-        .topnav a.active {
+        .tabnav:hover {
             background-color: #af7ca0;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            height: 100%;
             color: black;
+            display: none;
+            padding: 0 15px;
+        }
+
+        #Homepage {
+            background-color: #af7ca0;
+        }
+
+        #About {
+            background-color: #af7ca0;
+        }
+
+        #Blog {
+            background-color: #af7ca0;
+        }
+
+        #Community {
+            background-color: #af7ca0;
+        }
+
+        #Podcast {
+            background-color: #af7ca0;
+        }
+
+        /* Style for whole page */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Laila, serif;
         }
 
         /* Style for all titles */
         h1 {
             margin: 0;
             text-align: center;
-            font-family: Laila,serif;
+            font-family: Laila, serif;
         }
 
         h2 {
             margin: 0;
             text-align: left;
-            font-family: Laila,serif;
+            font-family: Laila, serif;
         }
 
         h3 {
             margin: 0;
             text-align: left;
-            font-family: Laila,serif;
+            font-family: Laila, serif;
         }
 
         h4 {
             margin: 0;
             text-align: left;
-            font-family: Laila,serif;
+            font-family: Laila, serif;
         }
 
-        /* Section with information about the project / website */
+        /* Welcome section */
+        .welcome {
+            padding: 50px;
+            background-color: #f0d7e9;
+            color: black;
+            text-align: center;
+        }
+
+        /* Section with information about this project / website */
         .about-section {
             padding: 50px;
             background-color: #f0d7e9;
@@ -264,7 +307,7 @@
 
         /*Blog*/
         .container-blog {
-            background-color:#f0d7e9;
+            background-color: #f0d7e9;
         }
 
         .column {
@@ -320,7 +363,7 @@
         /*Search bar*/
         .containter-search {
             padding: 50px;
-            background-color:  #f0d7e9;
+            background-color: #f0d7e9;
             text-align: left;
             color: #000;
         }
@@ -361,34 +404,52 @@
 
     <div class="header">
         <div>
-            <img id="logo" src="header/hi.jpg" alt="IT-Sanda">
+            <img id="logo" src="header/hi.jpg" alt="logo-it-sanda">
             <span>Test</span>
         </div>
 
-        <div class="topnav" id="header-links">
-            <a class="active"
-               href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_homepage.html?_ijt=kri050rl4hacliis39dlo0s6e4">HOMEPAGE</a>
-            <a class="active"
-               href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_about_project.html?_ijt=mhbmod29nu4d0cp0qds1r36dcl">ABOUT
-                PROJECT</a>
-            <a class="active"
-               href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5">BLOG</a>
-            <a class="active"
-               href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_community.html?_ijt=qf4sj4g53mvg0tebsms57s1i4k">COMMUNITY</a>
-            <a class="active"
-               href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_homepage.html?_ijt=kri050rl4hacliis39dlo0s6e4">PODCAST</a>
+        <div class="navigation-bar" id="header-links">
+            <button class="tabnav" onclick="openPage('Homepage', this, '#af7ca0')" id="defaultOpen"><b>HOMEPAGE</b></button>
+            <button class="tabnav" onclick="openPage('About', this, '#af7ca0')"><b>ABOUT PROJECT</b></button>
+            <button class="tabnav" onclick="openPage('Blog', this, '#af7ca0')"><b>BLOG</b></button>
+            <button class="tabnav" onclick="openPage('Community', this, '#af7ca0')"><b>COMMUNITY</b></button>
+            <button class="tabnav" onclick="openPage('Podcast', this, '#af7ca0')"><b>PODCAST</b></button>
+
+            <div id="Homepage" class="tabcontent">
+                <p>Home is where the heart is..</p>
+            </div>
+
+            <div id="About" class="tabcontent">
+                <p>Some news this fine day!</p>
+            </div>
+
+            <div id="Blog" class="tabcontent">
+                <p>Get in touch, or swing by for a cup of coffee.</p>
+            </div>
+
+            <div id="Community" class="tabcontent">
+                <p>Who we are and what we do.</p>
+            </div>
+
+            <div id="Podcast" class="tabcontent">
+                <p>Have fun!</p>
+            </div>
         </div>
     </div>
 
-    <div class="about-section">
-        <h1><b>About Page</b></h1>
+    <div class="welcome">
+        <h1><b>Welcome!</b></h1>
+        <img src="blog_images/womenintech.png" style="width:60%" alt="welcome-page">
+    </div>
+
+      <div class="about-section">
+        <h1><b>IT-Sanda gives you...</b></h1>
         <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
-        <img src="blog_images/womenintech.png" style="width:60%" alt="Digital_platform">
     </div>
 
     <div class="quote">
         <h1><b>Quote</b></h1>
-        <img src="blog_images/growth.jpg" style="width:20%" alt="Digital_platform">
+        <img src="blog_images/growth.jpg" style="width:20%" alt="quote">
     </div>
 
     <div class="about-me-section">
@@ -401,7 +462,7 @@
                 <p style="text-align: right">My name is Sanda blah-blah</p>
             </div>
             <div style="text-align: left" class="column-about-me">
-                <img src="blog_images/aboutme.jpg" style="width:20%" alt="Digital_platform">
+                <img src="blog_images/aboutme.jpg" style="width:20%" alt="about-me">
             </div>
         </div>
     </div>
@@ -411,14 +472,14 @@
         <div class="row-service">
             <div class="column-service">
                 <div class="card-service">
-                    <img src="images/qa.jpg" alt="QA" style="width: 100%">
+                    <img src="images/qa.jpg" alt="qa" style="width: 100%">
                     <div class="container-service">
                         <h2 style="text-align: center"><b>QA & Testing</b></h2>
                         <ul>
-                        <li><h4>Functional Testing</h4></li>
-                        <li><h4>Regression Testing</h4></li>
-                        <li><h4>Test Case Plan & Design</h4></li>
-                        <li><h4>Testing for Web & Mobile</h4></li>
+                            <li><h4>Functional Testing</h4></li>
+                            <li><h4>Regression Testing</h4></li>
+                            <li><h4>Test Case Plan & Design</h4></li>
+                            <li><h4>Testing for Web & Mobile</h4></li>
                         </ul>
                         <p>
                             <button class="button">Contact</button>
@@ -429,7 +490,7 @@
 
             <div class="column-service">
                 <div class="card-service">
-                    <img src="images/translations.JPG" alt="Translations" style="width: 100%">
+                    <img src="images/translations.JPG" alt="translations" style="width: 100%">
                     <div class="container-service">
                         <h2 style="text-align: center"><b>Translations</b></h2>
                         <ul>
@@ -447,7 +508,7 @@
 
             <div class="column-service">
                 <div class="card-service">
-                    <img src="images/marketing.JPG" alt="Marketing" style="width: 100%">
+                    <img src="images/marketing.JPG" alt="marketing" style="width: 100%">
                     <div class="container-service">
                         <h3 style="text-align: center"><b>Content Marketing & Content Management</b></h3>
                         <ul>
@@ -465,7 +526,7 @@
 
             <div class="column-service">
                 <div class="card-service">
-                    <img src="images/projectmanagement.JPG" alt="Project Management" style="width: 100%">
+                    <img src="images/projectmanagement.JPG" alt="project-management" style="width: 100%">
                     <div class="container-service">
                         <h2 style="text-align: center"><b>Project Management</b></h2>
                         <ul>
@@ -488,19 +549,19 @@
 
         <div class="slide-show fade">
             <div class="numbertext">1 / 3</div>
-            <img src="locals/barcelona.png" style="width:100%" alt="Barcelona">
+            <img src="locals/barcelona.png" style="width:100%" alt="barcelona">
             <div class="text">Barcelona</div>
         </div>
 
         <div class="slide-show fade">
             <div class="numbertext">2 / 3</div>
-            <img src="locals/ciocana.png" style="width:100%" alt="Chisinau">
+            <img src="locals/ciocana.png" style="width:100%" alt="chisinau">
             <div class="text">Chisinau</div>
         </div>
 
         <div class="slide-show fade">
             <div class="numbertext">3 / 3</div>
-            <img src="locals/odessa.jpg" style="width:100%" alt="Odessa">
+            <img src="locals/odessa.jpg" style="width:100%" alt="odessa">
             <div class="text">Odessa</div>
         </div>
 
@@ -520,11 +581,11 @@
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <img src="blog_images/veronica.png" alt="QA" style="width:90%">
+                    <img src="blog_images/veronica.png" alt="qa-blog-category" style="width:90%">
                     <div class="container">
                         <h2>QA</h2>
-                        <p class="title" style="font-size: 18px">A QA knowledge hub that hosts articles about anything related to testing.
-                            <br>
+                        <p class="title" style="font-size: 18px">A QA knowledge hub that hosts articles about anything
+                            related to testing.
                             <br>
                         </p>
                         <p>
@@ -536,10 +597,11 @@
 
             <div class="column">
                 <div class="card">
-                    <img src="blog_images/blair.png" alt="Project management" style="width:99%">
+                    <img src="blog_images/blair.png" alt="qa-project-management-category" style="width:99%">
                     <div class="container">
                         <h2>Project management</h2>
-                        <p class="title" style="font-size: 18px">Source of new techniques and best practices to optimize the work processes and project cycles.</p>
+                        <p class="title" style="font-size: 18px">Source of new techniques and best practices to optimize the
+                            work processes and project cycles.</p>
                         <p>
                             <button class="button">BLOG</button>
                         </p>
@@ -549,10 +611,11 @@
 
             <div class="column">
                 <div class="card">
-                    <img src="blog_images/andy.jpeg" alt="Marketing" style="width:99%">
+                    <img src="blog_images/andy.jpeg" alt="marketing-blog-category" style="width:99%">
                     <div class="container">
                         <h2>Marketing</h2>
-                        <p class="title" style="font-size: 18px">Information that helps in staying updated on everything that’s happening in the marketing industry worldwide.</p>
+                        <p class="title" style="font-size: 18px">Information that helps in staying updated on everything
+                            that’s happening in the marketing industry worldwide.</p>
                         <p>
                             <button class="button">BLOG</button>
                         </p>
@@ -562,10 +625,11 @@
 
             <div class="column">
                 <div class="card">
-                    <img src="blog_images/gina.jpg" alt="Tech News" style="width: 100%">
+                    <img src="blog_images/gina.jpg" alt="tech-news-blog-category" style="width: 100%">
                     <div class="container">
                         <h2>Tech News</h2>
-                        <p class="title" style="font-size: 18px">The latest tech news about the world's best (or worst) hardware / software and more.</p>
+                        <p class="title" style="font-size: 18px">The latest tech news about the world's best (or worst)
+                            hardware / software and more.</p>
                         <p>
                             <button class="button">BLOG</button>
                         </p>
@@ -575,10 +639,11 @@
 
             <div class="column">
                 <div class="card">
-                    <img src="blog_images/skye.jpg" alt="Tech Events" style="width:100%">
+                    <img src="blog_images/skye.jpg" alt="tech-events-blog-category" style="width:100%">
                     <div class="container">
                         <h2>Tech Events</h2>
-                        <p class="title" style="font-size: 18px">See how event tech is developing and what other professionals do and think.</p>
+                        <p class="title" style="font-size: 18px">See how event tech is developing and what other
+                            professionals do and think.</p>
                         <p>
                             <button class="button">BLOG</button>
                         </p>
@@ -588,10 +653,11 @@
 
             <div class="column">
                 <div class="card">
-                    <img src="blog_images/elle.jpg" alt="Empowerment" style="width:99.5%">
+                    <img src="blog_images/elle.jpg" alt="empowerment-blog-category" style="width:99.5%">
                     <div class="container">
-                        <h2>Empowerment</h2>
-                        <p class="title" style="font-size: 18px">Achieve your success and do what you love - every single day.</p>
+                        <h2>Empowerment & Motivation</h2>
+                        <p class="title" style="font-size: 18px">Achieve your success and do what you love - every single
+                            day.</p>
                         <p>
                             <button class="button">BLOG</button>
                         </p>
@@ -603,12 +669,12 @@
 
     <div class="facebook">
         <h1><b>Facebook Page</b></h1>
-        <img src="social_media/facebook.png" alt="Facebook" style="width:50%">
+        <img src="social_media/facebook.png" alt="facebook" style="width:50%">
     </div>
 
     <div class="instagram">
         <h1><b>Instagram Grid</b></h1>
-        <img src="social_media/instagram.png" alt="Instagram" style="width:50%">
+        <img src="social_media/instagram.png" alt="instagram" style="width:50%">
     </div>
 
     <div class="containter-search">
@@ -628,6 +694,22 @@
     </div>
 
 <script>
+    function openPage(pageName, elmnt, color) {
+        let i, tabcontent, tabnav;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tabnav = document.getElementsByClassName("tablink");
+        for (i = 0; i < tabnav.length; i++) {
+            tabnav[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
 
     let slideIndex = 1;
     showSlides(slideIndex);
