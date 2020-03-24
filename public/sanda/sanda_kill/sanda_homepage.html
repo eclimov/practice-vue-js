@@ -162,30 +162,60 @@
         {
             box-sizing: border-box;
         }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
 
-        .container-service {
-            position: relative;
+        .section-service {
             background-color: #61659c;
         }
 
         .column-service {
             float: left;
-            width: 40%;
-            padding: 0 8px;
-            margin-left: 180px;
-            background-color: #af7ca0;
+            width: 25%;
             margin-bottom: 16px;
+            padding: 0 8px;
+            background-color: #61659c;
+
         }
 
-        .card-service {
-            width: 500px;
-            margin: 10px 10px;
+        @media screen and (max-width: 650px) {
+            .column-service {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .container-service {
+            padding: 0 16px;
+            background-color: #af7ca0;
         }
 
         .container-service::after, .row-service::after {
             content: "";
             clear: both;
             display: table;
+            background-color: #af7ca0;
+        }
+
+        .title {
+            color: grey;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
         }
 
         /* Slide-show*/
@@ -468,81 +498,73 @@
     </div>
 </div>
 
-<div class="container-service">
-    <h1><b>Are you interested in...?</b></h1>
+<div class="section-service">
+    <h2><b>Are you interested in...?</b></h2>
+    <br>
     <div class="row-service">
         <div class="column-service">
             <div class="card-service">
-                <img src="images/qa.jpg" alt="qa" style="width: 100%">
+                <img src="images/qa.jpg" alt="qa" style="width:100%">
                 <div class="container-service">
-                    <h2 style="text-align: center"><b>QA & Testing</b></h2>
+                    <p class="title"><h2 style="text-align: center"><b>QA & Testing</b></h2>
                     <ul>
                         <li><h4>Functional Testing</h4></li>
                         <li><h4>Regression Testing</h4></li>
                         <li><h4>Test Case Plan & Design</h4></li>
                         <li><h4>Testing for Web & Mobile</h4></li>
                     </ul>
-                    <p>
-                        <button class="button">Contact</button>
-                    </p>
+                    <p><button class="button">Contact</button></p>
                 </div>
             </div>
         </div>
 
         <div class="column-service">
             <div class="card-service">
-                <img src="images/translations.JPG" alt="translations" style="width: 100%">
+                <img src="images/translations.JPG" alt="translations" style="width:100%">
                 <div class="container-service">
-                    <h2 style="text-align: center"><b>Translations</b></h2>
+                    <p class="title"><h2 style="text-align: center"><b>Translations</b></h2>
                     <ul>
                         <li><h4>Romanian</h4></li>
                         <li><h4>English</h4></li>
                         <li><h4>French</h4></li>
                         <li><h4>Russian</h4></li>
                     </ul>
-                    <p>
-                        <button class="button">Contact</button>
-                    </p>
+                    <p><button class="button">Contact</button></p>
                 </div>
             </div>
         </div>
 
         <div class="column-service">
             <div class="card-service">
-                <img src="images/marketing.JPG" alt="marketing" style="width: 100%">
+                <img src="images/marketing.JPG" alt="content-marketing" style="width:100%">
                 <div class="container-service">
-                    <h3 style="text-align: center"><b>Content Marketing & Content Management</b></h3>
+                    <p class="title"><h2 style="text-align: center"><b>Content Marketing</b></h2>
                     <ul>
                         <li><h4>Blog Writing</h4></li>
                         <li><h4>Content Writing</h4></li>
                         <li><h4>Technical & Business Writing</h4></li>
                         <li><h4>Copywriting</h4></li>
                     </ul>
-                    <p>
-                        <button class="button">Contact</button>
-                    </p>
+                    <p><button class="button">Contact</button></p>
                 </div>
             </div>
         </div>
 
         <div class="column-service">
             <div class="card-service">
-                <img src="images/projectmanagement.JPG" alt="project-management" style="width: 100%">
+                <img src="images/projectmanagement.JPG" alt="project-management" style="width:100%">
                 <div class="container-service">
-                    <h2 style="text-align: center"><b>Project Management</b></h2>
+                    <p class="title"><h2 style="text-align: center"><b>Project Management</b></h2>
                     <ul>
                         <li><h4>Business Analysis</h4></li>
                         <li><h4>Internet Research</h4></li>
                         <li><h4>Project Planning</h4></li>
                         <li><h4>Report Writing</h4></li>
                     </ul>
-                    <p>
-                        <button class="button">Contact</button>
-                    </p>
+                    <p><button class="button">Contact</button></p>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 

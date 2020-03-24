@@ -3,88 +3,138 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {font-family: Arial;}
-
-        /* Style the tab */
-        .tabnav {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
+        html {
+            box-sizing: border-box;
         }
 
-        /* Style the buttons inside the tab */
-        .tabnav button {
-            background-color: inherit;
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .section-service {
+            background-color: #61659c;
+        }
+
+        .column-service {
             float: left;
+            width: 25%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+            background-color: #61659c;
+
+        }
+
+        @media screen and (max-width: 650px) {
+            .column-service {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .container-service {
+            padding: 0 16px;
+            background-color: #af7ca0;
+        }
+
+        .container-service::after, .row-service::after {
+            content: "";
+            clear: both;
+            display: table;
+            background-color: #af7ca0;
+        }
+
+        .title {
+            color: grey;
+        }
+
+        .button {
             border: none;
-            outline: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
             cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
+            width: 100%;
         }
 
-        /* Change background color of buttons on hover */
-        .tabnav button:hover {
-            background-color: #ddd;
-        }
-
-        /* Create an active/current tablink class */
-        .tabnav button.active {
-            background-color: #ccc;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-top: none;
+        .button:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
 
-<h2>Tabs</h2>
-<p>Click on the buttons inside the tabbed menu:</p>
+<div class="section-service">
+<h2><b>Are you interested in...?</b></h2>
+<br>
+<div class="row-service">
+    <div class="column-service">
+        <div class="card-service">
+            <img src="images/qa.jpg" alt="qa" style="width:100%">
+            <div class="container-service">
+                <p class="title"><h2 style="text-align: center"><b>QA & Testing</b></h2>
+                <ul>
+                    <li><h4>Functional Testing</h4></li>
+                    <li><h4>Regression Testing</h4></li>
+                    <li><h4>Test Case Plan & Design</h4></li>
+                    <li><h4>Testing for Web & Mobile</h4></li>
+                </ul>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
 
-<div class="tabnav">
-    <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-    <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    <div class="column-service">
+        <div class="card-service">
+            <img src="images/translations.JPG" alt="translations" style="width:100%">
+            <div class="container-service">
+                <p class="title"><h2 style="text-align: center"><b>Translations</b></h2>
+                    <ul>
+                        <li><h4>Romanian</h4></li>
+                        <li><h4>English</h4></li>
+                        <li><h4>French</h4></li>
+                        <li><h4>Russian</h4></li>
+                    </ul>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column-service">
+        <div class="card-service">
+            <img src="images/marketing.JPG" alt="content-marketing" style="width:100%">
+            <div class="container-service">
+                <p class="title"><h2 style="text-align: center"><b>Content Marketing</b></h2>
+                <ul>
+                    <li><h4>Blog Writing</h4></li>
+                    <li><h4>Content Writing</h4></li>
+                    <li><h4>Technical & Business Writing</h4></li>
+                    <li><h4>Copywriting</h4></li>
+                </ul>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column-service">
+        <div class="card-service">
+            <img src="images/projectmanagement.JPG" alt="project-management" style="width:100%">
+            <div class="container-service">
+                <p class="title"><h2 style="text-align: center"><b>Project Management</b></h2>
+                <ul>
+                    <li><h4>Business Analysis</h4></li>
+                    <li><h4>Internet Research</h4></li>
+                    <li><h4>Project Planning</h4></li>
+                    <li><h4>Report Writing</h4></li>
+                </ul>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div id="London" class="tabcontent">
-    <h3>London</h3>
-    <p>London is the capital city of England.</p>
 </div>
-
-<div id="Paris" class="tabcontent">
-    <h3>Paris</h3>
-    <p>Paris is the capital of France.</p>
-</div>
-
-<div id="Tokyo" class="tabcontent">
-    <h3>Tokyo</h3>
-    <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<script>
-    function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-</script>
 
 </body>
 </html>
-
