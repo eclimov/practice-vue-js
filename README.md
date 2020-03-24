@@ -68,3 +68,16 @@ Style your page (including background color and text color) with colors of palet
     5. Use palette when picking colors
 2. Create pull request, where source branch is ‘<username>-hw3’, and target branch is ‘master’ 
 3. Follow the reviewer's suggestions (if any) until the branch is merged
+
+## Homework4
+Create branch ‘<username>-hw4’. Create ‘public/<username>/homework4.html’ and make the following changes:
+Update 'README.md' with task of this homework
+Represent data of all flowers from previous homework as combination of data types (array, object, etc), assign it to a variable and print in console (no need to format output, - just print the value as it is)
+Create a function ‘negate’ that receives a boolean argument, negates it and returns the result
+Create a function ‘printTitle(adjective, characterName)’, which prints the following text in console: ‘<adjective> adventures of <name of character>.’
+Create a function ‘buildUserModel(name, age, gender, eyeColor, hobbies)’, that returns an object that contains all of data passed as arguments
+Create a function ‘compare(a, b)’ that receives 2 numeric values and prints the following (replace the placeholders with actual values, accordingly):
+‘<a> > <b>’ in case when the 1st argument is bigger than the 2nd one
+‘<b> < <a>’ in case when the 2nd argument is bigger than the 1st one
+‘<a> = <b>’ in case when the numbers are equal
+Create pull request and follow the reviewer's suggestions (if any) until the branch is merged
