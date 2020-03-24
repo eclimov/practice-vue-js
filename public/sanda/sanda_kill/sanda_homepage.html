@@ -773,6 +773,7 @@
     </div>
 
 <script>
+        /* Function for navigation tabs */
     function openPage(pageName, elmnt, color) {
         let i, tabcontent, tabnav;
         tabcontent = document.getElementsByClassName("tabcontent");
@@ -785,10 +786,28 @@
         }
         document.getElementById(pageName).style.display = "block";
         elmnt.style.backgroundColor = color;
-    }
 
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
+        /* Function for switching to other connected pages */
+        switch(pageName) {
+            case  'About':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_about_project.html?_ijt=mhbmod29nu4d0cp0qds1r36dcl";
+                break;
+            case 'Blog':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
+                break;
+            case 'Community':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
+                break
+            case 'Podcast':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
+                break;
+        }
+        }
+
+        /* Get the element with id="defaultOpen" and make it as default tab from navigation bar */
+        document.getElementById("defaultOpen").click();
+
+        /* Function for slide show */
 
     let slideIndex = 1;
     showSlides(slideIndex);
