@@ -55,6 +55,17 @@ Add button [Hypotenuse](should calculate hypotenuse from values, provided in the
 - Section 5. Pick a palette, make picture of it, put it in the same directory as the HTML file and display it in this section of the page. Add ‘Palette’ title to the image
 Style your page (including background color and text color) with colors of palette you’ve picked
 
+## Practice2  
+
+1. Clone project  
+\<link to some repository in Github>  
+2. Create branch ‘\<username>-pr2’. Make the following changes:  
+a. Update 'README.md' with task of homework 1  
+b. Create folder \<username> in ‘/public’ directory  
+c. Create some test HTML page  
+3. Create pull request, where source branch is ‘\<username>-pr2’, and target branch is ‘master’ 
+
+
 ## Homework3
 1. Create branch ‘<username>-hw3’. Make the following changes:
     1. Update 'README.md' with task of this homework
