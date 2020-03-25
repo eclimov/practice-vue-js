@@ -1,70 +1,148 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        /* Header */
 
+<head>
+    <title>Sanda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        /* Header - inclusively logo */
         .header {
             display: flex;
             justify-content: space-between;
             overflow: hidden;
-            background-color: #f1f1f1;
-            padding: 20px 10px;
+            background-color: #af7ca0;
         }
 
-        .fa {
-            padding: 20px;
-            font-size: 30px;
-            width: 50px;
-            text-align: center;
-            text-decoration: none;
-            margin: 5px 2px;
-        }
-
-        .fa:hover {
-            opacity: 0.7;
-        }
-
-        .fa-facebook {
-            background: #3B5998;
-            color: white;
-        }
-
-        .fa-twitter {
-            background: #55ACEE;
-            color: white;
+        #logo {
+            height: 95px;
         }
 
         /* Navigation bar for menu tabs */
-        .topnav {
-            overflow: hidden;
+        {
+            box-sizing: border-box
         }
 
-        .topnav a {
-            float: left;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .topnav a:hover {
-            background-color: #ddd;
+        .navigation-bar {
+            height: 100%;
+            margin: 0;
+            line-height: initial;
+            font-family: Laila, serif;
+            text-align: right;
             color: black;
         }
 
-        .topnav a.active {
-            background-color: pink;
-            color: white;
+        .tabnav {
+            float: left;
+            margin: 0;
+            border: none;
+            padding: 15px;
+            background-color: #af7ca0;
+            font-family: Laila, serif;
+            text-align: center;
+            font-size: 20px;
+            color: black;
+            cursor: pointer;
         }
 
-        /* Menu tabs */
+        .tabnav:hover {
+            background-color: #af7ca0;
+        }
 
-        #header-links {
-            margin-top: 102px;
+        /* Navigation bar for menu tabs */
+        {
+            box-sizing: border-box
+        }
+
+        .navigation-bar {
+            height: 100%;
+            margin: 0;
+            line-height: initial;
+            font-family: Laila, serif;
+            text-align: right;
+            color: black;
+        }
+
+        .tabnav {
+            float: left;
+            margin: 0;
+            border: none;
+            padding: 15px;
+            background-color: #af7ca0;
+            font-family: Laila, serif;
+            text-align: center;
+            font-size: 20px;
+            color: black;
+            cursor: pointer;
+        }
+
+        .tabnav:hover {
+            background-color: #af7ca0;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            height: 100%;
+            display: none;
+            padding: 0 16px;
+            font-size: 18px;
+            color: black;
+        }
+
+        /* Colors for tabs */
+        #Homepage {
+            background-color: #af7ca0;
+        }
+
+        #About {
+            background-color: #af7ca0;
+        }
+
+        #Blog {
+            background-color: #af7ca0;
+        }
+
+        #Community {
+            background-color: #af7ca0;
+        }
+
+        #Podcast {
+            background-color: #af7ca0;
+        }
+
+        /* Style for whole page */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Laila, serif;
+        }
+
+        /* Style for all titles */
+        h1 {
+            margin: 0;
+            font-family: Laila, serif;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 0;
+            font-family: Laila, serif;
+            text-align: left;
+        }
+
+        h3 {
+            margin: 0;
+            font-family: Laila, serif;
+            text-align: left;
+            color: black;
+        }
+
+        h4 {
+            margin: 0;
+            font-family: Laila, serif;
+            text-align: left;
         }
 
         body {
@@ -139,24 +217,28 @@
     </style>
     <title></title>
 </head>
-<body>
 
+<body>
 <div class="header">
     <div>
-        <h1>SANDA blog</h1>
-        <h6>Sugar</h6>
-        <h6>Spice.</h6>
-        <h6>Nothing nice.</h6>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-twitter"></a>
+        <img id="logo" src="header/hi.jpg" alt="logo-it-sanda">
+        <span>Test</span>
     </div>
 
-    <div class="topnav" id="header-links">
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_menutabs.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5">HOMEPAGE</a>
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_about_project.html?_ijt=mhbmod29nu4d0cp0qds1r36dcl">ABOUT PROJECT</a>
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5">BLOG</a>
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_community.html?_ijt=qf4sj4g53mvg0tebsms57s1i4k">COMMUNITY</a>
+    <div class="navigation-bar" id="header-links">
+        <button class="tabnav" onclick="openPage('Homepage', this, '#af7ca0')"><b>HOMEPAGE</b></button>
+        <button class="tabnav" onclick="openPage('About', this, '#af7ca0')"><b>ABOUT PROJECT</b></button>
+        <button class="tabnav" onclick="openPage('Blog', this, '#af7ca0')" id="defaultOpen"><b>BLOG</b></button>
+        <button class="tabnav" onclick="openPage('Community', this, '#af7ca0')"><b>COMMUNITY</b></button>
+        <button class="tabnav" onclick="openPage('Podcast', this, '#af7ca0')"><b>PODCAST</b></button>
+
+        <div id="Homepage" class="tabcontent"></div>
+        <div id="About" class="tabcontent"></div>
+        <div id="Blog" class="tabcontent">
+            <p><q>There are secret opportunities hidden inside every failure.</q></p>
+        </div>
+        <div id="Community" class="tabcontent"></div>
+        <div id="Podcast" class="tabcontent"></div>
     </div>
 </div>
 
@@ -216,6 +298,44 @@
 <div class="footer">
     <h2>Footer</h2>
 </div>
+
+
+<script>
+    /* Function for navigation tabs */
+    function openPage(pageName, elmnt, color) {
+        let i, tabcontent, tabnav;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tabnav = document.getElementsByClassName("tablink");
+        for (i = 0; i < tabnav.length; i++) {
+            tabnav[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+
+        /* Function for switching to other connected pages */
+        switch(pageName) {
+            case  'Homepage':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_homepage.html?_ijt=rhnl561nussdan0a1fbjg9km5g";
+                break;
+            case 'About':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_about_project.html?_ijt=mhbmod29nu4d0cp0qds1r36dcl";
+                break;
+            case 'Community':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
+                break
+            case 'Podcast':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
+                break;
+        }
+    }
+
+    /* Get the element with id="defaultOpen" and make it as default tab from navigation bar */
+    document.getElementById("defaultOpen").click();
+
+</script>
 
 </body>
 </html>
