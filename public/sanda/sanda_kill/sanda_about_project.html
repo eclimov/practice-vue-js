@@ -86,69 +86,172 @@
             font-family: Laila, serif;
         }
 
-        /* Section with information about the project / website */
+        /* Style for all titles */
+        h1 {
+            margin: 0;
+            text-align: center;
+            font-family: Laila, serif;
+        }
 
+        h2 {
+            margin: 0;
+            text-align: left;
+            font-family: Laila, serif;
+        }
+
+        h3 {
+            margin: 0;
+            text-align: left;
+            font-family: Laila, serif;
+            color: black;
+        }
+
+        h4 {
+            margin: 0;
+            text-align: left;
+            font-family: Laila, serif;
+        }
+
+        /* Welcome section */
+        .welcome {
+            padding: 50px;
+            background-color: #f0d7e9;
+            color: black;
+            text-align: center;
+        }
+
+        /* Section with information about this project / website */
         .about-section {
             padding: 50px;
             text-align: center;
-            background-color: #474e5d;
-            color: white;
+            background-color: #af7ca0;
+            color: black;
         }
 
         /* Section with motivational quote*/
         .quote {
             padding: 50px;
             text-align: center;
-            background-color: indigo;
-            color: white;
+            background-color: #071268;
+            color: #af7ca0;
         }
 
-        /* Section with information about me*/
+        /* Section with information about creator */
         .about-me-section {
             padding: 50px;
             text-align: center;
-            background-color: lightpink;
-            color: white;
+            background-color: #f0d7e9;
+            color: black;
+        }
+
+        .row-about-me {
+            display: -ms-flexbox; /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE 10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+            color: black;
+        }
+
+        .column-about-me {
+            float: left;
+            width: 40%;
+            -ms-flex: 50%; /* IE 10 */
+            flex: 50%;
+            padding: 0 8px;
+            vertical-align: left;
+            color: black;
         }
 
         /* Styles for block with information about freelance services provided */
         {
-            box-sizing: border-box;
+            box-sizing: border-box
+        ;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
         }
 
-        .container-service {
-            position: relative;
+        /* Section which includes freelance services proposed by web-site */
+        .section-service {
+            background-color: #61659c;
         }
 
         .column-service {
             float: left;
-            width: 50%;
+            width: 25%;
             margin-bottom: 16px;
             padding: 0 8px;
+            background-color: #61659c;
+            color: black;
         }
 
-        .card-service {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            width: 500px;
-            margin: 8px;
+        @media screen and (max-width: 650px) {
+            .column-service {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .container-service {
+            padding: 0 16px;
+            background-color: #af7ca0;
+            color: black;
         }
 
         .container-service::after, .row-service::after {
             content: "";
             clear: both;
             display: table;
+            background-color: #af7ca0;
+            color: black;
+        }
+
+        .container-service:hover {
+            background-color: #071268;
+            color: white;
+        }
+
+        .card-service {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: #c34397;
+            color: black;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
         }
 
         /* Slide-show*/
 
-        * {box-sizing: border-box}
-        .slide-show {display: none}
-        img {vertical-align: middle;}
+        * {
+            box-sizing: border-box
+        }
+
+        .slide-show {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
 
         .container-slideshow {
-            max-width: 1000px;
             position: relative;
             margin: auto;
+            background-color: #f0d7e9;
         }
 
         /* Next & previous buttons */
@@ -175,43 +278,43 @@
 
         /* On hover, add a black background color with a little bit see-through */
         .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         /* Caption text */
         .text {
-            color: #f2f2f2;
-            font-size: 15px;
-            padding: 8px 12px;
             position: absolute;
-            bottom: 8px;
+            padding: 8px 12px;
             width: 100%;
+            bottom: 8px;
+            color: #000;
+            font-size: 15px;
             text-align: center;
         }
 
         /* Number text (1/3 etc) */
         .numbertext {
+            position: absolute;
+            padding: 8px 12px;
+            top: 0;
             color: #f2f2f2;
             font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
         }
 
         /* The dots/bullets/indicators */
         .dot {
+            display: inline-block;
             cursor: pointer;
             height: 15px;
             width: 15px;
             margin: 0 2px;
             background-color: #bbb;
             border-radius: 50%;
-            display: inline-block;
             transition: background-color 0.6s ease;
         }
 
         .active, .dot:hover {
-            background-color: #717171;
+            background-color: #A35CFF;;
         }
 
         /* Fading animation */
@@ -223,40 +326,73 @@
         }
 
         @-webkit-keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
         }
 
         @keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
         }
 
         /* On smaller screens, decrease text size */
 
         @media only screen and (max-width: 300px) {
-            .prev, .next,.text {font-size: 11px}
+            .prev, .next, .text {
+                font-size: 11px
+            }
         }
 
-        /*Blog*/
+        /* Blog */
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
 
-        .column {
+        .section-blog {
+            background-color: #61659c;
+        }
+
+        .column-blog {
             float: left;
             width: 33.3%;
             margin-bottom: 16px;
             padding: 0 8px;
+            background-color: #61659c;
+            color: black;
         }
 
-        .row:after {
+        @media screen and (max-width: 650px) {
+            .column-blog {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .container-service {
+            padding: 0 16px;
+            background-color: #af7ca0;
+            color: black;
+        }
+
+        .container-service::after, .row-service::after {
             content: "";
-            display: table;
             clear: both;
+            display: table;
+            background-color: #af7ca0;
+            color: black;
         }
 
-        .active,
-
-        .title {
-            color: grey;
+        .container-service:hover {
+            background-color: #071268;
+            color: white;
         }
 
         .button {
@@ -275,30 +411,40 @@
             background-color: #555;
         }
 
+        /* Facebook Page */
+        .facebook {
+            padding: 50px;
+            background-color: #071268;
+            text-align: left;
+            color: #af7ca0;
+        }
+
+        /* Instagram */
+        .instagram {
+            padding: 50px;
+            background-color: #c34397;
+            text-align: left;
+            color: #000;
+        }
+
         /*Search bar*/
+        .containter-search {
+            padding: 50px;
+            background-color: #f0d7e9;
+            text-align: left;
+            color: #000;
+        }
 
         form.example input[type=text] {
-            padding: 10px;
-            font-size: 17px;
-            border: 1px solid grey;
             float: left;
             width: 30%;
+            padding: 10px;
             background: #f1f1f1;
+            font-size: 17px;
+            border: 1px solid grey;
         }
 
         /* Style the submit button */
-        form.example button {
-            float: left;
-            width: 20%;
-            padding: 10px;
-            background: #000000;
-            color: white;
-            font-size: 17px;
-            border: 1px solid grey;
-            border-left: none; /* Prevent double borders */
-            cursor: pointer;
-        }
-
         form.example button:hover {
             background: #000000;
         }
@@ -310,6 +456,15 @@
             display: table;
         }
 
+        /*Search bar*/
+        .footer {
+            padding: 5px 35px;
+            text-align: left;
+            background-color: #af7ca0;
+            font-size: 20px;
+            color: #000;
+        }
+
     </style>
 </head>
 
@@ -317,33 +472,106 @@
 
 <div class="header">
     <div>
-        <img src="header/hi.jpg" alt="IT-Sanda" height="160" width="160">
+        <img id="logo" src="header/hi.jpg" alt="logo-it-sanda">
+        <span>Test</span>
     </div>
 
-    <div class="topnav" id="header-links">
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_homepage.html?_ijt=kri050rl4hacliis39dlo0s6e4">HOMEPAGE</a>
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_about_project.html?_ijt=86kgfahg92l478msudmu5691ua">ABOUT PROJECT</a>
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5">BLOG</a>
-        <a class="active" href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_community.html?_ijt=qf4sj4g53mvg0tebsms57s1i4k">COMMUNITY</a>
+    <div class="navigation-bar" id="header-links">
+        <button class="tabnav" onclick="openPage('Homepage', this, '#af7ca0')" id="defaultOpen"><b>HOMEPAGE</b></button>
+        <button class="tabnav" onclick="openPage('About', this, '#af7ca0')"><b>ABOUT PROJECT</b></button>
+        <button class="tabnav" onclick="openPage('Blog', this, '#af7ca0')"><b>BLOG</b></button>
+        <button class="tabnav" onclick="openPage('Community', this, '#af7ca0')"><b>COMMUNITY</b></button>
+        <button class="tabnav" onclick="openPage('Podcast', this, '#af7ca0')"><b>PODCAST</b></button>
+
+        <div id="Homepage" class="tabcontent">
+            <p>Glad you came!</p>
+        </div>
+
+        <div id="About" class="tabcontent">
+            <p>Some news this fine day!</p>
+        </div>
+
+        <div id="Blog" class="tabcontent">
+            <p>Get in touch, or swing by for a cup of coffee.</p>
+        </div>
+
+        <div id="Community" class="tabcontent">
+            <p>Who we are and what we do.</p>
+        </div>
+
+        <div id="Podcast" class="tabcontent">
+            <p>Have fun!</p>
+        </div>
     </div>
+</div>
+
+<div class="welcome">
+    <h1><b>Welcome!</b></h1>
+    <img src="blog_images/womenintech.png" style="width:60%" alt="welcome-page">
 </div>
 
 <div class="about-section">
-    <h1>About Page</h1>
-    <p>Our vision is career fulfillment for all women, whether that is working for a company, running your own business or running your home.
-        What we believe:
-        We believe that the more women we have in this world who are doing what they love and are doing what they were born to do (like jumping out of bed to get to work), our world will be filled with happier and more successful women.
-        We believe it is crucial to understand yourself and your calling first in your career transition or business start-up process. We also believe in breaking the barriers of cost to get personalized career and business coaching. We offer low-priced online training for women to get the career and business help they need.
-        We have members around the world in our two membership sites. Corporate Rescue Plan is the most comprehensive side hustle to business launch program for women out there. Love Your Career Formula is an accelerated dream job launch program, where you get training, inspiration and a group community for as long as you need it. We are a life-changing program and our aim is to change your work and your life, not just get you a new paycheck or make you a lot of money. </p>
-    <p>Lose yourself in finding this!</p>
+    <h1><b>IT-Sanda gives you...</b></h1>
+    <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
 </div>
 
-<h1>The footer element</h1>
+<div class="about-me-section">
+    <h1><b>About Me</b></h1>
+    <p>Let me introduce myself. :)</p>
+    <p>My name is Sanda blah-blah</p>
 
-<footer>
-    <p>IT-Sanda</p>
-    <p>Contact information: </p>
-</footer>
+    <div class="row-about-me">
+        <div class="column-about-me">
+            <p style="text-align: right">My name is Sanda blah-blah</p>
+        </div>
+        <div style="text-align: left" class="column-about-me">
+            <img src="blog_images/aboutme.jpg" style="width:20%" alt="about-me">
+        </div>
+    </div>
+</div>
 
+<div class="footer">
+    <footer>
+        <p><b>IT-Sanda</b></p>
+        <p><b>Contact information:</b></p>
+    </footer>
+</div>
+
+<script>
+    /* Function for navigation tabs */
+    function openPage(pageName, elmnt, color) {
+        let i, tabcontent, tabnav;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tabnav = document.getElementsByClassName("tablink");
+        for (i = 0; i < tabnav.length; i++) {
+            tabnav[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+
+        /* Function for switching to other connected pages */
+        switch(pageName) {
+            case  'Home':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_homepage.html?_ijt=ddgltl2qjb3otjpe14l1ktkrvt";
+                break;
+            case 'Blog':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
+                break;
+            case 'Community':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
+                break
+            case 'Podcast':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
+                break;
+        }
+    }
+
+    /* Get the element with id="defaultOpen" and make it as default tab from navigation bar */
+    document.getElementById("defaultOpen").click();
+
+</script>
 </body>
 </html>
