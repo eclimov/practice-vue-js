@@ -32,7 +32,7 @@
             margin: 0;
             line-height: initial;
             height: 100%;
-            width: 35%;
+            width: 38%;
             font-family: Laila, serif;
             text-align: right;
             color: black;
@@ -91,6 +91,7 @@
         /* Style for whole page */
         body, html {
             margin: 0;
+            padding: 5px 5px 5px ;
             height: 100%;
             width: 100%;
             font-family: Laila, serif;
@@ -136,27 +137,30 @@
         .leftcolumn {
             float: left;
             width: 75%;
+            background-color: #f0d7e9;
         }
 
         /* Right column */
         .rightcolumn {
             float: left;
-            width: 25%;
             padding-left: 20px;
+            width: 25%;
+            background-color: #f0d7e9;
         }
 
         /* Fake image */
         .fakeimg {
-            background-color: #aaa;
             width: 100%;
             padding: 20px;
+            background-color: #aaa;
         }
 
         /* Add a card effect for articles */
         .card {
-            background-color: white;
             padding: 20px;
             margin-top: 20px;
+            width: 100%;
+            background-color: #f0d7e9;
         }
 
         /* Clear floats after the columns */
@@ -164,23 +168,25 @@
             content: "";
             display: table;
             clear: both;
+            width: 100%;
         }
 
         /* Welcome section */
         .welcome {
+            padding: 5px;
             width: 100%;
             text-align: center;
             color: black;
-            background-color: #f0d7e9;
+            background-color: #5d6297;
         }
 
         /* Section with information about this project / website */
         .about-section {
-            width: 100%;
             padding: 20px;
+            width: 100%;
             text-align: center;
-            color: black;
-            background-color: #af7ca0;
+            color: #af7ca0;
+            background-color: #080e63;
         }
 
         /* Section with motivational quote*/
@@ -198,28 +204,7 @@
             width: 100%;
             text-align: center;
             color: black;
-            background-color: #f0d7e9;
-        }
-
-        .row-about-me {
-            display: -ms-flexbox; /* IE 10 */
-            display: flex;
-            -ms-flex-wrap: wrap; /* IE 10 */
-            flex-wrap: wrap;
-            padding: 0 4px;
-            width: 100%;
-            text-align: left;
-            color: black;
-        }
-
-        .column-about-me {
-            float: left;
-            -ms-flex: 50%; /* IE 10 */
-            flex: 50%;
-            padding: 0 8px;
-            width: 100%;
-            text-align: left;
-            color: black;
+            background-color: #e671a2;
         }
 
         /* Styles for block with information about freelance services provided */
@@ -264,8 +249,8 @@
             content: "";
             clear: both;
             display: table;
-            background-color: #af7ca0;
             color: black;
+            background-color: #af7ca0;
         }
 
         .container-service:hover {
@@ -501,12 +486,12 @@
             padding: 10px;
             width: 30%;
             font-size: 17px;
-            background: #f1f1f1;
+            background-color: #f1f1f1;
         }
 
         /* Style the submit button */
         form.example button:hover {
-            background: #000000;
+            background-color: #000000;
         }
 
         /* Clear floats */
@@ -768,10 +753,12 @@
     </div>
     <div class="rightcolumn">
         <div class="card">
-            <h2>About Me</h2>
-            <div class="fakeimg" style="height:100px;">Image</div>
+            <div class="about-me-section">
+            <h1><b>About Me</b></h1>
+                <div class="fakeimg" style="height:100px;">Image</div>
             <p>Let me introduce myself. :)</p>
-            <p>My name is Sanda blah-blah</p>
+                <p>My name is Sanda blah-blah</p>
+        </div>
         </div>
         <div class="quote">
             <h1><b>Quote</b></h1>
