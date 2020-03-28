@@ -87,38 +87,9 @@
             background-color: #af7ca0;
         }
 
-        /* Style the tab content (and add height:100% for full page content) */
-        .tabcontent {
-            height: 100%;
-            display: none;
-            padding: 0 16px;
-            font-size: 18px;
-            color: black;
-        }
-
-        /* Colors for tabs */
-        #Homepage {
-            background-color: #af7ca0;
-        }
-
-        #About {
-            background-color: #af7ca0;
-        }
-
-        #Blog {
-            background-color: #af7ca0;
-        }
-
-        #Community {
-            background-color: #af7ca0;
-        }
-
-        #Podcast {
-            background-color: #af7ca0;
-        }
-
         /* Style for whole page */
         body, html {
+            margin: 0;
             height: 100%;
             width: 100%;
             font-family: Laila, serif;
@@ -149,68 +120,75 @@
             font-family: Laila, serif;
             text-align: left;
         }
-        /* Add a gray background color with some padding */
-        body {
-            font-family: Arial,serif;
-            padding: 20px;
-            background: #f1f1f1;
+        /* Welcome section */
+        .welcome {
+            width: 100%;
+            text-align: center;
+            color: black;
+            background-color: #f0d7e9;
         }
 
-        /* Two unequal columns that floats next to each other - main structure of the website */
-        /* Left column */
-        .leftcolumn {
-            float: left;
-            width: 75%;
-        }
-
-        /* Right column */
-        .rightcolumn {
-            float: left;
-            width: 25%;
-            padding-left: 20px;
-        }
-
-        /* Fake image */
-        .fakeimg {
-            background-color: #aaa;
+        /* Section with information about this project / website */
+        .about-section {
             width: 100%;
             padding: 20px;
+            text-align: center;
+            color: black;
+            background-color: #af7ca0;
         }
 
-        /* Add a card effect for articles */
-        .card {
-            background-color: white;
-            padding: 20px;
-            margin-top: 20px;
+        /* Section with information about creator */
+        .about-me-section {
+            padding: 50px;
+            width: 100%;
+            text-align: center;
+            color: black;
+            background-color: #f0d7e9;
         }
 
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
+        .row-about-me {
+            display: -ms-flexbox; /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE 10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+            width: 100%;
+            text-align: left;
+            color: black;
         }
 
-        /* Footer */
-        .footer {
+        .column-about-me {
+            float: left;
+            -ms-flex: 50%; /* IE 10 */
+            flex: 50%;
+            padding: 0 8px;
+            width: 100%;
+            text-align: left;
+            color: black;
+        }
+        /* Section with video */
+        .video {
+            width: 100%;
             padding: 20px;
             text-align: center;
-            background: #ddd;
-            margin-top: 20px;
+            color: black;
+            background-color: #af7ca0;
+        }
+        /*Footer*/
+        .footer {
+            padding: 5px 35px;
+            width: 100%;
+            text-align: left;
+            font-size: 20px;
+            color: #000;
+            background-color: #af7ca0;
         }
 
-        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 800px) {
-            .leftcolumn, .rightcolumn {
-                width: 100%;
-                padding: 0;
-            }
-        }
     </style>
-    <title></title>
 </head>
 
 <body>
+
 <div class="header">
     <div>
         <img id="logo" src="header/hi.jpg" alt="logo-it-sanda">
@@ -219,77 +197,56 @@
 
     <div class="navigation-bar" id="header-links">
         <button class="tabnav" onclick="openPage('Homepage', this, '#af7ca0')"><b>HOMEPAGE</b></button>
-        <button class="tabnav" onclick="openPage('About', this, '#af7ca0')"><b>ABOUT</b></button>
-        <button class="tabnav" onclick="openPage('Blog', this, '#af7ca0')" id="defaultOpen"><b>BLOG</b></button>
+        <button class="tabnav" onclick="openPage('About', this, '#af7ca0')" id="defaultOpen"><b>ABOUT</b></button>
+        <button class="tabnav" onclick="openPage('Blog', this, '#af7ca0')"><b>BLOG</b></button>
         <button class="tabnav" onclick="openPage('Community', this, '#af7ca0')"><b>COMMUNITY</b></button>
         <button class="tabnav" onclick="openPage('Podcast', this, '#af7ca0')"><b>PODCAST</b></button>
 
         <div id="Homepage" class="tabcontent"></div>
-        <div id="About" class="tabcontent"></div>
-        <div id="Blog" class="tabcontent">
-            <p><q>There are secret opportunities hidden inside every failure.</q></p>
+        <div id="About" class="tabcontent">
+            <p><q>The only way to support a revolution is to make your own.</q></p>
         </div>
+        <div id="Blog" class="tabcontent"></div>
         <div id="Community" class="tabcontent"></div>
         <div id="Podcast" class="tabcontent"></div>
     </div>
 </div>
 
-<div class="row">
-    <div class="leftcolumn">
-        <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+<div class="welcome">
+    <h1><b>Welcome!</b></h1>
+    <img src="blog_images/womenintech.png" style="width:60%" alt="welcome-page">
+</div>
+
+<div class="about-section">
+    <h1><b>IT-Sanda gives you...</b></h1>
+    <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
+</div>
+
+<div class="about-me-section">
+    <h1><b>About Me</b></h1>
+    <p>Let me introduce myself. :)</p>
+    <p>My name is Sanda blah-blah</p>
+
+    <div class="row-about-me">
+        <div class="column-about-me">
+            <p style="text-align: right">My name is Sanda blah-blah</p>
         </div>
-        <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-    </div>
-    <div class="rightcolumn">
-        <div class="card">
-            <h2>About Me</h2>
-            <div class="fakeimg" style="height:100px;">Image</div>
-            <p>Let me introduce myself. :)</p>
-            <p>My name is Sanda blah-blah</p>
-        </div>
-        <div class="card">
-            <h3>Popular Post</h3>
-            <div class="fakeimg">Image</div><br>
-            <div class="fakeimg">Image</div><br>
-            <div class="fakeimg">Image</div>
-        </div>
-        <div class="card">
-            <h3>Recent Post</h3>
-            <div class="fakeimg">Image</div><br>
-            <div class="fakeimg">Image</div><br>
-            <div class="fakeimg">Image</div>
-        </div>
-        <div class="card">
-            <h3>Follow Me on Facebook</h3>
-            <p>Some text..</p>
-        </div>
-        <div class="card">
-            <h3>Follow Me on Instargram</h3>
-            <p>Some text..</p>
+        <div style="text-align: left" class="column-about-me">
+            <img src="blog_images/aboutme.jpg" style="width:20%" alt="about-me">
         </div>
     </div>
 </div>
 
+<div class="video">
+    <h1><b>IT-Sanda gives you...</b></h1>
+    <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
+</div>
+
 <div class="footer">
-    <h2>Footer</h2>
+    <footer>
+        <p><b>IT-Sanda</b></p>
+        <p><b>Contact information:</b></p>
+    </footer>
 </div>
 
 <script>
@@ -310,10 +267,10 @@
         /* Function for switching to other connected pages */
         switch(pageName) {
             case  'Homepage':
-                window.location.href = "sanda_test.html";
+                window.location.href = "sanda_homepage.html";
                 break;
-            case 'About':
-                window.location.href = "sanda_about_project_test1.html";
+            case 'Blog':
+                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
                 break;
             case 'Community':
                 window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
@@ -328,7 +285,5 @@
     document.getElementById("defaultOpen").click();
 
 </script>
-
 </body>
 </html>
-
