@@ -18,8 +18,9 @@
         }
 
         #logo {
-            height: 95px;
-            width: 25%;
+            height: 90px;
+            width: 20%;
+            text-align: center;
         }
 
         /* Navigation bar for menu tabs */
@@ -27,6 +28,7 @@
             box-sizing: border-box
         }
 
+        /* Part of header which includes only navigation menu tabs */
         .navigation-bar {
             margin: 0;
             line-height: initial;
@@ -34,9 +36,10 @@
             width: 35%;
             font-family: Laila, serif;
             text-align: right;
+            font-size: 18px;
             color: black;
         }
-
+        /* Each navigation tab */
         .tabnav {
             float: left;
             margin: 0;
@@ -51,9 +54,13 @@
             cursor: pointer;
         }
 
+        /* Style for navigation tab while changing colors */
         .tabnav:hover {
             width: 20%;
-            background-color: #af7ca0;
+            font-family: Laila, serif;
+            text-align: center;
+            font-size: 18px;
+            color: black;
         }
 
         /* Style the tab content (and add height:100% for full page content) */
@@ -121,7 +128,9 @@
         body, html {
             height: 100%;
             width: 100%;
+            padding: 10px;
             font-family: Laila, serif;
+            font-size: 18px;
         }
 
         /* Style for all titles */
@@ -149,13 +158,50 @@
             font-family: Laila, serif;
             text-align: left;
         }
-        /* Add a gray background color with some padding */
-        body {
-            font-family: Arial,serif;
+        /* Style for whole page */
+        body, html {
+            font-family: Laila,serif;
             padding: 20px;
             background: #f1f1f1;
         }
+        /* Style for all titles */
+        h1 {
+            margin: 0;
+            font-family: Laila, serif;
+            font-size: 34px;
+            text-align: center;
+        }
 
+        h2 {
+            margin: 0;
+            font-family: Laila, serif;
+            font-size: 30px;
+            text-align: left;
+        }
+
+        h3 {
+            margin: 0;
+            font-family: Laila, serif;
+            font-size: 28px;
+            text-align: left;
+            color: black;
+        }
+
+        h4 {
+            margin: 0;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: left;
+        }
+        /* Remove of underline from links - sections of social networks */
+
+        a:link {
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #61659c;
+        }
         /* Two unequal columns that floats next to each other - main structure of the website */
         /* Left column */
         .leftcolumn {
@@ -189,6 +235,28 @@
             content: "";
             display: table;
             clear: both;
+        }
+        /* Welcome section */
+        .card-welcome {
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: black;
+            background-color: #696c96;
+        }
+
+        /* Section with information about creator */
+        .card-aboutme {
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 120px;
+            text-align: center;
+            font-size: 22px;
+            color: black;
+            background-color: #c34397;
         }
 
         /* Footer */
@@ -236,12 +304,9 @@
 
 <div class="row">
     <div class="leftcolumn">
-        <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <div class="card-welcome">
+            <h1><b>Welcome!</b></h1><br>
+            <img src="blog_images/welcome.png" style="width:90%" alt="welcome-page">
         </div>
         <div class="card">
             <h2>TITLE HEADING</h2>
@@ -259,9 +324,9 @@
         </div>
     </div>
     <div class="rightcolumn">
-        <div class="card">
-            <h2>About Me</h2>
-            <div class="fakeimg" style="height:100px;">Image</div>
+        <div class="card-aboutme">
+            <h1><b>About Me</b></h1>
+            <div class="aboutmeimg"><img src="blog_images/aboutme.png" alt="about-me"></div>
             <p>Let me introduce myself. :)</p>
             <p>My name is Sanda blah-blah</p>
         </div>
@@ -310,16 +375,16 @@
         /* Function for switching to other connected pages */
         switch(pageName) {
             case  'Homepage':
-                window.location.href = "sanda_test.html";
+                window.location.href = "homepage1.html";
                 break;
             case 'About':
-                window.location.href = "sanda_about_project_test1.html";
+                window.location.href = "./sanda_about_project.html";
                 break;
             case 'Community':
-                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
+                window.location.href = "./sanda_community.html";
                 break;
             case 'Podcast':
-                window.location.href = "http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5";
+                window.location.href = "./sanda_podcast.html";
                 break;
         }
     }
@@ -331,4 +396,3 @@
 
 </body>
 </html>
-

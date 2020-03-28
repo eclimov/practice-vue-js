@@ -18,8 +18,9 @@
         }
 
         #logo {
-            height: 95px;
-            width: 25%;
+            height: 90px;
+            width: 20%;
+            text-align: center;
         }
 
         /* Navigation bar for menu tabs */
@@ -32,12 +33,13 @@
             margin: 0;
             line-height: initial;
             height: 100%;
-            width: 38%;
+            width: 35%;
             font-family: Laila, serif;
             text-align: right;
+            font-size: 18px;
             color: black;
         }
-
+        /* Each navigation tab */
         .tabnav {
             float: left;
             margin: 0;
@@ -52,9 +54,13 @@
             cursor: pointer;
         }
 
+        /* Style for navigation tab while changing colors */
         .tabnav:hover {
             width: 20%;
-            background-color: #af7ca0;
+            font-family: Laila, serif;
+            text-align: center;
+            font-size: 18px;
+            color: black;
         }
 
         /* Style the tab content (and add height:100% for full page content) */
@@ -90,12 +96,12 @@
 
         /* Style for whole page */
         body, html {
-            margin: 0;
-            padding: 5px 5px 5px ;
             height: 100%;
             width: 100%;
+            padding: 20px;
             font-family: Laila, serif;
             font-size: 18px;
+            background: #f0d7e9;
         }
 
         /* Style for all titles */
@@ -127,7 +133,6 @@
             font-size: 20px;
             text-align: left;
         }
-
         /* Remove of underline from links - sections of social networks */
 
         a:link {
@@ -156,10 +161,11 @@
         }
 
         /* Fake image */
-        .fakeimg {
+        .aboutmeimg {
             width: 100%;
-            padding: 20px;
-            background-color: #aaa;
+            padding: 10px;
+            border: 2px #9fdfcd;
+            background-color: #071268;
         }
 
         /* Add a card effect for articles */
@@ -181,9 +187,10 @@
         }
 
         /* Welcome section */
-        .welcome {
-            padding: 5px;
+        .card-welcome {
             width: 100%;
+            padding: 20px;
+            margin-top: 20px;
             text-align: center;
             font-size: 20px;
             color: black;
@@ -195,9 +202,9 @@
             padding: 20px;
             width: 100%;
             text-align: center;
-            font-size: 20px;
-            color: #af7ca0;
-            background-color: #080e63;
+            font-size: 22px;
+            color: white;
+            background-color: #071268;
         }
 
         /* Section with motivational quote*/
@@ -215,91 +222,9 @@
             padding: 50px;
             width: 100%;
             text-align: center;
-            font-size: 20px;
+            font-size: 22px;
             color: black;
-            background-color: #e671a2;
-        }
-
-        /* Styles for block with information about freelance services provided */
-        {
-            box-sizing: border-box
-        ;
-        }
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        /* Section which includes freelance services proposed by web-site */
-        .section-service {
-            width: 100%;
-            font-size: 20px;
-            background-color: #61659c;
-        }
-
-        .column-service {
-            float: left;
-            width: 25%;
-            margin-bottom: 16px;
-            padding: 0 8px;
-            font-size: 20px;
-            color: black;
-            background-color: #61659c;
-        }
-
-        @media screen and (max-width: 650px) {
-            .column-service {
-                width: 100%;
-                display: block;
-            }
-        }
-
-        .container-service {
-            padding: 0 16px;
-            width: 100%;
-            font-size: 20px;
-            color: black;
-            background-color: #af7ca0;
-        }
-
-        .container-service::after, .row-service::after {
-            content: "";
-            clear: both;
-            display: table;
-            font-size: 20px;
-            color: black;
-            background-color: #af7ca0;
-        }
-
-        .container-service:hover {
-            width: 100%;
-            font-size: 20px;
-            color: white;
-            background-color: #071268;
-        }
-
-        .card-service {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            width: 100%;
-            font-size: 20px;
-            color: black;
-        }
-
-        .button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            width: 100%;
-            text-align: center;
-            color: white;
-            background-color: #000;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            width: 100%;
-            text-align: center;
-            background-color: #555;
+            background-color: #c34397;
         }
         /* Slide-show*/
 
@@ -422,81 +347,6 @@
                 font-size: 11px
             }
         }
-        /* Blog */
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        .section-blog {
-            width: 100%;
-            font-size: 20px;
-            background-color: #61659c;
-        }
-
-        .column-blog {
-            float: left;
-            margin-bottom: 16px;
-            padding: 0 8px;
-            width: 33.3%;
-            font-size: 20px;
-            color: black;
-        }
-
-        .column-blog:nth-child(odd) {
-            background-color: #c34397;
-        }
-        .column-blog:nth-child(even) {
-            background-color: #A35CFF;
-        }
-
-        @media screen and (max-width: 650px) {
-            .column-blog {
-                display: block;
-                width: 100%;
-            }
-        }
-
-        .container-service {
-            padding: 0 16px;
-            width: 100%;
-            color: black;
-            font-size: 20px;
-            background-color: #af7ca0;
-        }
-
-        .container-service::after, .row-service::after {
-            content: "";
-            clear: both;
-            display: table;
-            width: 100%;
-            font-size: 20px;
-            color: black;
-            background-color: #af7ca0;
-        }
-
-        .container-service:hover {
-            width: 100%;
-            font-size: 20px;
-            color: white;
-            background-color: #071268;
-        }
-
-        .button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            width: 100%;
-            text-align: center;
-            color: white;
-            background-color: #000;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            width: 100%;
-            background-color: #555;
-        }
         /*Search bar*/
         .containter-search {
             padding: 50px;
@@ -545,7 +395,7 @@
 
 <div class="header">
     <div>
-        <img id="logo" src="header/hi.jpg" alt="logo-it-sanda">
+        <img id="logo" src="header/hi.JPG" alt="logo-it-sanda">
         <span>Test</span>
     </div>
 
@@ -564,17 +414,16 @@
         <div id="Community" class="tabcontent"></div>
         <div id="Podcast" class="tabcontent"></div>
     </div>
-</div>
 
 <div class="row">
     <div class="leftcolumn">
         <div class="card">
-            <div class="welcome">
+            <div class="card-welcome">
                 <h1><b>Welcome!</b></h1><br>
-                <img src="blog_images/welcome.png" style="width:100%" alt="welcome-page">
+                <img src="blog_images/welcome.png" style="width:90%" alt="welcome-page">
             </div>
             <div class="about-section">
-                <h1><b>IT-Sanda gives you...</b></h1>
+                <h1 style="color: #c34397;"><b>IT-Sanda gives you...</b></h1>
                 <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
             </div>
             <div class="video">
@@ -587,7 +436,7 @@
         <div class="card">
             <div class="about-me-section">
                 <h1><b>About Me</b></h1>
-                <div class="fakeimg" style="height:100px;">Image</div>
+                <div class="aboutmeimg"><img src="blog_images/aboutme.png" alt="about-me"></div>
                 <p>Let me introduce myself. :)</p>
                 <p>My name is Sanda blah-blah</p>
             </div>
@@ -672,7 +521,7 @@
         /* Function for switching to other connected pages */
         switch(pageName) {
             case  'Homepage':
-                window.location.href = "sanda_homepage.html";
+                window.location.href = "homepage1.html";
                 break;
             case 'Blog':
                 window.location.href = "./sanda_blog.html";
