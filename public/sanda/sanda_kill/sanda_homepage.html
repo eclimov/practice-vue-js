@@ -67,8 +67,9 @@
         .tabcontent {
             display: none;
             height: 100%;
-            padding: 0 16px;
             width: 100%;
+            padding: 0 16px;
+            font-family: Laila, serif;
             font-size: 18px;
             color: black;
         }
@@ -99,6 +100,7 @@
             display: none;
             height: 100%;
             padding: 0 16px;
+            font-family: Laila, serif;
             font-size: 18px;
             color: black;
         }
@@ -169,7 +171,7 @@
         }
 
         a:hover {
-            background-color: #61659c;
+            background-color: #af7ca0;
         }
         /* Two unequal columns that floats next to each other - main structure of the website */
         /* Left column */
@@ -207,11 +209,12 @@
             font-family: Laila, serif;
         }
         /* Properties for all images*/
-        .fakeimg {
+        .images {
             width: 100%;
             padding: 20px;
             background-color: #aaa;
         }
+
         /* Welcome section */
         .card-welcome {
             width: 100%;
@@ -221,7 +224,28 @@
             font-family: Laila, serif;
             font-size: 20px;
             color: black;
-            background-color: #696c96;
+            background-color: #523f8f;
+        }
+
+        .row-welcome {
+            display: -ms-flexbox; /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE 10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+            width: 100%;
+            text-align: left;
+            color: black;
+        }
+
+        .column-welcome {
+            float: left;
+            -ms-flex: 50%; /* IE 10 */
+            flex: 50%;
+            padding: 0 8px;
+            width: 100%;
+            text-align: left;
+            color: black;
         }
 
         /* Section with information about project */
@@ -230,7 +254,7 @@
             padding: 20px;
             margin-top: 20px;
             font-family: Laila, serif;
-            font-size: 22px;
+            font-size: 20px;
             text-align: center;
             color: white;
             background-color: #071268;
@@ -246,7 +270,7 @@
             width: 100%;
         }
 
-        img {
+        .img {
             vertical-align: middle;
             width: 100%;
         }
@@ -254,8 +278,6 @@
         .card-slideshow {
             position: relative;
             width: 100%;
-            padding: 20px;
-            margin-top: 20px;
             font-family: Laila, serif;
             font-size: 20px;
             background-color: #f0d7e9;
@@ -306,7 +328,6 @@
         .numbertext {
             position: absolute;
             padding: 8px 12px;
-            top: 0;
             color: #f2f2f2;
             font-family: Laila, serif;
             font-size: 15px;
@@ -499,21 +520,92 @@
             background-color: #c34397;
         }
 
+        /*Search bar*/
+        .container-search {
+            width: 100%;
+            padding: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: left;
+            color: black;
+            background-color: #523f8f;
+        }
+
+        form.example input[type=text] {
+            border: 1px solid grey;
+            float: left;
+            padding: 10px;
+            width: 90%;
+            font-size: 20px;
+            background-color: white;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            border: 1px #af7ca0;
+            border-left: none;
+            background: white;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Style the submit button */
+        form.example button:hover {
+            background-color: #af7ca0;
+        }
+
+        /* Clear floats */
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
         /* Section with motivational quote*/
         .quote {
-            padding: 50px;
             width: 100%;
+            padding: 50px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 25px;
             text-align: center;
-            font-size: 20px;
-            color: #af7ca0;
+            color: black;
             background-color: #c34397;
         }
+
+        .facebook {
+             padding: 50px;
+             width: 100%;
+             margin-bottom: 20px;
+             font-family: Laila, serif;
+             font-size: 20px;
+             text-align: center;
+             color: white;
+             background-color: #071268;
+         }
+
+        .instagram {
+            padding: 50px;
+            width: 100%;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: black;
+            background-color: #c34397;
+        }
+
         /* Footer */
         .footer {
             padding: 20px;
-            text-align: center;
-            background: #ddd;
             margin-top: 20px;
+            text-align: center;
+            background: #af7ca0;
         }
 
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -524,7 +616,7 @@
             }
         }
     </style>
-    <title></title>
+    <title>IT-SANDA</title>
 </head>
 
 <body>
@@ -542,7 +634,7 @@
         <button class="tabnav" onclick="openPage('Podcast', this, '#af7ca0')"><b>PODCAST</b></button>
 
         <div id="Homepage" class="tabcontent">
-        <p><q>Home's not a place, it's a feeling.</q></p>
+        <p><i><q>Home's not a place, it's a feeling.</q></i></p>
         </div>
         <div id="About" class="tabcontent"></div>
         <div id="Blog" class="tabcontent"></div>
@@ -555,11 +647,23 @@
     <div class="leftcolumn">
         <div class="card-welcome">
             <h1><b>Welcome!</b></h1><br>
-            <img src="blog_images/welcome.png" style="width:90%" alt="welcome-page">
+            <div class="row-welcome">
+                <div class="column-welcome">
+                    <p style="text-align: right">My name is Sanda blah-blah</p>
+                </div>
+                <div style="text-align: left" class="column-welcome">
+                    <img src="blog_images/welcome.png" style="height:100%; width:100%" alt="welcome">
+                </div>
+            </div>
         </div>
         <div class="card-aboutproject">
             <h1 style="color: #c34397;"><b>IT-Sanda gives you...</b></h1>
-            <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
+            <p>Freelance services of QA, Marketing, Translations etc.</p>
+            <p>Digital platform with focus on IT & tech, Marketing, Project Management etc.</p>
+            <p>Empowerment, Motivation, Inspiration in career and not only</p>
+            <p>Community & Networking</p>
+            <br>
+            <p>So what are you wanna be today?</p>
         </div>
         <div class="card-slideshow">
             <div class="slide-show fade">
@@ -670,49 +774,63 @@
                 </div>
             </div>
         </div>
-        <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <div class="card-welcome">
+            <h1><b>Project, we working for:</b></h1><br>
         </div>
     </div>
     <div class="rightcolumn">
         <div class="card-aboutme">
             <h1><b>About Me</b></h1>
-            <div class="aboutmeimg"><img src="blog_images/aboutme.png" alt="about-me"></div>
-            <p>Let me introduce myself. :)</p>
-            <p>My name is Sanda blah-blah</p>
+            <div class="aboutmeimg"><img src="blog_images/aboutme.png" alt="about-me" style="height:50%; width:50%"></div>
+            <p><b>Let me introduce myself. :)</b></p>
+            <p><b>Test</b></p>
+            <p><b>Test</b></p>
+            <p><b>Test</b></p>
+            <p><b>Test</b></p>
         </div>
-        <div class="card">
-            <h3>Recent Post</h3>
-            <div class="fakeimg">Image</div><br>
-            <div class="fakeimg">Image</div><br>
-            <div class="fakeimg">Image</div>
+       <div class="container-search">
+           <h1><b>Search</b></h1>
+           <form class="example" action="/action_page.php">
+               <label>
+                   <input type="text" placeholder="Search.." name="search">
+               </label>
+               <button type="submit"><i class="fa fa-search"></i></button>
+           </form>
         </div>
         <div class="quote">
             <h1><b>Quote</b></h1>
-            <img src="blog_images/quote.png" style="width:100%" alt="quote">
+            <p><strong><i>Surround yourself with supportive people.</i></strong></p>
         </div>
-        <div class="card">
-            <h3>Follow Me on Facebook</h3>
-            <p>Some text..</p>
+        <div class="facebook">
+            <h1><b><a href="https://www.facebook.com/sandaitsanda/">Facebook Page :</a></b></h1>
+            <img src="social_media/facebook.png" alt="facebook" style="width:100%">
+            <p>
+            <b><a href="https://www.facebook.com/sandaitsanda/"
+                target="_blank">
+                Facebook Page
+            </a></b>
         </div>
-        <div class="card">
-            <h3>Follow Me on Instargram</h3>
-            <p>Some text..</p>
+        <div class="instagram">
+            <h1><b><a href="https://www.instagram.com/it_sanda/">Instagram Grid :</a></b></h1>
+            <img src="social_media/instagram.png" alt="facebook" style="width:100%">
+            <p>
+                <b><a href="https://www.instagram.com/it_sanda/"
+                target="_blank">
+                    Instagram Page
+                </a></b>
         </div>
         <div class="card-service">
-            <h1><b><a href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5">Blog</a></b></h1>
+            <h1><b><a href="./sanda_blog.html"
+                       target="_blank">
+                Blog
+            </a></b></h1>
+            <p>
             <div class="row-service">
                 <div class="column-blog">
                     <div class="card">
                         <img src="images/qa.jpg" alt="qa" style="width:50%">
                         <div class="container-service">
-                            <p class="title">
-                            <h2 style="text-align: center"><b>QA</b></h2>
-                            <p>
+                            <p>QA
                                 <button class="button">Contact</button>
                             </p>
                         </div>
@@ -723,7 +841,7 @@
                         <img src="images/translations.JPG" alt="translations" style="width:50%">
                         <div class="container-service">
                             <p class="title">
-                            <h2 style="text-align: center"><b>Project Management</b></h2>
+                            <p>Project Management<p>
                             <p>
                                 <button class="button">Contact</button>
                             </p>
@@ -735,7 +853,7 @@
                         <img src="images/marketing.JPG" alt="content-marketing" style="width:50%">
                         <div class="container-service">
                             <p class="title">
-                            <h2 style="text-align: center"><b>Content Marketing</b></h2>
+                            <p>Content Marketing</p>
                             <p>
                                 <button class="button">Contact</button>
                             </p>
@@ -747,7 +865,7 @@
                         <img src="images/projectmanagement.JPG" alt="project-management" style="width:50%">
                         <div class="container-service">
                             <p class="title">
-                            <h2 style="text-align: center"><b>Tech News</b></h2>
+                            <h4 style="text-align: center"><b>Tech News</b></h4>
                             <p>
                                 <button class="button">Contact</button>
                             </p>
@@ -759,7 +877,7 @@
                         <img src="images/projectmanagement.JPG" alt="project-management" style="width:50%">
                         <div class="container-service">
                             <p class="title">
-                            <h2 style="text-align: center"><b>Events</b></h2>
+                            <h4 style="text-align: center"><b>Events</b></h4>
                             <p>
                                 <button class="button">Contact</button>
                             </p>
@@ -771,7 +889,7 @@
                         <img src="images/projectmanagement.JPG" alt="project-management" style="width:50%">
                         <div class="container-service">
                             <p class="title">
-                            <h2 style="text-align: center"><b>Empowerment & Motivation</b></h2>
+                            <h4 style="text-align: center"><b>Empowerment & Motivation</b></h4>
                             <p>
                                 <button class="button">Contact</button>
                             </p>
@@ -780,12 +898,12 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
 <div class="footer">
-    <h2>Footer</h2>
+    <h2>IT-Sanda</h2>
+    <h4>Contact information:</h4>
 </div>
 
 <script>

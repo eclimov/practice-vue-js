@@ -11,9 +11,9 @@
         /* Header - inclusively logo */
         .header {
             display: flex;
+            width: 100%;
             justify-content: space-between;
             overflow: hidden;
-            width: 100%;
             background-color: #af7ca0;
         }
 
@@ -30,25 +30,25 @@
 
         /* Part of header which includes only navigation menu tabs */
         .navigation-bar {
-            margin: 0;
-            line-height: initial;
             height: 100%;
             width: 35%;
+            margin: 0;
+            line-height: initial;
             font-family: Laila, serif;
-            text-align: right;
             font-size: 18px;
+            text-align: right;
             color: black;
         }
         /* Each navigation tab */
         .tabnav {
             float: left;
+            width: 20%;
             margin: 0;
             border: none;
             padding: 15px;
-            width: 20%;
             font-family: Laila, serif;
-            text-align: center;
             font-size: 18px;
+            text-align: center;
             color: black;
             background-color: #af7ca0;
             cursor: pointer;
@@ -58,17 +58,49 @@
         .tabnav:hover {
             width: 20%;
             font-family: Laila, serif;
-            text-align: center;
             font-size: 18px;
+            text-align: center;
             color: black;
         }
 
         /* Style the tab content (and add height:100% for full page content) */
         .tabcontent {
-            height: 100%;
             display: none;
-            padding: 0 16px;
+            height: 100%;
             width: 100%;
+            padding: 0 16px;
+            font-family: Laila, serif;
+            font-size: 18px;
+            color: black;
+        }
+
+        /* Colors for tabs */
+        #Homepage {
+            background-color: #af7ca0;
+        }
+
+        #About {
+            background-color: #af7ca0;
+        }
+
+        #Blog {
+            background-color: #af7ca0;
+        }
+
+        #Community {
+            background-color: #af7ca0;
+        }
+
+        #Podcast {
+            background-color: #af7ca0;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            display: none;
+            height: 100%;
+            padding: 0 16px;
+            font-family: Laila, serif;
             font-size: 18px;
             color: black;
         }
@@ -134,7 +166,6 @@
             text-align: left;
         }
         /* Remove of underline from links - sections of social networks */
-
         a:link {
             text-decoration: none;
         }
@@ -147,43 +178,35 @@
         .leftcolumn {
             float: left;
             width: 75%;
-            font-size: 20px;
+            font-family: Laila, serif;
+            font-size: 22px;
             background-color: #f0d7e9;
         }
 
         /* Right column */
         .rightcolumn {
             float: left;
-            padding-left: 20px;
             width: 25%;
-            font-size: 20px;
+            padding-left: 20px;
+            font-family: Laila, serif;
+            font-size: 22px;
             background-color: #f0d7e9;
-        }
-
-        /* Fake image */
-        .aboutmeimg {
-            width: 100%;
-            padding: 10px;
-            border: 2px #9fdfcd;
-            background-color: #071268;
         }
 
         /* Add a card effect for articles */
         .card {
+            background-color: white;
             padding: 20px;
             margin-top: 20px;
-            width: 100%;
-            font-size: 20px;
-            background-color: #f0d7e9;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
         }
-
         /* Clear floats after the columns */
         .row:after {
             content: "";
             display: table;
             clear: both;
-            width: 100%;
-            font-size: 20px;
+            font-family: Laila, serif;
         }
 
         /* Welcome section */
@@ -192,37 +215,140 @@
             padding: 20px;
             margin-top: 20px;
             text-align: center;
+            font-family: Laila, serif;
             font-size: 20px;
             color: black;
-            background-color: #696c96;
+            background-color: #523f8f;
         }
 
-        /* Section with information about this project / website */
-        .about-section {
-            padding: 20px;
+        /* Section with information about project */
+        .card-aboutproject {
             width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
             text-align: center;
-            font-size: 22px;
             color: white;
             background-color: #071268;
         }
 
-        /* Section with motivational quote*/
+        /* Section with video*/
         .video {
-            padding: 50px;
             width: 100%;
-            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: Laila, serif;
             font-size: 20px;
-            color: #af7ca0;
+            text-align: center;
+            color: white;
             background-color: #071268;
         }
 
+        /*Search bar*/
+        .container-search {
+            width: 100%;
+            padding: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: left;
+            color: #c34397;
+            background-color: #071268;
+        }
+
+        form.example input[type=text] {
+            border: 1px solid grey;
+            float: left;
+            padding: 10px;
+            width: 30%;
+            font-size: 20px;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the submit button */
+        form.example button:hover {
+            background-color: #000000;
+        }
+
+        /* Clear floats */
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
         /* Section with information about creator */
         .about-me-section {
             padding: 50px;
             width: 100%;
             text-align: center;
             font-size: 22px;
+            color: black;
+            background-color: #c34397;
+        }
+
+        /*Search bar*/
+        .containter-search {
+            padding: 50px;
+            width: 100%;
+            text-align: left;
+            font-size: 20px;
+            color: #000;
+            background-color: #f0d7e9;
+        }
+
+        form.example input[type=text] {
+            border: 1px solid grey;
+            float: left;
+            padding: 10px;
+            width: 30%;
+            font-size: 20px;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the submit button */
+        form.example button:hover {
+            background-color: #000000;
+        }
+
+        /* Clear floats */
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Section with motivational quote*/
+        .quote {
+            width: 100%;
+            padding: 50px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #af7ca0;
+            background-color: #c34397;
+        }
+
+        .facebook {
+            padding: 50px;
+            width: 100%;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #af7ca0;
+            background-color: #071268;
+        }
+
+        .instagram {
+            padding: 50px;
+            width: 100%;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
             color: black;
             background-color: #c34397;
         }
@@ -347,36 +473,7 @@
                 font-size: 11px
             }
         }
-        /*Search bar*/
-        .containter-search {
-            padding: 50px;
-            width: 100%;
-            text-align: left;
-            font-size: 20px;
-            color: #000;
-            background-color: #f0d7e9;
-        }
 
-        form.example input[type=text] {
-            border: 1px solid grey;
-            float: left;
-            padding: 10px;
-            width: 30%;
-            font-size: 20px;
-            background-color: #f1f1f1;
-        }
-
-        /* Style the submit button */
-        form.example button:hover {
-            background-color: #000000;
-        }
-
-        /* Clear floats */
-        form.example::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
 
         /*Footer*/
         .footer {
@@ -388,6 +485,13 @@
             background-color: #af7ca0;
         }
 
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
     </style>
 </head>
 
@@ -408,7 +512,7 @@
 
         <div id="Homepage" class="tabcontent"></div>
         <div id="About" class="tabcontent"></div>
-            <p><q>The only way to support a revolution is to make your own.</q></p>
+            <p><i><q>The only way to support a revolution is to make your own.</q></i></p>
         </div>
         <div id="Blog" class="tabcontent"></div>
         <div id="Community" class="tabcontent"></div>
@@ -422,12 +526,18 @@
                 <h1><b>Welcome!</b></h1><br>
                 <img src="blog_images/welcome.png" style="width:90%" alt="welcome-page">
             </div>
-            <div class="about-section">
+            <div class="card-aboutproject">
                 <h1 style="color: #c34397;"><b>IT-Sanda gives you...</b></h1>
-                <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
+                <p>Freelance services of QA, Marketing, Translations etc.</p>
+                <p>Digital platform with focus on IT & tech, Marketing, Project Management etc.</p>
+                <p>Empowerment, Motivation, Inspiration in career and not only</p>
+                <p>Community & Networking</p>
+                <br>
+                <p>So what are you wanna be today?</p>
             </div>
+
             <div class="video">
-                <h1><b>IT-Sanda gives you...</b></h1>
+                <h1><b>Promotional video</b></h1>
                 <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
             </div>
         </div>
@@ -521,7 +631,7 @@
         /* Function for switching to other connected pages */
         switch(pageName) {
             case  'Homepage':
-                window.location.href = "homepage1.html";
+                window.location.href = "./sanda_homepage.html";
                 break;
             case 'Blog':
                 window.location.href = "./sanda_blog.html";
