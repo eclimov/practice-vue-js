@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lesson5</title>
+</head>
+
+<body>
+<table border="1" style="border-spacing: unset;">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </tr>
+    <tr>
+        <td>
+            <label for="quantity">Smartphone</label>
+        </td>
+        <td>
+            <span id="price">230</span>$
+        </td>
+        <td>
+            <input type="number" id="quantity" value="0" onchange="recalculateTotal(this.value);" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" style="text-align: right">
+            <b>Total: &nbsp;</b><span id="total">0</span>$
+        </td>
+    </tr>
+</table>
+
+<script>
+    function recalculateTotal(quantity) {
+        const price = this.document.getElementById('price').innerHTML;
+        this.document.getElementById('total').innerHTML = `${price * quantity}`;  // Why do I use template literal here?
+    }
+</script>
+</body>
+</html>
