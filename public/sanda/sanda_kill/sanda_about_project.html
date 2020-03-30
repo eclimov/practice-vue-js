@@ -95,37 +95,6 @@
             background-color: #af7ca0;
         }
 
-        /* Style the tab content (and add height:100% for full page content) */
-        .tabcontent {
-            display: none;
-            height: 100%;
-            padding: 0 16px;
-            font-family: Laila, serif;
-            font-size: 18px;
-            color: black;
-        }
-
-        /* Colors for tabs */
-        #Homepage {
-            background-color: #af7ca0;
-        }
-
-        #About {
-            background-color: #af7ca0;
-        }
-
-        #Blog {
-            background-color: #af7ca0;
-        }
-
-        #Community {
-            background-color: #af7ca0;
-        }
-
-        #Podcast {
-            background-color: #af7ca0;
-        }
-
         /* Style for whole page */
         body, html {
             height: 100%;
@@ -171,7 +140,7 @@
         }
 
         a:hover {
-            background-color: #61659c;
+            background-color: #af7ca0;
         }
         /* Two unequal columns that floats next to each other - main structure of the website */
         /* Left column */
@@ -195,10 +164,7 @@
 
         /* Add a card effect for articles */
         .card {
-            background-color: white;
             padding: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
             font-family: Laila, serif;
         }
         /* Clear floats after the columns */
@@ -208,17 +174,44 @@
             clear: both;
             font-family: Laila, serif;
         }
+        /* Properties for all images*/
+        .images {
+            width: 100%;
+            padding: 20px;
+            background-color: #aaa;
+        }
 
         /* Welcome section */
         .card-welcome {
             width: 100%;
             padding: 20px;
             margin-top: 20px;
-            text-align: center;
             font-family: Laila, serif;
             font-size: 20px;
+            text-align: center;
             color: black;
             background-color: #523f8f;
+        }
+
+        .row-welcome {
+            display: -ms-flexbox; /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE 10 */
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0 4px;
+            text-align: left;
+            color: black;
+        }
+
+        .column-welcome {
+            float: left;
+            -ms-flex: 50%; /* IE 10 */
+            flex: 50%;
+            width: 100%;
+            padding: 0 8px;
+            text-align: left;
+            color: black;
         }
 
         /* Section with information about project */
@@ -233,127 +226,7 @@
             background-color: #071268;
         }
 
-        /* Section with video*/
-        .video {
-            width: 100%;
-            padding: 20px;
-            margin-top: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: white;
-            background-color: #071268;
-        }
-
-        /*Search bar*/
-        .container-search {
-            width: 100%;
-            padding: 50px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: left;
-            color: #c34397;
-            background-color: #071268;
-        }
-
-        form.example input[type=text] {
-            border: 1px solid grey;
-            float: left;
-            padding: 10px;
-            width: 30%;
-            font-size: 20px;
-            background-color: #f1f1f1;
-        }
-
-        /* Style the submit button */
-        form.example button:hover {
-            background-color: #000000;
-        }
-
-        /* Clear floats */
-        form.example::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-        /* Section with information about creator */
-        .about-me-section {
-            padding: 50px;
-            width: 100%;
-            text-align: center;
-            font-size: 22px;
-            color: black;
-            background-color: #c34397;
-        }
-
-        /*Search bar*/
-        .containter-search {
-            padding: 50px;
-            width: 100%;
-            text-align: left;
-            font-size: 20px;
-            color: #000;
-            background-color: #f0d7e9;
-        }
-
-        form.example input[type=text] {
-            border: 1px solid grey;
-            float: left;
-            padding: 10px;
-            width: 30%;
-            font-size: 20px;
-            background-color: #f1f1f1;
-        }
-
-        /* Style the submit button */
-        form.example button:hover {
-            background-color: #000000;
-        }
-
-        /* Clear floats */
-        form.example::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        /* Section with motivational quote*/
-        .quote {
-            width: 100%;
-            padding: 50px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: #af7ca0;
-            background-color: #c34397;
-        }
-
-        .facebook {
-            padding: 50px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: #af7ca0;
-            background-color: #071268;
-        }
-
-        .instagram {
-            padding: 50px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: black;
-            background-color: #c34397;
-        }
-        /* Slide-show*/
-
+        /* Section with information about slide-show */
         * {
             box-sizing: border-box
         }
@@ -363,15 +236,15 @@
             width: 100%;
         }
 
-        img {
+        .img {
             vertical-align: middle;
             width: 100%;
         }
 
-        .container-slideshow {
+        .card-slideshow {
             position: relative;
-            margin: auto;
             width: 100%;
+            font-family: Laila, serif;
             font-size: 20px;
             background-color: #f0d7e9;
         }
@@ -383,11 +256,12 @@
             user-select: none;
             cursor: pointer;
             position: absolute;
+            width: 100%;
             top: 50%;
             padding: 16px;
             margin-top: -22px;
-            width: 100%;
             font-weight: bold;
+            font-family: Laila, serif;
             font-size: 18px;
             color: white;
         }
@@ -411,6 +285,7 @@
             bottom: 8px;
             width: 100%;
             text-align: center;
+            font-family: Laila, serif;
             font-size: 20px;
             color: #000;
         }
@@ -419,8 +294,8 @@
         .numbertext {
             position: absolute;
             padding: 8px 12px;
-            top: 0;
             color: #f2f2f2;
+            font-family: Laila, serif;
             font-size: 15px;
         }
 
@@ -473,16 +348,230 @@
                 font-size: 11px
             }
         }
-
-
-        /*Footer*/
-        .footer {
-            padding: 5px 35px;
+        /* Section which includes freelance services proposed by web-site */
+        .card-service {
             width: 100%;
-            text-align: left;
+            font-family: Laila, serif;
             font-size: 20px;
-            color: #000;
+            text-align: center;
+            background-color: #61659c;
+        }
+
+        .column-service {
+            float: left;
+            width: 25%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: black;
+            background-color: #61659c;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column-service {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .container-service {
+            padding: 0 16px;
+            width: 100%;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: black;
             background-color: #af7ca0;
+        }
+
+        .container-service::after, .row-service::after {
+            content: "";
+            clear: both;
+            display: table;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: black;
+            background-color: #af7ca0;
+        }
+
+        .container-service:hover {
+            width: 100%;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: white;
+            background-color: #071268;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 100%;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: black;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            background-color: #000;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            width: 100%;
+            text-align: center;
+            background-color: #555;
+        }
+        /* Blog */
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .column-blog {
+            float: left;
+            margin-bottom: 16px;
+            padding: 0 8px;
+            width: 50%;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: black;
+        }
+
+        .column-blog:nth-child(odd) {
+            background-color: #c34397;
+        }
+        .column-blog:nth-child(even) {
+            background-color: #A35CFF;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column-blog {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            background-color: #000;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            width: 100%;
+            background-color: #555;
+        }
+
+        /* Section with information about creator */
+        .card-aboutme {
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 22px;
+            text-align: center;
+            color: black;
+            background-color: #c34397;
+        }
+
+        /*Search bar*/
+        .container-search {
+            width: 100%;
+            padding: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: left;
+            color: black;
+            background-color: #523f8f;
+        }
+
+        form.example input[type=text] {
+            border: 1px solid grey;
+            float: left;
+            padding: 10px;
+            width: 90%;
+            font-size: 20px;
+            background-color: white;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            border: 1px #af7ca0;
+            border-left: none;
+            font-size: 20px;
+            color: black;
+            background: white;
+            cursor: pointer;
+        }
+
+        /* Style the submit button */
+        form.example button:hover {
+            background-color: #af7ca0;
+        }
+
+        /* Clear floats */
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Section with motivational quote*/
+        .quote {
+            width: 100%;
+            padding: 50px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 25px;
+            text-align: center;
+            color: black;
+            background-color: #c34397;
+        }
+
+        .facebook {
+            padding: 50px;
+            width: 100%;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            background-color: #071268;
+        }
+
+        .instagram {
+            padding: 50px;
+            width: 100%;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: black;
+            background-color: #c34397;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            background: #af7ca0;
         }
 
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -496,10 +585,9 @@
 </head>
 
 <body>
-
 <div class="header">
     <div>
-        <img id="logo" src="header/hi.JPG" alt="logo-it-sanda">
+        <img id="logo" src="header/hi.jpg" alt="logo-it-sanda">
         <span>Test</span>
     </div>
 
@@ -511,58 +599,38 @@
         <button class="tabnav" onclick="openPage('Podcast', this, '#af7ca0')"><b>PODCAST</b></button>
 
         <div id="Homepage" class="tabcontent"></div>
-        <div id="About" class="tabcontent"></div>
+        <div id="About" class="tabcontent">
             <p><i><q>The only way to support a revolution is to make your own.</q></i></p>
         </div>
         <div id="Blog" class="tabcontent"></div>
         <div id="Community" class="tabcontent"></div>
         <div id="Podcast" class="tabcontent"></div>
     </div>
+</div>
 
 <div class="row">
     <div class="leftcolumn">
-        <div class="card">
-            <div class="card-welcome">
-                <h1><b>Welcome!</b></h1><br>
-                <img src="blog_images/welcome.png" style="width:90%" alt="welcome-page">
-            </div>
-            <div class="card-aboutproject">
-                <h1 style="color: #c34397;"><b>IT-Sanda gives you...</b></h1>
-                <p>Freelance services of QA, Marketing, Translations etc.</p>
-                <p>Digital platform with focus on IT & tech, Marketing, Project Management etc.</p>
-                <p>Empowerment, Motivation, Inspiration in career and not only</p>
-                <p>Community & Networking</p>
-                <br>
-                <p>So what are you wanna be today?</p>
-            </div>
-
-            <div class="video">
-                <h1><b>Promotional video</b></h1>
-                <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
+        <div class="card-welcome">
+            <h1><b>Welcome!</b></h1><br>
+            <div class="row-welcome">
+                <div class="column-welcome">
+                    <p style="text-align: right">My name is Sanda blah-blah</p>
+                </div>
+                <div style="text-align: left" class="column-welcome">
+                    <img src="blog_images/welcome.png" style="height:100%; width:100%" alt="welcome">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="rightcolumn">
-        <div class="card">
-            <div class="about-me-section">
-                <h1><b>About Me</b></h1>
-                <div class="aboutmeimg"><img src="blog_images/aboutme.png" alt="about-me"></div>
-                <p>Let me introduce myself. :)</p>
-                <p>My name is Sanda blah-blah</p>
-            </div>
+        <div class="card-aboutproject">
+            <h1 style="color: #c34397;"><b>IT-Sanda gives you...</b></h1>
+            <p>Freelance services of QA, Marketing, Translations etc.</p>
+            <p>Digital platform with focus on IT & tech, Marketing, Project Management etc.</p>
+            <p>Empowerment, Motivation, Inspiration in career and not only</p>
+            <p>Community & Networking</p>
+            <br>
+            <p>So what are you wanna be today?</p>
         </div>
-        <div class="card">
-            <div class="containter-search">
-                <form class="example" action="action_page.php">
-                    <label>
-                        <input type="text" placeholder="Search." name="search">
-                    </label>
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="container-slideshow">
-
+        <div class="card-slideshow">
             <div class="slide-show fade">
                 <div class="numbertext">1 / 3</div>
                 <img src="locals/barcelona.png" style="width:100%" alt="barcelona">
@@ -591,26 +659,61 @@
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-        <div class="card">
-            <div class="facebook">
-                <h1><b><a href="https://www.facebook.com/sandaitsanda/">Facebook Page :</a></b></h1>
-                <img src="social_media/facebook.png" alt="facebook" style="width:50%">
-            </div>
-        </div>
-        <div class="card">
-            <div class="instagram">
-                <h1><b><a href="https://www.instagram.com/it_sanda/">Instagram Grid :</a></b></h1>
-                <img src="social_media/instagram.png" alt="instagram" style="width:50%">
-            </div>
+
+        <div class="card-welcome">
+            <h1><b>Project, we working for:</b></h1><br>
         </div>
     </div>
+    <div class="rightcolumn">
+        <div class="card-aboutme">
+            <h1><b>About Me</b></h1>
+            <div class="aboutmeimg"><img src="blog_images/aboutme.png" alt="about-me" style="height:50%; width:50%"></div>
+            <p><b>Let me introduce myself. :)</b></p>
+            <p><b>Test</b></p>
+            <p><b>Test</b></p>
+            <p><b>Test</b></p>
+            <p><b>Test</b></p>
+        </div>
+        <div class="container-search">
+            <h1><b>Search</b></h1>
+            <form class="example" action="/action_page.php">
+                <label>
+                    <input type="text" placeholder="Search.." name="search">
+                </label>
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="quote">
+            <h1><b>Quote</b></h1>
+            <p><strong><i>Surround yourself with supportive people.</i></strong></p>
+        </div>
+        <div class="facebook">
+            <h1><b><a href="https://www.facebook.com/sandaitsanda/">Facebook Page :</a></b></h1>
+            <img src="social_media/facebook.png" alt="facebook" style="width:100%">
+            <p>
+                <b><a href="https://www.facebook.com/sandaitsanda/"
+                      target="_blank">
+                    Facebook Page
+                </a></b>
+        </div>
+        <div class="instagram">
+            <h1><b><a href="https://www.instagram.com/it_sanda/">Instagram Grid :</a></b></h1>
+            <img src="social_media/instagram.png" alt="facebook" style="width:100%">
+            <p>
+                <b><a href="https://www.instagram.com/it_sanda/"
+                      target="_blank">
+                    Instagram Page
+                </a></b>
+        </div>
+
+</div>
+</div>
+</div>
 </div>
 
 <div class="footer">
-    <footer>
-        <p><b>IT-Sanda</b></p>
-        <p><b>Contact information:</b></p>
-    </footer>
+    <h2>IT-Sanda</h2>
+    <h4>Contact information:</h4>
 </div>
 
 <script>
@@ -686,5 +789,6 @@
     }
 
 </script>
+
 </body>
 </html>
