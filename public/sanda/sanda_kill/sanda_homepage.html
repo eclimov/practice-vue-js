@@ -31,7 +31,7 @@
         /* Part of header which includes only navigation menu tabs */
         .navigation-bar {
             height: 100%;
-            width: 35%;
+            width: 37%;
             margin: 0;
             line-height: initial;
             font-family: Laila, serif;
@@ -174,13 +174,6 @@
             clear: both;
             font-family: Laila, serif;
         }
-        /* Properties for all images*/
-        .images {
-            width: 100%;
-            padding: 20px;
-            background-color: #aaa;
-        }
-
         /* Welcome section */
         .card-welcome {
             width: 100%;
@@ -214,6 +207,14 @@
             color: black;
         }
 
+        .bordered-img-welcome {
+            vertical-align: middle;
+            width: 100%;
+            padding:5px;
+            border:1px solid #021a40;
+            background-color:#af7ca0;
+        }
+
         /* Section with information about project */
         .card-aboutproject {
             width: 100%;
@@ -233,11 +234,6 @@
 
         .slide-show {
             display: none;
-            width: 100%;
-        }
-
-        .img {
-            vertical-align: middle;
             width: 100%;
         }
 
@@ -478,12 +474,18 @@
             width: 100%;
             padding: 20px;
             margin-top: 20px;
-            margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 22px;
             text-align: center;
             color: black;
             background-color: #c34397;
+        }
+
+        .bordered-img-about-me {
+            width: 100%;
+            padding:5px;
+            border: 5px solid #af7ca0;
+            background-color:#071268;
         }
 
         /*Search bar*/
@@ -617,7 +619,7 @@
                     <p style="text-align: right">My name is Sanda blah-blah</p>
                 </div>
                 <div style="text-align: left" class="column-welcome">
-                    <img src="blog_images/welcome.png" style="height:100%; width:100%" alt="welcome">
+                    <img class="bordered-img-welcome" src="blog_images/welcome.png" style="height:100%; width:100% " alt="welcome">
                 </div>
             </div>
         </div>
@@ -746,12 +748,16 @@
     <div class="rightcolumn">
         <div class="card-aboutme">
             <h1><b>About Me</b></h1>
-            <div class="aboutmeimg"><img src="blog_images/aboutme.png" alt="about-me" style="height:50%; width:50%"></div>
-            <p><b>Let me introduce myself. :)</b></p>
-            <p><b>Test</b></p>
-            <p><b>Test</b></p>
-            <p><b>Test</b></p>
-            <p><b>Test</b></p>
+            <div class="aboutmeimg"><img class="bordered-img-about-me" src="blog_images/aboutme.png" alt="about-me" style="height:60%; width:60%"></div>
+            <p style="text-align: left"><b>Let me introduce myself. :)</b></p>
+            <p style="text-align: left">The interests are:</p>
+            <ul style="text-align: left">
+                <li>IT & Tech World</li>
+                <li>Blogging</li>
+                <li>Marketing</li>
+                <li>Project Management</li>
+                <li>Freelance</li>
+            </ul>
         </div>
        <div class="container-search">
            <h1><b>Search</b></h1>
@@ -869,6 +875,11 @@
 <div class="footer">
     <h2>IT-Sanda</h2>
     <h4>Contact information:</h4>
+    <address style="text-align: left;">
+        Created by <a href="mailto:itsanda@gmail.com">IT-Sanda</a>.<br>
+        Visit our office at:<br>
+        Cioocana City<br>
+    </address>
 </div>
 
 <script>

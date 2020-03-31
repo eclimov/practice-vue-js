@@ -31,7 +31,7 @@
         /* Part of header which includes only navigation menu tabs */
         .navigation-bar {
             height: 100%;
-            width: 35%;
+            width: 37%;
             margin: 0;
             line-height: initial;
             font-family: Laila, serif;
@@ -212,6 +212,14 @@
             padding: 0 8px;
             text-align: left;
             color: black;
+        }
+
+        .bordered-img-welcome {
+            vertical-align: middle;
+            width: 100%;
+            padding:5px;
+            border:1px solid #021a40;
+            background-color:#af7ca0;
         }
 
         /* Section with information about project */
@@ -478,12 +486,18 @@
             width: 100%;
             padding: 20px;
             margin-top: 20px;
-            margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 22px;
             text-align: center;
             color: black;
             background-color: #c34397;
+        }
+
+        .bordered-img-about-me {
+            width: 100%;
+            padding:5px;
+            border: 5px solid #af7ca0;
+            background-color:#071268;
         }
 
         /*Search bar*/
@@ -611,18 +625,32 @@
 <div class="row">
     <div class="leftcolumn">
         <div class="card-welcome">
-            <h1><b>Welcome!</b></h1><br>
+            <h1><b>Let the show begin!</b></h1><br>
             <div class="row-welcome">
                 <div class="column-welcome">
-                    <p style="text-align: right">My name is Sanda blah-blah</p>
+                    <p style="text-align: right">IT-Sanda presents</p>
                 </div>
                 <div style="text-align: left" class="column-welcome">
-                    <img src="blog_images/welcome.png" style="height:100%; width:100%" alt="welcome">
+                    <img class="bordered-img-welcome" src="blog_images/welcome.png" style="height:100%; width:100% " alt="welcome">
                 </div>
             </div>
         </div>
         <div class="card-aboutproject">
+            <h1><b>The definition of IT-Sanda is...</b></h1>
+            <p>We are an e-learning platform designed to be a one-stop-shop for all women in career transition. Our trainings are world class and we are dedicated to motivating and inspiring women who are job searching or starting businesses. To date, we’ve launched 2,000+ dream careers and businesses since 2010.</p>
+            <p>Our vision is career fulfillment for all women, whether that is working for a company, running your own business or running your home.</p>
+            <p>We believe that the more women we have in this world who are doing what they love and are doing what they were born to do (like jumping out of bed to get to work), our world will be filled with happier and more successful women.</p>
+            <p>We believe it is crucial to understand yourself and your calling first in your career transition or business start-up process. We also believe in breaking the barriers of cost to get personalized career and business coaching. We offer low-priced online training for women to get the career and business help they need.</p>
+            <p>We have members around the world in our two membership sites. Corporate Rescue Plan is the most comprehensive side hustle to business launch program for women out there. Love Your Career Formula is an accelerated dream job launch program, where you get training, inspiration and a group community for as long as you need it. We are a life-changing program and our aim is to change your work and your life, not just get you a new paycheck or make you a lot of money. </p>
+        </div>
+        <div class="card-aboutproject">
             <h1 style="color: #c34397;"><b>IT-Sanda gives you...</b></h1>
+            <p>A digital platform high standards of personal behavior, skill and grace.</p>
+            <p>We are passionate about meaningful content and community at the intersection of your work, dreams and everyday life.</p>
+            <p>We are passionate about helping women who want to make a difference in the world.</p>
+            <p>We exist to help women set career and business goals and reach them.</p>
+            <p>We work with women who are determined and know their dreams are possible.</p>
+            <p>We are passionate about helping women who invest in themselves, their career goals and don’t make excuses.</p>
             <p>Freelance services of QA, Marketing, Translations etc.</p>
             <p>Digital platform with focus on IT & tech, Marketing, Project Management etc.</p>
             <p>Empowerment, Motivation, Inspiration in career and not only</p>
@@ -667,12 +695,16 @@
     <div class="rightcolumn">
         <div class="card-aboutme">
             <h1><b>About Me</b></h1>
-            <div class="aboutmeimg"><img src="blog_images/aboutme.png" alt="about-me" style="height:50%; width:50%"></div>
-            <p><b>Let me introduce myself. :)</b></p>
-            <p><b>Test</b></p>
-            <p><b>Test</b></p>
-            <p><b>Test</b></p>
-            <p><b>Test</b></p>
+            <div class="aboutmeimg"><img class="bordered-img-about-me" src="blog_images/aboutme.png" alt="about-me" style="height:60%; width:60%"></div>
+            <p style="text-align: left"><b>Let me introduce myself. :)</b></p>
+            <p style="text-align: left">The interests are:</p>
+            <ul style="text-align: left">
+                <li>IT & Tech World</li>
+                <li>Blogging</li>
+                <li>Marketing</li>
+                <li>Project Management</li>
+                <li>Freelance</li>
+            </ul>
         </div>
         <div class="container-search">
             <h1><b>Search</b></h1>
@@ -705,10 +737,7 @@
                     Instagram Page
                 </a></b>
         </div>
-
-</div>
-</div>
-</div>
+    </div>
 </div>
 
 <div class="footer">
