@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 4</title>
+</head>
+<body>
+</body>
+<script>
+
+    function sayHello(name) {
+        console.log(`Hello ${name}!`);
+    }
+
+    function generateRandomInt() {
+        let randomNum = Math.floor(Math.random()*10);
+        console.log(`Random integer: ${randomNum}`);
+        return randomNum;
+    }
+
+    function generateRandomIntInRange(min, max) {
+        let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(`Random integer in range ${min} and ${max}: ${randomNum}`);
+        return randomNum;
+    }
+
+    function isEven(a) {
+        return a % 2 === 0;
+
+    }
+
+    let randomNum = generateRandomInt();
+    console.log(`${randomNum} is ${isEven(randomNum) ? 'Even' : 'Odd'}`);
+
+    function getTheBestDistrict() {
+        let districts = [
+            'Ciocana',
+            'Rascani',
+            'Botanica'
+        ];
+        console.log(districts [generateRandomIntInRange(0, districts.length - 1)]);
+    }
+
+    switch(getTheBestDistrict()) {
+        case 'Ciocana':
+            sayHello('Sanda');
+            break;
+        case 'Rascani':
+            sayHello('Tanya');
+            break;
+        default:
+            console.log('Who are you?');
+    }
+</script>
+</html>
