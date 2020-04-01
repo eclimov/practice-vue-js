@@ -10,4 +10,4 @@ EXPOSE 8080
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
 
-CMD yarn serve
+CMD yarn dev
