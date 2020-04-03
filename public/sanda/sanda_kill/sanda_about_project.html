@@ -162,11 +162,6 @@
             background-color: #f0d7e9;
         }
 
-        /* Add a card effect for articles */
-        .card {
-            padding: 20px;
-            font-family: Laila, serif;
-        }
         /* Clear floats after the columns */
         .row:after {
             content: "";
@@ -223,13 +218,25 @@
         }
 
         /* Section with information about project */
-        .card-aboutproject {
+        .card-vision {
             width: 100%;
             padding: 20px;
             margin-top: 20px;
             font-family: Laila, serif;
             font-size: 20px;
             text-align: center;
+            color: black;
+            background-color: #af7ca0;
+        }
+
+        /* Section with information about project */
+        .card-aboutproject {
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: left;
             color: white;
             background-color: #071268;
         }
@@ -241,11 +248,6 @@
 
         .slide-show {
             display: none;
-            width: 100%;
-        }
-
-        .img {
-            vertical-align: middle;
             width: 100%;
         }
 
@@ -356,130 +358,6 @@
                 font-size: 11px
             }
         }
-        /* Section which includes freelance services proposed by web-site */
-        .card-service {
-            width: 100%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            background-color: #61659c;
-        }
-
-        .column-service {
-            float: left;
-            width: 25%;
-            margin-bottom: 16px;
-            padding: 0 8px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: black;
-            background-color: #61659c;
-        }
-
-        @media screen and (max-width: 650px) {
-            .column-service {
-                width: 100%;
-                display: block;
-            }
-        }
-
-        .container-service {
-            padding: 0 16px;
-            width: 100%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: black;
-            background-color: #af7ca0;
-        }
-
-        .container-service::after, .row-service::after {
-            content: "";
-            clear: both;
-            display: table;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: black;
-            background-color: #af7ca0;
-        }
-
-        .container-service:hover {
-            width: 100%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: white;
-            background-color: #071268;
-        }
-
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            width: 100%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: black;
-        }
-
-        .button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            width: 100%;
-            text-align: center;
-            color: white;
-            background-color: #000;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            width: 100%;
-            text-align: center;
-            background-color: #555;
-        }
-        /* Blog */
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        .column-blog {
-            float: left;
-            margin-bottom: 16px;
-            padding: 0 8px;
-            width: 50%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: black;
-        }
-
-        .column-blog:nth-child(odd) {
-            background-color: #c34397;
-        }
-        .column-blog:nth-child(even) {
-            background-color: #A35CFF;
-        }
-
-        @media screen and (max-width: 650px) {
-            .column-blog {
-                display: block;
-                width: 100%;
-            }
-        }
-
-        .button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            width: 100%;
-            text-align: center;
-            color: white;
-            background-color: #000;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            width: 100%;
-            background-color: #555;
-        }
 
         /* Section with information about creator */
         .card-aboutme {
@@ -487,7 +365,7 @@
             padding: 20px;
             margin-top: 20px;
             font-family: Laila, serif;
-            font-size: 22px;
+            font-size: 18px;
             text-align: center;
             color: black;
             background-color: #c34397;
@@ -529,8 +407,8 @@
             border: 1px #af7ca0;
             border-left: none;
             font-size: 20px;
-            color: black;
-            background: white;
+            color: #000000;
+            background: #FFFFFF;
             cursor: pointer;
         }
 
@@ -554,32 +432,95 @@
             font-family: Laila, serif;
             font-size: 25px;
             text-align: center;
-            color: black;
+            color: #000000;
             background-color: #c34397;
         }
-
-        .facebook {
-            padding: 50px;
+        /* Section for e-mail newsletter*/
+        .card-email {
             width: 100%;
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
             text-align: center;
-            color: white;
+            color: #000000;
+            background-color: #523f8f;
+        }
+
+        form {
+            font-family: Laila, serif;
+        }
+
+        .container-email {
+            padding: 20px;
+            background-color: #523f8f;
+        }
+
+        input[type=text], input[type=submit] {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #523f8f;
+            box-sizing: border-box;
+        }
+
+        input[type=checkbox] {
+            margin-top: 16px;
+        }
+
+        input[type=submit] {
+            border: none;
+            color: #FFFFFF;
             background-color: #071268;
         }
 
-        .instagram {
-            padding: 50px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: black;
+        input[type=submit]:hover {
+            opacity: 0.8;
             background-color: #c34397;
         }
 
+        /* Section for contact form */
+        .card-contact-form {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #000000;
+            background-color: #af7ca0;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            color: #FFFFFF;
+            background-color: #071268;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #071268;
+        }
+
+        .contact-form {
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
         /* Footer */
         .footer {
             padding: 20px;
@@ -635,28 +576,22 @@
                 </div>
             </div>
         </div>
-        <div class="card-aboutproject">
-            <h1><b>The definition of IT-Sanda is...</b></h1>
-            <p>We are an e-learning platform designed to be a one-stop-shop for all women in career transition. Our trainings are world class and we are dedicated to motivating and inspiring women who are job searching or starting businesses. To date, we’ve launched 2,000+ dream careers and businesses since 2010.</p>
-            <p>Our vision is career fulfillment for all women, whether that is working for a company, running your own business or running your home.</p>
-            <p>We believe that the more women we have in this world who are doing what they love and are doing what they were born to do (like jumping out of bed to get to work), our world will be filled with happier and more successful women.</p>
-            <p>We believe it is crucial to understand yourself and your calling first in your career transition or business start-up process. We also believe in breaking the barriers of cost to get personalized career and business coaching. We offer low-priced online training for women to get the career and business help they need.</p>
-            <p>We have members around the world in our two membership sites. Corporate Rescue Plan is the most comprehensive side hustle to business launch program for women out there. Love Your Career Formula is an accelerated dream job launch program, where you get training, inspiration and a group community for as long as you need it. We are a life-changing program and our aim is to change your work and your life, not just get you a new paycheck or make you a lot of money. </p>
+        <div class="card-vision">
+            <h1 style="color: black"><b>The definition of IT-Sanda is...</b></h1>
+            <p>...an e-learning platform designed to help in career transition and not only, for these, who are are dedicated. Motivation, inspiration and empowerment - find all these here.</p>
+            <p>My vision is to help everyone to obtain a career fulfillment for all people, whether they are working for a company, freelancing, running own business etc.</p>
+            <p>The best moment of the day - is waking up and starting run the world. Don't you think?</p>
         </div>
+
         <div class="card-aboutproject">
-            <h1 style="color: #c34397;"><b>IT-Sanda gives you...</b></h1>
-            <p>A digital platform high standards of personal behavior, skill and grace.</p>
-            <p>We are passionate about meaningful content and community at the intersection of your work, dreams and everyday life.</p>
-            <p>We are passionate about helping women who want to make a difference in the world.</p>
-            <p>We exist to help women set career and business goals and reach them.</p>
-            <p>We work with women who are determined and know their dreams are possible.</p>
-            <p>We are passionate about helping women who invest in themselves, their career goals and don’t make excuses.</p>
-            <p>Freelance services of QA, Marketing, Translations etc.</p>
-            <p>Digital platform with focus on IT & tech, Marketing, Project Management etc.</p>
-            <p>Empowerment, Motivation, Inspiration in career and not only</p>
-            <p>Community & Networking</p>
+            <h1 style="color: #c34397"><b>IT-Sanda gives you...</b></h1>
+            <p style="text-align: center">A digital platform high standards of personal behavior, skill and grace.</p>
+            <p>It is crucial to understand yourself and your calling in  career transition or business start-up process.</p>
+            <p><li>Check services I propose as a freelances and contact me for more details.</li>
+            <p><li>Read <b><a href="./sanda_blog.html" target="_blank"> blog</a></b> posts you like most - about QA, tech, marketing, project management etc.</li>
+            <p><li>Join <b><a href="./sanda_community.html" target="_blank"> community</a></b> or follow the one, you like more - Tech Women or Business Babes.</li>
             <br>
-            <p>So what are you wanna be today?</p>
+            <p style="text-align: center">Work can be = dream. So what are you wanna be today?</p>
         </div>
         <div class="card-slideshow">
             <div class="slide-show fade">
@@ -691,20 +626,16 @@
         <div class="card-welcome">
             <h1><b>Project, we working for:</b></h1><br>
         </div>
+        <div class="card-welcome">
+            <h1><b>Video:</b></h1><br>
+        </div>
     </div>
     <div class="rightcolumn">
         <div class="card-aboutme">
             <h1><b>About Me</b></h1>
             <div class="aboutmeimg"><img class="bordered-img-about-me" src="blog_images/aboutme.png" alt="about-me" style="height:60%; width:60%"></div>
-            <p style="text-align: left"><b>Let me introduce myself. :)</b></p>
-            <p style="text-align: left">The interests are:</p>
-            <ul style="text-align: left">
-                <li>IT & Tech World</li>
-                <li>Blogging</li>
-                <li>Marketing</li>
-                <li>Project Management</li>
-                <li>Freelance</li>
-            </ul>
+            <p>I was completely confused about what I wanted to be when I grew up.  I thought I did everything right but felt stuck and confused. Then something changed. I started a blog and found my passion. I chose to write and teach about what I loved.
+                It didn’t matter what I was teaching, I just loved sharing my knowledge with others. On an average day, I would wake up early, blog, go to my day job and then come home and teach again at night.</p>
         </div>
         <div class="container-search">
             <h1><b>Search</b></h1>
@@ -719,30 +650,76 @@
             <h1><b>Quote</b></h1>
             <p><strong><i>Surround yourself with supportive people.</i></strong></p>
         </div>
-        <div class="facebook">
-            <h1><b><a href="https://www.facebook.com/sandaitsanda/">Facebook Page :</a></b></h1>
-            <img src="social_media/facebook.png" alt="facebook" style="width:100%">
-            <p>
-                <b><a href="https://www.facebook.com/sandaitsanda/"
-                      target="_blank">
-                    Facebook Page
-                </a></b>
-        </div>
-        <div class="instagram">
-            <h1><b><a href="https://www.instagram.com/it_sanda/">Instagram Grid :</a></b></h1>
-            <img src="social_media/instagram.png" alt="facebook" style="width:100%">
-            <p>
-                <b><a href="https://www.instagram.com/it_sanda/"
-                      target="_blank">
-                    Instagram Page
-                </a></b>
+
+        <div class="card-email">
+            <h1><b>Subscribe to Newsletter</b></h1>
+
+        <form action="/action_page.php">
+            <div class="container-email">
+                <p>Find exactly what you need right now to reach your career goals and dreams by reading our blog posts and following the updates.</p>
+            </div>
+
+            <div class="container-email">
+                <label>
+                    <input type="text" placeholder="Name" name="name" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Email address" name="mail" required>
+                </label>
+                <label>
+                    <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                </label>
+            </div>
+
+            <div class="container-email">
+                <input type="submit" value="Subscribe">
+            </div>
+        </form>
+            <div/>
+    </div>
+    </div>
+
+    <div class="card-contact-form">
+        <h3>Contact Form</h3>
+
+        <div class="contact-form">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="emailuser" placeholder="Your e-mail..">
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
         </div>
     </div>
+
+</div>
+</div>
 </div>
 
 <div class="footer">
     <h2>IT-Sanda</h2>
     <h4>Contact information:</h4>
+    <address style="text-align: left;">
+        Created by <a href="mailto:itsanda@gmail.com">IT-Sanda</a>.<br>
+        Visit our office at:<br>
+        Cioocana City<br>
+    </address>
 </div>
 
 <script>
