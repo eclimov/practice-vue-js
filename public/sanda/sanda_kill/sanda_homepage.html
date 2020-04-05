@@ -95,7 +95,7 @@
         }
 
         #About {
-            background-color: #af7ca0;
+            background-color: #c34397;
         }
 
         #Blog {
@@ -221,6 +221,7 @@
 
         /* Section with information about project */
         .card-aboutproject {
+            display: block;
             width: 100%;
             padding: 20px;
             margin-top: 20px;
@@ -442,6 +443,7 @@
         }
 
         .card-blog {
+            display: block;
             width: 100%;
             padding: 50px;
             margin-bottom: 20px;
@@ -513,8 +515,16 @@
             background-color: #555;
         }
 
+        .bordered-img-blog {
+            width: 100%;
+            padding: 5px;
+            border: 5px solid #c34397;
+            background-color: #523f8f;
+        }
+
         /* Section with information about creator */
         .card-aboutme {
+            display: block;
             width: 100%;
             padding: 20px;
             margin-top: 20px;
@@ -534,6 +544,7 @@
 
         /*Search bar*/
         .container-search {
+            display: block;
             width: 100%;
             padding: 50px;
             margin-top: 20px;
@@ -550,7 +561,10 @@
             float: left;
             padding: 10px;
             width: 90%;
+            font-family: Laila, serif;
             font-size: 20px;
+            text-align: left;
+            color: #000000;
             background-color: #FFFFFF;
         }
 
@@ -560,7 +574,9 @@
             padding: 10px;
             border: 1px #af7ca0;
             border-left: none;
+            font-family: Laila, serif;
             font-size: 20px;
+            text-align: left;
             color: #000000;
             background: #FFFFFF;
             cursor: pointer;
@@ -580,6 +596,7 @@
 
         /* Section with motivational quote*/
         .quote {
+            display: block;
             width: 100%;
             padding: 50px;
             margin-bottom: 20px;
@@ -591,6 +608,7 @@
         }
 
         .facebook {
+            display: block;
             padding: 50px;
             width: 100%;
             margin-bottom: 20px;
@@ -602,6 +620,7 @@
         }
 
         .instagram {
+            display: block;
             padding: 50px;
             width: 100%;
             margin-bottom: 20px;
@@ -626,7 +645,7 @@
             background-color: #c34397;
         }
 
-        /* Section for contact form */
+        /* Section for current projects */
         .card-contact-form {
             display: block;
             width: 100%;
@@ -642,38 +661,104 @@
         input[type=text], select, textarea {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ccc;
+            border: 1px solid #af7ca0;
             border-radius: 4px;
             box-sizing: border-box;
             margin-top: 6px;
             margin-bottom: 16px;
             resize: vertical;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: left;
         }
 
         input[type=submit] {
             padding: 12px 20px;
             border: none;
             border-radius: 4px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
             color: #FFFFFF;
-            background-color: #4CAF50;
+            background-color: #000000;
             cursor: pointer;
         }
 
         input[type=submit]:hover {
-            background-color: #45a049;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #555;
         }
 
         .contact-form {
             border-radius: 5px;
             padding: 20px;
-            background-color: #f2f2f2;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: left;
+            background-color: #af7ca0;
+        }
+
+        /* Section for e-mail newsletter*/
+        .card-email {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #000000;
+            background-color: #523f8f;
+        }
+
+        form {
+            font-family: Laila, serif;
+        }
+
+        .container-email {
+            padding: 20px;
+            background-color: #523f8f;
+        }
+
+        input[type=text], input[type=submit] {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #523f8f;
+            box-sizing: border-box;
+        }
+
+        input[type=checkbox] {
+            margin-top: 16px;
+        }
+
+        input[type=submit] {
+            border: none;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #000000;
+        }
+
+        input[type=submit]:hover {
+            opacity: 0.8;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            background-color: #555;
         }
 
         /* Footer */
         .footer {
             padding: 20px;
             margin-top: 20px;
-            text-align: center;
+            font-family: Laila, serif;
+            text-align: left;
             background: #af7ca0;
         }
 
@@ -696,7 +781,7 @@
 
     <div class="navigation-bar" id="header-links">
         <button class="tabnav" onclick="openPage('Homepage', this, '#523f8f')" id="defaultOpen"><b>HOMEPAGE</b></button>
-        <button class="tabnav" onclick="openPage('About', this, '#af7ca0')"><b>ABOUT</b></button>
+        <button class="tabnav" onclick="openPage('About', this, '#c34397')"><b>ABOUT</b></button>
         <button class="tabnav" onclick="openPage('Blog', this, '#af7ca0')"><b>BLOG</b></button>
         <button class="tabnav" onclick="openPage('Community', this, '#af7ca0')"><b>COMMUNITY</b></button>
         <button class="tabnav" onclick="openPage('Podcast', this, '#af7ca0')"><b>PODCAST</b></button>
@@ -717,7 +802,11 @@
             <h1><b>Welcome!</b></h1><br>
             <div class="row-welcome">
                 <div class="column-welcome">
-                    <p style="text-align: right">My name is Sanda blah-blah</p>
+                    <p style="text-align: right">We believe in high standards of personal behavior.</p>
+                    <p style="text-align: right">We support other women.</p>
+                    <p style="text-align: right">We believe in your dreams.</p>
+                    <p style="text-align: right">We don’t waste your time.</p>
+                    <p style="text-align: right">We do the right thing.</p>
                 </div>
                 <div style="text-align: left" class="column-welcome">
                     <img class="bordered-img-welcome" src="blog_images/welcome.png" style="height:100%; width:100% "
@@ -818,8 +907,7 @@
                 </div>
                 <div class="column-service">
                     <div class="card">
-                        <img class="bordered-img-service" src="images/translations.JPG" alt="translations"
-                             style="width:100%">
+                        <img class="bordered-img-service" src="blog_images/blair.png" alt="content-marketing" style="width: 100%">
                         <div class="container-service">
                             <h2 style="text-align: center"><b>Project Management</b></h2>
                             <ul>
@@ -848,7 +936,7 @@
                 <div class="row-service">
                     <div class="column-blog">
                         <div class="card">
-                            <img src="images/qa.jpg" alt="qa" style="width:100%">
+                            <img class="bordered-img-blog" src="images/qa.jpg" alt="qa" style="width:100%">
                             <div class="container-blog">
                                 <h2 style="text-align: center"><b>Quality Assurance</b></h2>
             <p>
@@ -859,9 +947,9 @@
 </div>
 <div class="column-blog">
     <div class="card">
-        <img src="images/marketing.JPG" alt="content-marketing" style="width:100%">
+        <img class="bordered-img-blog" src="images/project-management.jpg" alt="project-management" style="width:100%">
         <div class="container-blog">
-            <h2 style="text-align: center"><b>Content Marketing</b></h2>
+            <h2 style="text-align: center"><b>Project Management</b></h2>
             <p>
                 <button class="button">Contact</button>
             </p>
@@ -870,9 +958,9 @@
 </div>
 <div class="column-blog">
     <div class="card">
-        <img src="images/projectmanagement.JPG" alt="project-management" style="width:100%">
+        <img class="bordered-img-blog" src="images/marketing.jpg" alt="content-marketing" style="width:100%">
         <div class="container-blog">
-            <h2 style="text-align: center"><b>Project Management</b></h2>
+            <h2 style="text-align: center"><b>Content Marketing</b></h2>
             <p>
                 <button class="button">Contact</button>
             </p>
@@ -883,7 +971,7 @@
 <div class="row-service">
     <div class="column-blog">
         <div class="card">
-            <img src="images/translations.JPG" alt="tech-news" style="width:100%">
+            <img class="bordered-img-blog" src="images/translations.JPG" alt="tech-news" style="width:100%">
             <div class="container-blog">
                 <h2 style="text-align: center"><b>Tech News</b></h2>
                 <p>
@@ -894,7 +982,7 @@
     </div>
     <div class="column-blog">
         <div class="card">
-            <img src="images/translations.JPG" alt="events" style="width:100%">
+            <img class="bordered-img-blog" src="images/translations.JPG" alt="events" style="width:100%">
             <div class="container-blog">
                 <h2 style="text-align: center"><b>Events</b></h2>
                 <p>
@@ -905,7 +993,7 @@
     </div>
     <div class="column-blog">
         <div class="card">
-            <img src="images/translations.JPG" alt="empowerment" style="width:100%">
+            <img class="bordered-img-blog" src="images/translations.JPG" alt="empowerment" style="width:100%">
             <div class="container-blog">
                 <h2 style="text-align: center"><b>Empowerment & Motivation</b></h2>
                 <p>
@@ -965,29 +1053,96 @@
     </div>
 
     <div class="card-contact-form">
-        <h3>Contact Form</h3>
+        <h1><b>Contact Form</b></h1>
 
         <div class="contact-form">
-            <form action="/action_page.php">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <form name="htmlform" method="post" action="html_form_send.php">
+                <table width="350px">
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="first_name">First Name*</label>
+                        </td>
+                        <td valign="top">
+                            <label>
+                                <input  type="text" name="first_name" maxlength="100" size="30">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                        <label for="last_name">Last Name*</label>
+                        </td>
+                        <td valign="top">
+                            <label>
+                                <input  type="text" name="last_name" maxlength="100" size="30">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="email">Email Address*</label>
+                        </td>
+                        <td valign="top">
+                            <label>
+                                <input  type="text" name="email" maxlength="100" size="30">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="telephone">Subject*</label>
+                        </td>
+                        <td valign="top">
+                            <label>
+                                <input  type="text" name="telephone" maxlength="50" size="30">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="comments">Comments*</label>
+                        </td>
+                        <td valign="top">
+                            <label>
+                                <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+                            </label>
+                        </td>
 
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
-                </select>
-
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-                <input type="submit" value="Submit">
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center">
+                            <input type="submit" value="Submit">   ( <a href="https://www.facebook.com/sandaitsanda/">Try Facebook Page :</a> )
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
+        </div>
+
+    <div class="card-email">
+        <h1><b>Subscribe to Newsletter</b></h1>
+
+        <form action="/action_page.php">
+            <div class="container-email">
+                <p>Find exactly what you need right now to reach your career goals and dreams by reading our blog posts and following the updates.</p>
+            </div>
+
+            <div class="container-email">
+                <label>
+                    <input type="text" placeholder="Name" name="name" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Email address" name="mail" required>
+                </label>
+                <label>
+                    <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                </label>
+            </div>
+
+            <div class="container-email">
+                <input type="submit" value="Subscribe">
+            </div>
     </div>
 </div>
 </div>

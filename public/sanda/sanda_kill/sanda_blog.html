@@ -11,6 +11,7 @@
         /* Header - inclusively logo */
         .header {
             display: flex;
+            height: 10%;
             width: 100%;
             justify-content: space-between;
             overflow: hidden;
@@ -18,9 +19,19 @@
         }
 
         #logo {
-            height: 90px;
-            width: 20%;
+            display: inline;
+            width: 21%;
             text-align: center;
+        }
+
+        /* Style for whole page */
+        body, html {
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+            font-family: Laila, serif;
+            font-size: 18px;
+            background: #f0d7e9;
         }
 
         /* Navigation bar for menu tabs */
@@ -41,26 +52,28 @@
         }
         /* Each navigation tab */
         .tabnav {
+            display: inline;
             float: left;
             width: 20%;
             margin: 0;
             border: none;
-            padding: 15px;
+            padding: 10px;
             font-family: Laila, serif;
-            font-size: 18px;
+            font-size: 20px;
             text-align: center;
-            color: black;
+            color: #000000;
             background-color: #af7ca0;
             cursor: pointer;
         }
 
         /* Style for navigation tab while changing colors */
         .tabnav:hover {
+            display: inline;
             width: 20%;
             font-family: Laila, serif;
             font-size: 18px;
-            text-align: center;
-            color: black;
+            text-align: left;
+            color: #000000;
         }
 
         /* Style the tab content (and add height:100% for full page content) */
@@ -71,16 +84,16 @@
             padding: 0 16px;
             font-family: Laila, serif;
             font-size: 18px;
-            color: black;
+            color: #000000;
         }
 
         /* Colors for tabs */
         #Homepage {
-            background-color: #af7ca0;
+            background-color: #523f8f;
         }
 
         #About {
-            background-color: #af7ca0;
+            background-color: #c34397;
         }
 
         #Blog {
@@ -93,47 +106,6 @@
 
         #Podcast {
             background-color: #af7ca0;
-        }
-
-        /* Style the tab content (and add height:100% for full page content) */
-        .tabcontent {
-            display: none;
-            height: 100%;
-            padding: 0 16px;
-            font-family: Laila, serif;
-            font-size: 18px;
-            color: black;
-        }
-
-        /* Colors for tabs */
-        #Homepage {
-            background-color: #af7ca0;
-        }
-
-        #About {
-            background-color: #af7ca0;
-        }
-
-        #Blog {
-            background-color: #af7ca0;
-        }
-
-        #Community {
-            background-color: #af7ca0;
-        }
-
-        #Podcast {
-            background-color: #af7ca0;
-        }
-
-        /* Style for whole page */
-        body, html {
-            height: 100%;
-            width: 100%;
-            padding: 20px;
-            font-family: Laila, serif;
-            font-size: 18px;
-            background: #f0d7e9;
         }
 
         /* Style for all titles */
@@ -156,7 +128,7 @@
             font-family: Laila, serif;
             font-size: 28px;
             text-align: left;
-            color: black;
+            color: #000000;
         }
 
         h4 {
@@ -171,7 +143,7 @@
         }
 
         a:hover {
-            background-color: #61659c;
+            background-color: #af7ca0;
         }
         /* Two unequal columns that floats next to each other - main structure of the website */
         /* Left column */
@@ -193,14 +165,6 @@
             background-color: #f0d7e9;
         }
 
-        /* Add a card effect for articles */
-        .card {
-            background-color: white;
-            padding: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-        }
         /* Clear floats after the columns */
         .row:after {
             content: "";
@@ -208,11 +172,90 @@
             clear: both;
             font-family: Laila, serif;
         }
-        /* Properties for all images*/
-        .images {
+
+        /* Blog */
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .card-blog {
+            display: block;
             width: 100%;
-            padding: 20px;
-            background-color: #aaa;
+            padding: 50px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #071268;
+        }
+
+        .column-blog {
+            float: left;
+            margin-bottom: 16px;
+            padding: 0 8px;
+            width: 33.3%;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .container-blog {
+            padding: 0 16px;
+            width: 100%;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #000000;
+            background-color: #c34397;
+        }
+
+        .container-blog::after, .row-service::after {
+            display: table;
+            content: "";
+            clear: both;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #000000;
+            background-color: #c34397;
+        }
+
+        .container-blog:hover {
+            width: 100%;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #000000;
+            background-color: #523f8f;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column-blog {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .button {
+            display: inline-block;
+            border: none;
+            outline: 0;
+            padding: 8px;
+            width: 100%;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #000000;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            width: 100%;
+            background-color: #555;
+        }
+
+        .bordered-img-blog {
+            width: 100%;
+            padding: 5px;
+            border: 5px solid #c34397;
+            background-color: #523f8f;
         }
 
         /* Welcome section */
@@ -593,17 +636,17 @@
     </div>
 
     <div class="navigation-bar" id="header-links">
-        <button class="tabnav" onclick="openPage('Homepage', this, '#af7ca0')"><b>HOMEPAGE</b></button>
-        <button class="tabnav" onclick="openPage('About', this, '#af7ca0')"><b>ABOUT</b></button>
+        <button class="tabnav" onclick="openPage('Homepage', this, '#523f8f')"><b>HOMEPAGE</b></button>
+        <button class="tabnav" onclick="openPage('About', this, '#c34397')"><b>ABOUT</b></button>
         <button class="tabnav" onclick="openPage('Blog', this, '#af7ca0')" id="defaultOpen"><b>BLOG</b></button>
         <button class="tabnav" onclick="openPage('Community', this, '#af7ca0')"><b>COMMUNITY</b></button>
         <button class="tabnav" onclick="openPage('Podcast', this, '#af7ca0')"><b>PODCAST</b></button>
 
         <div id="Homepage" class="tabcontent"></div>
-        <div id="About" class="tabcontent"></div>
-        <div id="Blog" class="tabcontent">
-            <p><i><q>There are secret opportunities hidden inside every failure.</q></i></p>
+        <div id="About" class="tabcontent">
+            <p><i><q>The only way to support a revolution is to make your own.</q></i></p>
         </div>
+        <div id="Blog" class="tabcontent"></div>
         <div id="Community" class="tabcontent"></div>
         <div id="Podcast" class="tabcontent"></div>
     </div>
@@ -615,96 +658,84 @@
             <h1><b>Check the blog right now!</b></h1><br>
             <img src="blog_images/welcome.png" style="width:90%" alt="welcome-page">
         </div>
-        <div class="card">
-            <div class="card-service">
-                <h1><b><a href="http://localhost:63342/practice-vue-js/public/sanda/sanda_kill/sanda_blog.html?_ijt=54qpkpq9lu5dtjt7tgv6krtiv5">Blog</a></b></h1>
+        <div class="card-blog">
+            <h1><b><a href="./sanda_blog.html"
+                      target="_blank">
+                Blog
+            </a></b></h1>
+            <p>
                 <div class="row-service">
                     <div class="column-blog">
                         <div class="card">
-                            <img src="images/qa.jpg" alt="qa" style="width:50%">
-                            <div class="container-service">
-                                <p class="title">
-                                <h2 style="text-align: center"><b>QA</b></h2>
-                                <p class="title" style="font-size: 18px">A QA knowledge hub that hosts articles about anything
-                                    related to testing.
-                                    <br>
-                                </p>
-                                <p>
-                                    <button class="button">Contact</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column-blog">
-                        <div class="card">
-                            <img src="images/translations.JPG" alt="translations" style="width:50%">
-                            <div class="container-service">
-                                <p class="title">
-                                <h2 style="text-align: center"><b>Project Management</b></h2>
-                                <p class="title" style="font-size: 18px">New techniques & practices to optimize the work processes
-                                    and project cycles.</p>
-                                <p>
-                                    <button class="button">Contact</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column-blog">
-                        <div class="card">
-                            <img src="images/marketing.JPG" alt="content-marketing" style="width:50%">
-                            <div class="container-service">
-                                <p class="title">
-                                <h2 style="text-align: center"><b>Content Marketing</b></h2>
-                                <p class="title" style="font-size: 18px">Everything that's happening in the marketing industry
-                                    worldwide.</p>
-                                <p>
-                                    <button class="button">Contact</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column-blog">
-                        <div class="card">
-                            <img src="images/projectmanagement.JPG" alt="project-management" style="width:50%">
-                            <div class="container-service">
-                                <p class="title">
-                                <h2 style="text-align: center"><b>Tech News</b></h2>
-                                <p class="title" style="font-size: 18px">The latest tech news.</p>
-                                <p>
-                                    <button class="button">Contact</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column-blog">
-                        <div class="card">
-                            <img src="images/projectmanagement.JPG" alt="project-management" style="width:50%">
-                            <div class="container-service">
-                                <p class="title">
-                                <h2 style="text-align: center"><b>Events</b></h2>
-                                <p class="title" style="font-size: 18px">See how event tech is developing.</p>
-                                <p>
-                                    <button class="button">Contact</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column-blog">
-                        <div class="card">
-                            <img src="images/projectmanagement.JPG" alt="project-management" style="width:50%">
-                            <div class="container-service">
-                                <p class="title">
-                                <h2 style="text-align: center"><b>Empowerment & Motivation</b></h2>
-                                <p class="title" style="font-size: 18px">Achieve your success and do what you love.</p>
-                                <p>
-                                    <button class="button">Contact</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            <img class="bordered-img-blog" src="images/qa.jpg" alt="qa" style="width:100%">
+                            <div class="container-blog">
+                                <h2 style="text-align: center"><b>Quality Assurance</b></h2>
+            <p>
+                <button class="button">Contact</button>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="column-blog">
+    <div class="card">
+        <img class="bordered-img-blog" src="images/project-management.jpg" alt="project-management" style="width:100%">
+        <div class="container-blog">
+            <h2 style="text-align: center"><b>Project Management</b></h2>
+            <p>
+                <button class="button">Contact</button>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="column-blog">
+    <div class="card">
+        <img class="bordered-img-blog" src="images/marketing.jpg" alt="content-marketing" style="width:100%">
+        <div class="container-blog">
+            <h2 style="text-align: center"><b>Content Marketing</b></h2>
+            <p>
+                <button class="button">Contact</button>
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row-service">
+    <div class="column-blog">
+        <div class="card">
+            <img class="bordered-img-blog" src="images/translations.JPG" alt="tech-news" style="width:100%">
+            <div class="container-blog">
+                <h2 style="text-align: center"><b>Tech News</b></h2>
+                <p>
+                    <button class="button">Contact</button>
+                </p>
             </div>
-
+        </div>
+    </div>
+    <div class="column-blog">
+        <div class="card">
+            <img class="bordered-img-blog" src="images/translations.JPG" alt="events" style="width:100%">
+            <div class="container-blog">
+                <h2 style="text-align: center"><b>Events</b></h2>
+                <p>
+                    <button class="button">Contact</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="column-blog">
+        <div class="card">
+            <img class="bordered-img-blog" src="images/translations.JPG" alt="empowerment" style="width:100%">
+            <div class="container-blog">
+                <h2 style="text-align: center"><b>Empowerment & Motivation</b></h2>
+                <p>
+                    <button class="button">Contact</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
         </div>
         <div class="card">
             <h2>TITLE HEADING</h2>
