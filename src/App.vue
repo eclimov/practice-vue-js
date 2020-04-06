@@ -9,6 +9,9 @@
       </router-link> |
       <router-link :to="{ name: 'smartphone-price-quantity-example' }">
         Example
+      </router-link> |
+      <router-link :to="{ name: 'phantom' }">
+        Phantom
       </router-link>
     </div>
     <router-view />
