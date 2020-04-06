@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import SmartphonePriceQuantityExample from '../views/eclimov/SmartphonePriceQuantityExample'
+import Example1 from '../views/sanda/Example1'
 import Phantom from '../views/sjofn/Phantom'
 
 Vue.use(VueRouter)
@@ -29,6 +30,11 @@ const routes = [
     path: '/eclimov/example1',
     name: 'smartphone-price-quantity-example',
     component: SmartphonePriceQuantityExample
+  },
+  {
+    path: '/sanda/example1',
+    name: 'sanda-example1',
+    component: Example1
   }
 ]
 
