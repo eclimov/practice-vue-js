@@ -1,12 +1,25 @@
 <template>
   <div>
-    Phantom
+    <!--Show link to Google if isGoogle. Show link to Yandex otherwise-->
+
+    <!--Enumerate Agile Club members here-->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Phantom'
+  name: 'Phantom',
+  data () {
+    return {
+      isGoogle: true,
+      agileClubMembers: [
+        'Sanda',
+        'Tanya',
+        'Evghenii',
+        'Eduard'
+      ]
+    }
+  }
 }
 </script>
 

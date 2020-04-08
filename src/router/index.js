@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import SmartphonePriceQuantityExample from '../views/eclimov/SmartphonePriceQuantityExample'
 import Example1 from '../views/sanda/Example1'
-import Phantom from '../views/sjofn/Phantom'
+import Phantom from '@/views/sjofn/Phantom'
 
 Vue.use(VueRouter)
 
