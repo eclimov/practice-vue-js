@@ -41,20 +41,22 @@
 
         /* Part of header which includes only navigation menu tabs */
         .navigation-bar {
+            display: inline;
             height: 100%;
-            width: 37%;
+            width: 48%;
             margin: 0;
             line-height: initial;
             font-family: Laila, serif;
-            font-size: 18px;
+            font-size: 20px;
             text-align: right;
-            color: black;
+            color: #000000;
         }
+
         /* Each navigation tab */
         .tabnav {
-            display: inline;
+            display: block;
             float: left;
-            width: 20%;
+            width: 16.66%;
             margin: 0;
             border: none;
             padding: 10px;
@@ -68,12 +70,17 @@
 
         /* Style for navigation tab while changing colors */
         .tabnav:hover {
-            display: inline;
-            width: 20%;
+            display: block;
+            float: left;
+            width: 16.66%;
+            margin: 0;
+            border: none;
+            padding: 10px;
             font-family: Laila, serif;
             font-size: 18px;
-            text-align: left;
+            text-align: center;
             color: #000000;
+            cursor: pointer;
         }
 
         /* Style the tab content (and add height:100% for full page content) */
@@ -96,16 +103,20 @@
             background-color: #c34397;
         }
 
+        #Services {
+            background-color: #523f8f;
+        }
+
         #Blog {
-            background-color: #af7ca0;
+            background-color: #c34397;
         }
 
         #Community {
-            background-color: #af7ca0;
+            background-color: #523f8f;
         }
 
         #Podcast {
-            background-color: #af7ca0;
+            background-color: #c34397;
         }
 
         /* Style for all titles */
@@ -173,6 +184,93 @@
             font-family: Laila, serif;
         }
 
+        /* Fake image */
+        .fakeimg {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background-color: #aaa;
+        }
+
+        /* Grid for blog categories */
+        .grid-container {
+            display: grid;
+            height: auto;
+            width: 50%;
+            grid-template-columns: auto auto;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #000000;
+            background-color: #523f8f;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+
+        li a {
+            display: block;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        li a:hover {
+            display: block;
+            color: #FFFFFF;
+            background-color: #071268;
+        }
+        /* Add a card effect for articles */
+        .card {
+            display: block;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+        }
+        .card-article1 {
+            display: block;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            background-color: #af7ca0;
+        }
+
+        .card-article2 {
+            display: block;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #FFFFFF;
+            background-color: #071268;
+        }
+
+        .card-article3 {
+            display: block;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            background-color: #c34397;
+        }
+
+        .card-article4 {
+            display: block;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            background-color: #523f8f;
+        }
         /* Blog */
         *, *:before, *:after {
             box-sizing: inherit;
@@ -258,364 +356,134 @@
             background-color: #523f8f;
         }
 
-        /* Welcome section */
-        .card-welcome {
+        /* Section with information about creator */
+        .card-aboutme {
+            display: block;
             width: 100%;
             padding: 20px;
             margin-top: 20px;
+            font-family: Laila, serif;
+            font-size: 18px;
             text-align: center;
+            color: black;
+            background-color: #c34397;
+        }
+
+        .bordered-img-about-me {
+            width: 100%;
+            padding:5px;
+            border: 5px solid #af7ca0;
+            background-color:#071268;
+        }
+
+        /* Section for e-mail newsletter*/
+        .card-email {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
             font-family: Laila, serif;
             font-size: 20px;
-            color: black;
+            text-align: center;
+            color: #000000;
             background-color: #523f8f;
         }
 
-        /* Section with information about project */
-        .card-aboutproject {
-            width: 100%;
+        form {
+            font-family: Laila, serif;
+        }
+
+        .container-email {
             padding: 20px;
-            margin-top: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: white;
-            background-color: #071268;
+            background-color: #523f8f;
         }
 
-        /* Section with information about slide-show */
-        * {
-            box-sizing: border-box
-        }
-
-        .slide-show {
-            display: none;
-            width: 100%;
-        }
-
-        .img {
-            vertical-align: middle;
-            width: 100%;
-        }
-
-        .card-slideshow {
-            position: relative;
-            width: 100%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            background-color: #f0d7e9;
-        }
-
-        /* Next & previous buttons */
-        .prev, .next {
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            padding: 16px;
-            margin-top: -22px;
-            width: 100%;
-            font-weight: bold;
-            font-family: Laila, serif;
-            font-size: 18px;
-            color: white;
-        }
-
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        /* On hover, add a black background color with a little bit see-through */
-        .prev:hover, .next:hover {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        /* Caption text */
-        .text {
-            position: absolute;
-            padding: 8px 12px;
-            bottom: 8px;
-            width: 100%;
-            text-align: center;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: #000;
-        }
-
-        /* Number text (1/3 etc) */
-        .numbertext {
-            position: absolute;
-            padding: 8px 12px;
-            color: #f2f2f2;
-            font-family: Laila, serif;
-            font-size: 15px;
-        }
-
-        /* The dots/bullets/indicators */
-        .dot {
-            border-radius: 50%;
-            transition: background-color 0.6s ease;
+        input[type=text], input[type=submit] {
             display: inline-block;
-            cursor: pointer;
-            margin: 0 2px;
-            height: 15px;
-            width: 15px;
-            background-color: #bbb;
-        }
-
-        .active, .dot:hover {
-            background-color: #A35CFF;;
-        }
-
-        /* Fading animation */
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @-webkit-keyframes fade {
-            from {
-                opacity: .4
-            }
-            to {
-                opacity: 1
-            }
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-            to {
-                opacity: 1
-            }
-        }
-
-        /* On smaller screens, decrease text size */
-
-        @media only screen and (max-width: 300px) {
-            .prev, .next, .text {
-                font-size: 11px
-            }
-        }
-        /* Section which includes freelance services proposed by web-site */
-        .card-service {
             width: 100%;
-            text-align: center;
-            font-family: Laila, serif;
-            font-size: 20px;
-            background-color: #61659c;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #523f8f;
+            box-sizing: border-box;
         }
 
-        .column-service {
-            float: left;
-            width: 25%;
-            margin-bottom: 16px;
-            padding: 0 8px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: black;
-            background-color: #61659c;
+        input[type=checkbox] {
+            margin-top: 16px;
         }
 
-        @media screen and (max-width: 650px) {
-            .column-service {
-                width: 100%;
-                display: block;
-            }
-        }
-
-        .container-service {
-            padding: 0 16px;
-            width: 100%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: black;
-            background-color: #af7ca0;
-        }
-
-        .container-service::after, .row-service::after {
-            content: "";
-            clear: both;
-            display: table;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: black;
-            background-color: #af7ca0;
-        }
-
-        .container-service:hover {
-            width: 100%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: white;
-            background-color: #071268;
-        }
-
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            width: 100%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: black;
-        }
-
-        .button {
+        input[type=submit] {
             border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            width: 100%;
-            text-align: center;
-            color: white;
-            background-color: #000;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            width: 100%;
-            text-align: center;
-            background-color: #555;
-        }
-        /* Blog */
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        .column-blog {
-            float: left;
-            margin-bottom: 16px;
-            padding: 0 8px;
-            width: 33,33%;
             font-family: Laila, serif;
             font-size: 20px;
-            color: black;
-        }
-
-        .column-blog:nth-child(odd) {
-            background-color: #c34397;
-        }
-        .column-blog:nth-child(even) {
-            background-color: #A35CFF;
-        }
-
-        @media screen and (max-width: 650px) {
-            .column-blog {
-                display: block;
-                width: 100%;
-            }
-        }
-
-        .button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            width: 100%;
             text-align: center;
-            color: white;
-            background-color: #000;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            width: 100%;
-            background-color: #555;
-        }
-
-        /* Section with information about creator */
-        .card-aboutme {
-            width: 100%;
-            padding: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 22px;
-            text-align: center;
-            color: black;
-            background-color: #c34397;
-        }
-
-        /*Search bar*/
-        .container-search {
-            width: 100%;
-            padding: 50px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: left;
-            color: #c34397;
-            background-color: #071268;
-        }
-
-        form.example input[type=text] {
-            border: 1px solid grey;
-            float: left;
-            padding: 10px;
-            width: 30%;
-            font-size: 20px;
-            background-color: #f1f1f1;
-        }
-
-        /* Style the submit button */
-        form.example button:hover {
+            color: #FFFFFF;
             background-color: #000000;
         }
 
-        /* Clear floats */
-        form.example::after {
-            content: "";
-            clear: both;
-            display: table;
+        input[type=submit]:hover {
+            opacity: 0.8;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            background-color: #555;
         }
 
-        /* Section with motivational quote*/
-        .quote {
-            width: 100%;
+        .card-popular-posts {
+            display: block;
             padding: 50px;
+            width: 100%;
+            margin-top: 20px;
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
             text-align: center;
-            color: #af7ca0;
-            background-color: #c34397;
+            color: #FFFFFF;
+            background-color: #071268;
+        }
+
+        .card-trending {
+            display: block;
+            padding: 50px;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #071268;
         }
 
         .facebook {
+            display: block;
             padding: 50px;
             width: 100%;
-            margin-bottom: 20px;
+            margin-top: 20px;
             font-family: Laila, serif;
             font-size: 20px;
             text-align: center;
-            color: #af7ca0;
+            color: #FFFFFF;
             background-color: #071268;
         }
 
         .instagram {
+            display: block;
             padding: 50px;
             width: 100%;
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
             text-align: center;
-            color: black;
+            color: #000000;
             background-color: #c34397;
         }
 
         /* Footer */
         .footer {
             padding: 20px;
-            margin-top: 20px;
             text-align: center;
-            background: #af7ca0;
+            background: #ddd;
+            margin-top: 20px;
         }
 
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -627,8 +495,8 @@
         }
     </style>
 </head>
-
 <body>
+
 <div class="header">
     <div>
         <img id="logo" src="header/hi.jpg" alt="logo-it-sanda">
@@ -638,15 +506,17 @@
     <div class="navigation-bar" id="header-links">
         <button class="tabnav" onclick="openPage('Homepage', this, '#523f8f')"><b>HOMEPAGE</b></button>
         <button class="tabnav" onclick="openPage('About', this, '#c34397')"><b>ABOUT</b></button>
-        <button class="tabnav" onclick="openPage('Blog', this, '#af7ca0')" id="defaultOpen"><b>BLOG</b></button>
-        <button class="tabnav" onclick="openPage('Community', this, '#af7ca0')"><b>COMMUNITY</b></button>
-        <button class="tabnav" onclick="openPage('Podcast', this, '#af7ca0')"><b>PODCAST</b></button>
+        <button class="tabnav" onclick="openPage('Services', this, '#523f8f')"><b>SERVICES</b></button>
+        <button class="tabnav" onclick="openPage('Blog', this, '#c34397')" id="defaultOpen"><b>BLOG</b></button>
+        <button class="tabnav" onclick="openPage('Community', this, '#523f8f')"><b>COMMUNITY</b></button>
+        <button class="tabnav" onclick="openPage('Podcast', this, '#c34397')"><b>PODCAST</b></button>
 
         <div id="Homepage" class="tabcontent"></div>
-        <div id="About" class="tabcontent">
-            <p><i><q>The only way to support a revolution is to make your own.</q></i></p>
+        <div id="About" class="tabcontent"></div>
+        <div id="Services" class="tabcontent"></div>
+        <div id="Blog" class="tabcontent">
+            <p><i><q>The energy you’ll expend focusing on someone else’s life is better spent working on your own. Just be your own idol.</q></i></p>
         </div>
-        <div id="Blog" class="tabcontent"></div>
         <div id="Community" class="tabcontent"></div>
         <div id="Podcast" class="tabcontent"></div>
     </div>
@@ -654,9 +524,89 @@
 
 <div class="row">
     <div class="leftcolumn">
-        <div class="card-welcome">
-            <h1><b>Check the blog right now!</b></h1><br>
-            <img src="blog_images/welcome.png" style="width:90%" alt="welcome-page">
+        <p></p>
+        <div class="grid-container">
+            <div>Blog categories:</div>
+            <div>
+                <ul>
+                    <li><a href="#qualityassurance">Quality Assurance</a></li>
+                    <li><a href="#marketing">Content Marketing & Management</a></li>
+                    <li><a href="#projectmanagement">Project Management</a></li>
+                    <li><a href="#technews">Tech News</a></li>
+                    <li><a href="#technews">Tech Events</a></li>
+                    <li><a href="#technews">Empowerment & Motivation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-article1">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Dec 7, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article2">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article3">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article4">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article1">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article2">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article3">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article4">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article1">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article2">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         </div>
         <div class="card-blog">
             <h1><b><a href="./sanda_blog.html"
@@ -702,7 +652,7 @@
 <div class="row-service">
     <div class="column-blog">
         <div class="card">
-            <img class="bordered-img-blog" src="images/translations.JPG" alt="tech-news" style="width:100%">
+            <img class="bordered-img-blog" src="images/news.jpg" alt="tech-news" style="width:100%">
             <div class="container-blog">
                 <h2 style="text-align: center"><b>Tech News</b></h2>
                 <p>
@@ -713,7 +663,7 @@
     </div>
     <div class="column-blog">
         <div class="card">
-            <img class="bordered-img-blog" src="images/translations.JPG" alt="events" style="width:100%">
+            <img class="bordered-img-blog" src="images/events.jpg" alt="events" style="width:100%">
             <div class="container-blog">
                 <h2 style="text-align: center"><b>Events</b></h2>
                 <p>
@@ -724,7 +674,7 @@
     </div>
     <div class="column-blog">
         <div class="card">
-            <img class="bordered-img-blog" src="images/translations.JPG" alt="empowerment" style="width:100%">
+            <img class="bordered-img-blog" src="images/empowerment.jpg" alt="empowerment" style="width:100%">
             <div class="container-blog">
                 <h2 style="text-align: center"><b>Empowerment & Motivation</b></h2>
                 <p>
@@ -736,41 +686,66 @@
 </div>
 </div>
 </div>
-        </div>
-        <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-    </div>
     <div class="rightcolumn">
         <div class="card-aboutme">
             <h1><b>About Me</b></h1>
-            <div class="aboutmeimg"><img src="blog_images/aboutme.png" alt="about-me"></div>
-            <p>Let me introduce myself. :)</p>
-            <p>My name is Sanda blah-blah</p>
+            <div class="aboutmeimg"><img class="bordered-img-about-me" src="blog_images/aboutme.png" alt="about-me" style="height:60%; width:60%"></div>
+            <p>Guest posts and not only.</p>
+            <p>There’s a new way of doing work and living. We have to prepare for the future. I’m homeschooling with you and working. We can do this together. That’s what today’s all about. </p>
         </div>
-        <div class="card">
+        <div class="card-email">
+            <h1><b>Subscribe to Newsletter</b></h1>
+
+            <form action="/action_page.php">
+                <div class="container-email">
+                    <p>Find exactly what you need right now to reach your career goals and dreams by reading our blog posts and following the updates.</p>
+                </div>
+
+                <div class="container-email">
+                    <label>
+                        <input type="text" placeholder="Name" name="name" required>
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Email address" name="mail" required>
+                    </label>
+                    <label>
+                        <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                    </label>
+                </div>
+
+                <div class="container-email">
+                    <input type="submit" value="Subscribe">
+                </div>
+        </div>
+        <div class="card-popular-posts">
             <h3>Popular Post</h3>
             <div class="fakeimg">Image</div><br>
             <div class="fakeimg">Image</div><br>
             <div class="fakeimg">Image</div>
         </div>
-        <div class="card">
-            <h3>Recent Post</h3>
+        <div class="card-trending">
+            <h3>Popular Post</h3>
             <div class="fakeimg">Image</div><br>
             <div class="fakeimg">Image</div><br>
             <div class="fakeimg">Image</div>
         </div>
-        <div class="card">
-            <h3>Follow Me on Facebook</h3>
-            <p>Some text..</p>
+        <div class="facebook">
+            <h1><b><a href="https://www.facebook.com/sandaitsanda/">Facebook Page :</a></b></h1>
+            <img src="social_media/facebook.png" alt="facebook" style="width:100%">
+            <p>
+                <b><a href="https://www.facebook.com/sandaitsanda/"
+                      target="_blank">
+                    Facebook Page
+                </a></b>
         </div>
-        <div class="card">
-            <h3>Follow Me on Instargram</h3>
-            <p>Some text..</p>
+        <div class="instagram">
+            <h1><b><a href="https://www.instagram.com/it_sanda/">Instagram Grid :</a></b></h1>
+            <img src="social_media/instagram.png" alt="facebook" style="width:100%">
+            <p>
+                <b><a href="https://www.instagram.com/it_sanda/"
+                      target="_blank">
+                    Instagram Page
+                </a></b>
         </div>
     </div>
 </div>
@@ -795,12 +770,15 @@
         elmnt.style.backgroundColor = color;
 
         /* Function for switching to other connected pages */
-        switch(pageName) {
+        switch (pageName) {
             case  'Homepage':
                 window.location.href = "./sanda_homepage.html";
                 break;
-            case 'About':
+            case  'About':
                 window.location.href = "./sanda_about_project.html";
+                break;
+            case 'Services':
+                window.location.href = "./sanda_services.html";
                 break;
             case 'Community':
                 window.location.href = "./sanda_community.html";
@@ -813,8 +791,6 @@
 
     /* Get the element with id="defaultOpen" and make it as default tab from navigation bar */
     document.getElementById("defaultOpen").click();
-
-</script>
-
+    </script>
 </body>
 </html>

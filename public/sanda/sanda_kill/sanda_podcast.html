@@ -11,6 +11,7 @@
         /* Header - inclusively logo */
         .header {
             display: flex;
+            height: 10%;
             width: 100%;
             justify-content: space-between;
             overflow: hidden;
@@ -18,112 +19,9 @@
         }
 
         #logo {
-            height: 90px;
-            width: 20%;
+            display: inline;
+            width: 21%;
             text-align: center;
-        }
-
-        /* Navigation bar for menu tabs */
-        {
-            box-sizing: border-box
-        }
-
-        /* Part of header which includes only navigation menu tabs */
-        .navigation-bar {
-            height: 100%;
-            width: 37%;
-            margin: 0;
-            line-height: initial;
-            font-family: Laila, serif;
-            font-size: 18px;
-            text-align: right;
-            color: black;
-        }
-        /* Each navigation tab */
-        .tabnav {
-            float: left;
-            width: 20%;
-            margin: 0;
-            border: none;
-            padding: 15px;
-            font-family: Laila, serif;
-            font-size: 18px;
-            text-align: center;
-            color: black;
-            background-color: #af7ca0;
-            cursor: pointer;
-        }
-
-        /* Style for navigation tab while changing colors */
-        .tabnav:hover {
-            width: 20%;
-            font-family: Laila, serif;
-            font-size: 18px;
-            text-align: center;
-            color: black;
-        }
-
-        /* Style the tab content (and add height:100% for full page content) */
-        .tabcontent {
-            display: none;
-            height: 100%;
-            width: 100%;
-            padding: 0 16px;
-            font-family: Laila, serif;
-            font-size: 18px;
-            color: black;
-        }
-
-        /* Colors for tabs */
-        #Homepage {
-            background-color: #af7ca0;
-        }
-
-        #About {
-            background-color: #af7ca0;
-        }
-
-        #Blog {
-            background-color: #af7ca0;
-        }
-
-        #Community {
-            background-color: #af7ca0;
-        }
-
-        #Podcast {
-            background-color: #af7ca0;
-        }
-
-        /* Style the tab content (and add height:100% for full page content) */
-        .tabcontent {
-            display: none;
-            height: 100%;
-            padding: 0 16px;
-            font-family: Laila, serif;
-            font-size: 18px;
-            color: black;
-        }
-
-        /* Colors for tabs */
-        #Homepage {
-            background-color: #af7ca0;
-        }
-
-        #About {
-            background-color: #af7ca0;
-        }
-
-        #Blog {
-            background-color: #af7ca0;
-        }
-
-        #Community {
-            background-color: #af7ca0;
-        }
-
-        #Podcast {
-            background-color: #af7ca0;
         }
 
         /* Style for whole page */
@@ -134,6 +32,91 @@
             font-family: Laila, serif;
             font-size: 18px;
             background: #f0d7e9;
+        }
+
+        /* Navigation bar for menu tabs */
+        {
+            box-sizing: border-box
+        }
+
+        /* Part of header which includes only navigation menu tabs */
+        .navigation-bar {
+            display: inline;
+            height: 100%;
+            width: 48%;
+            margin: 0;
+            line-height: initial;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: right;
+            color: #000000;
+        }
+
+        /* Each navigation tab */
+        .tabnav {
+            display: block;
+            float: left;
+            width: 16.66%;
+            margin: 0;
+            border: none;
+            padding: 10px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #000000;
+            background-color: #af7ca0;
+            cursor: pointer;
+        }
+
+        /* Style for navigation tab while changing colors */
+        .tabnav:hover {
+            display: block;
+            float: left;
+            width: 16.66%;
+            margin: 0;
+            border: none;
+            padding: 10px;
+            font-family: Laila, serif;
+            font-size: 18px;
+            text-align: center;
+            color: #000000;
+            cursor: pointer;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            display: none;
+            height: 100%;
+            width: 100%;
+            padding: 0 16px;
+            font-family: Laila, serif;
+            font-size: 18px;
+            color: #000000;
+        }
+
+        /* Colors for tabs */
+        #Homepage {
+            background-color: #523f8f;
+        }
+
+        #About {
+            background-color: #c34397;
+        }
+
+        #Services {
+            background-color: #523f8f;
+        }
+
+        #Blog {
+            background-color: #c34397;
+        }
+
+        #Community {
+            background-color: #523f8f;
+        }
+
+        #Podcast {
+            background-color: #c34397;
         }
 
         /* Style for all titles */
@@ -156,7 +139,7 @@
             font-family: Laila, serif;
             font-size: 28px;
             text-align: left;
-            color: black;
+            color: #000000;
         }
 
         h4 {
@@ -171,7 +154,7 @@
         }
 
         a:hover {
-            background-color: #61659c;
+            background-color: #af7ca0;
         }
         /* Two unequal columns that floats next to each other - main structure of the website */
         /* Left column */
@@ -193,14 +176,6 @@
             background-color: #f0d7e9;
         }
 
-        /* Add a card effect for articles */
-        .card {
-            background-color: white;
-            padding: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-        }
         /* Clear floats after the columns */
         .row:after {
             content: "";
@@ -209,279 +184,303 @@
             font-family: Laila, serif;
         }
 
-        /* Welcome section */
-        .card-welcome {
+        /* Fake image */
+        .fakeimg {
+            display: block;
             width: 100%;
             padding: 20px;
+            background-color: #aaa;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            display: block;
+            padding: 20px;
             margin-top: 20px;
-            text-align: center;
+            margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
-            color: black;
+        }
+
+        .grid-container {
+            display: grid;
+            width: 40%;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+            font-family: Laila, serif;
+            font-size: 20px;
             background-color: #523f8f;
         }
 
-        /* Section with information about project */
-        .card-aboutproject {
-            width: 100%;
-            padding: 20px;
-            margin-top: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: white;
-            background-color: #071268;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Section with video*/
-        .video {
-            width: 100%;
-            padding: 20px;
-            margin-top: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: white;
-            background-color: #071268;
+        li a {
+            display: block;
+            color: #000;
+            text-decoration: none;
         }
 
-        /*Search bar*/
-        .container-search {
-            width: 100%;
-            padding: 50px;
+        li a:hover {
+            background-color: #555;
+            color: white;
+        }
+        .card-article1 {
+            display: block;
+            padding: 20px;
             margin-top: 20px;
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
-            text-align: left;
-            color: #c34397;
+            background-color: #af7ca0;
+        }
+
+        .card-article2 {
+            display: block;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #FFFFFF;
             background-color: #071268;
         }
 
-        form.example input[type=text] {
-            border: 1px solid grey;
-            float: left;
-            padding: 10px;
-            width: 30%;
+        .card-article3 {
+            display: block;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
             font-size: 20px;
-            background-color: #f1f1f1;
+            background-color: #c34397;
         }
 
-        /* Style the submit button */
-        form.example button:hover {
-            background-color: #000000;
+        .card-article4 {
+            display: block;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            background-color: #523f8f;
+        }
+        /* Blog */
+        *, *:before, *:after {
+            box-sizing: inherit;
         }
 
-        /* Clear floats */
-        form.example::after {
+        .card-blog {
+            display: block;
+            width: 100%;
+            padding: 50px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #071268;
+        }
+
+        .column-blog {
+            float: left;
+            margin-bottom: 16px;
+            padding: 0 8px;
+            width: 33.3%;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .container-blog {
+            padding: 0 16px;
+            width: 100%;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #000000;
+            background-color: #c34397;
+        }
+
+        .container-blog::after, .row-service::after {
+            display: table;
             content: "";
             clear: both;
-            display: table;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #000000;
+            background-color: #c34397;
         }
-        /* Section with information about creator */
-        .about-me-section {
-            padding: 50px;
+
+        .container-blog:hover {
+            width: 100%;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #000000;
+            background-color: #523f8f;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column-blog {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .button {
+            display: inline-block;
+            border: none;
+            outline: 0;
+            padding: 8px;
             width: 100%;
             text-align: center;
-            font-size: 22px;
+            color: #FFFFFF;
+            background-color: #000000;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            width: 100%;
+            background-color: #555;
+        }
+
+        .bordered-img-blog {
+            width: 100%;
+            padding: 5px;
+            border: 5px solid #c34397;
+            background-color: #523f8f;
+        }
+
+        /* Section with information about creator */
+        .card-aboutme {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: Laila, serif;
+            font-size: 18px;
+            text-align: center;
             color: black;
             background-color: #c34397;
         }
 
-        /*Search bar*/
-        .containter-search {
-            padding: 50px;
+        .bordered-img-about-me {
             width: 100%;
-            text-align: left;
-            font-size: 20px;
-            color: #000;
-            background-color: #f0d7e9;
+            padding:5px;
+            border: 5px solid #af7ca0;
+            background-color:#071268;
         }
 
-        form.example input[type=text] {
-            border: 1px solid grey;
-            float: left;
-            padding: 10px;
-            width: 30%;
+        /* Section for e-mail newsletter*/
+        .card-email {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: Laila, serif;
             font-size: 20px;
-            background-color: #f1f1f1;
+            text-align: center;
+            color: #000000;
+            background-color: #523f8f;
         }
 
-        /* Style the submit button */
-        form.example button:hover {
+        form {
+            font-family: Laila, serif;
+        }
+
+        .container-email {
+            padding: 20px;
+            background-color: #523f8f;
+        }
+
+        input[type=text], input[type=submit] {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #523f8f;
+            box-sizing: border-box;
+        }
+
+        input[type=checkbox] {
+            margin-top: 16px;
+        }
+
+        input[type=submit] {
+            border: none;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #FFFFFF;
             background-color: #000000;
         }
 
-        /* Clear floats */
-        form.example::after {
-            content: "";
-            clear: both;
-            display: table;
+        input[type=submit]:hover {
+            opacity: 0.8;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            background-color: #555;
         }
 
-        /* Section with motivational quote*/
-        .quote {
-            width: 100%;
+        .card-popular-posts {
+            display: block;
             padding: 50px;
+            width: 100%;
+            margin-top: 20px;
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
             text-align: center;
-            color: #af7ca0;
-            background-color: #c34397;
+            color: #FFFFFF;
+            background-color: #071268;
+        }
+
+        .card-trending {
+            display: block;
+            padding: 50px;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #071268;
         }
 
         .facebook {
+            display: block;
             padding: 50px;
             width: 100%;
-            margin-bottom: 20px;
+            margin-top: 20px;
             font-family: Laila, serif;
             font-size: 20px;
             text-align: center;
-            color: #af7ca0;
+            color: #FFFFFF;
             background-color: #071268;
         }
 
         .instagram {
+            display: block;
             padding: 50px;
             width: 100%;
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
             text-align: center;
-            color: black;
+            color: #000000;
             background-color: #c34397;
         }
-        /* Slide-show*/
 
-        * {
-            box-sizing: border-box
-        }
-
-        .slide-show {
-            display: none;
-            width: 100%;
-        }
-
-        img {
-            vertical-align: middle;
-            width: 100%;
-        }
-
-        .container-slideshow {
-            position: relative;
-            margin: auto;
-            width: 100%;
-            font-size: 20px;
-            background-color: #f0d7e9;
-        }
-
-        /* Next & previous buttons */
-        .prev, .next {
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            padding: 16px;
-            margin-top: -22px;
-            width: 100%;
-            font-weight: bold;
-            font-size: 18px;
-            color: white;
-        }
-
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        /* On hover, add a black background color with a little bit see-through */
-        .prev:hover, .next:hover {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        /* Caption text */
-        .text {
-            position: absolute;
-            padding: 8px 12px;
-            bottom: 8px;
-            width: 100%;
-            text-align: center;
-            font-size: 20px;
-            color: #000;
-        }
-
-        /* Number text (1/3 etc) */
-        .numbertext {
-            position: absolute;
-            padding: 8px 12px;
-            top: 0;
-            color: #f2f2f2;
-            font-size: 15px;
-        }
-
-        /* The dots/bullets/indicators */
-        .dot {
-            border-radius: 50%;
-            transition: background-color 0.6s ease;
-            display: inline-block;
-            cursor: pointer;
-            margin: 0 2px;
-            height: 15px;
-            width: 15px;
-            background-color: #bbb;
-        }
-
-        .active, .dot:hover {
-            background-color: #A35CFF;;
-        }
-
-        /* Fading animation */
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @-webkit-keyframes fade {
-            from {
-                opacity: .4
-            }
-            to {
-                opacity: 1
-            }
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-            to {
-                opacity: 1
-            }
-        }
-
-        /* On smaller screens, decrease text size */
-
-        @media only screen and (max-width: 300px) {
-            .prev, .next, .text {
-                font-size: 11px
-            }
-        }
-
-        /*Footer*/
+        /* Footer */
         .footer {
-            padding: 5px 35px;
-            width: 100%;
-            text-align: left;
-            font-size: 20px;
-            color: #000;
-            background-color: #af7ca0;
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
         }
 
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -493,123 +492,263 @@
         }
     </style>
 </head>
-
 <body>
 
 <div class="header">
     <div>
-        <img id="logo" src="header/hi.JPG" alt="logo-it-sanda">
+        <img id="logo" src="header/hi.jpg" alt="logo-it-sanda">
         <span>Test</span>
     </div>
 
     <div class="navigation-bar" id="header-links">
-        <button class="tabnav" onclick="openPage('Homepage', this, '#af7ca0')"><b>HOMEPAGE</b></button>
-        <button class="tabnav" onclick="openPage('About', this, '#af7ca0')"><b>ABOUT</b></button>
-        <button class="tabnav" onclick="openPage('Blog', this, '#af7ca0')"><b>BLOG</b></button>
-        <button class="tabnav" onclick="openPage('Community', this, '#af7ca0')"><b>COMMUNITY</b></button>
-        <button class="tabnav" onclick="openPage('Podcast', this, '#af7ca0')" id="defaultOpen"><b>PODCAST</b></button>
+        <button class="tabnav" onclick="openPage('Homepage', this, '#523f8f')"><b>HOMEPAGE</b></button>
+        <button class="tabnav" onclick="openPage('About', this, '#c34397')"><b>ABOUT</b></button>
+        <button class="tabnav" onclick="openPage('Services', this, '#523f8f')"><b>SERVICES</b></button>
+        <button class="tabnav" onclick="openPage('Blog', this, '#c34397')"><b>BLOG</b></button>
+        <button class="tabnav" onclick="openPage('Community', this, '#523f8f')"><b>COMMUNITY</b></button>
+        <button class="tabnav" onclick="openPage('Podcast', this, '#c34397')" id="defaultOpen"><b>PODCAST</b></button>
 
         <div id="Homepage" class="tabcontent"></div>
         <div id="About" class="tabcontent"></div>
+        <div id="Services" class="tabcontent"></div>
         <div id="Blog" class="tabcontent"></div>
         <div id="Community" class="tabcontent"></div>
-        <div id="Podcast" class="tabcontent"></div>
-        <p><i><q>Know that there is no finish line; fortune favors action.</q></i></p>
+        <div id="Podcast" class="tabcontent">
+            <p><i><q>Become the master of what you do. </q></i></p>
         </div>
+    </div>
 </div>
 
 <div class="row">
     <div class="leftcolumn">
+        <p></p>
+        <div class="grid-container">
+            <div>Blog Categories</div>
+            <div>
+                <ul>
+                    <li><a href="#qualityassurance">Quality Assurance</a></li>
+                    <li><a href="#marketing">Marketing</a></li>
+                    <li><a href="#projectmanagement">Project Management</a></li>
+                    <li><a href="#technews">Tech News</a></li>
+                    <li><a href="#technews">Tech Events</a></li>
+                    <li><a href="#technews">Empowerment & Motivation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-article1">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Dec 7, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article2">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article3">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article4">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article1">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article2">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article3">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article4">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article1">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-article2">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card-blog">
+            <h1><b><a href="./sanda_blog.html"
+                      target="_blank">
+                Blog
+            </a></b></h1>
+            <p>
+                <div class="row-service">
+                    <div class="column-blog">
+                        <div class="card">
+                            <img class="bordered-img-blog" src="images/qa.jpg" alt="qa" style="width:100%">
+                            <div class="container-blog">
+                                <h2 style="text-align: center"><b>Quality Assurance</b></h2>
+            <p>
+                <button class="button">Contact</button>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="column-blog">
+    <div class="card">
+        <img class="bordered-img-blog" src="images/project-management.jpg" alt="project-management" style="width:100%">
+        <div class="container-blog">
+            <h2 style="text-align: center"><b>Project Management</b></h2>
+            <p>
+                <button class="button">Contact</button>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="column-blog">
+    <div class="card">
+        <img class="bordered-img-blog" src="images/marketing.jpg" alt="content-marketing" style="width:100%">
+        <div class="container-blog">
+            <h2 style="text-align: center"><b>Content Marketing</b></h2>
+            <p>
+                <button class="button">Contact</button>
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row-service">
+    <div class="column-blog">
         <div class="card">
-            <div class="card-welcome">
-                <h1><b>Welcome!</b></h1><br>
-                <img src="blog_images/welcome.png" style="width:90%" alt="welcome-page">
-            </div>
-            <div class="card-aboutproject">
-                <h1 style="color: #c34397;"><b>IT-Sanda gives you...</b></h1>
-                <p>Freelance services of QA, Marketing, Translations etc.</p>
-                <p>Digital platform with focus on IT & tech, Marketing, Project Management etc.</p>
-                <p>Empowerment, Motivation, Inspiration in career and not only</p>
-                <p>Community & Networking</p>
-                <br>
-                <p>So what are you wanna be today?</p>
-            </div>
-
-            <div class="video">
-                <h1><b>Promotional video</b></h1>
-                <p>Digital platform with focus on IT, Marketing, Project Management etc.</p>
+            <img class="bordered-img-blog" src="images/news.jpg" alt="tech-news" style="width:100%">
+            <div class="container-blog">
+                <h2 style="text-align: center"><b>Tech News</b></h2>
+                <p>
+                    <button class="button">Contact</button>
+                </p>
             </div>
         </div>
     </div>
-    <div class="rightcolumn">
+    <div class="column-blog">
         <div class="card">
-            <div class="about-me-section">
-                <h1><b>About Me</b></h1>
-                <div class="aboutmeimg"><img src="blog_images/aboutme.png" alt="about-me"></div>
-                <p>Let me introduce myself. :)</p>
-                <p>My name is Sanda blah-blah</p>
+            <img class="bordered-img-blog" src="images/events.jpg" alt="events" style="width:100%">
+            <div class="container-blog">
+                <h2 style="text-align: center"><b>Events</b></h2>
+                <p>
+                    <button class="button">Contact</button>
+                </p>
             </div>
         </div>
+    </div>
+    <div class="column-blog">
         <div class="card">
-            <div class="containter-search">
-                <form class="example" action="action_page.php">
-                    <label>
-                        <input type="text" placeholder="Search." name="search">
-                    </label>
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="container-slideshow">
-
-            <div class="slide-show fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="locals/barcelona.png" style="width:100%" alt="barcelona">
-                <div class="text">Barcelona</div>
-            </div>
-
-            <div class="slide-show fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="locals/ciocana.png" style="width:100%" alt="chisinau">
-                <div class="text">Chisinau</div>
-            </div>
-
-            <div class="slide-show fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="locals/odessa.jpg" style="width:100%" alt="odessa">
-                <div class="text">Odessa</div>
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        </div>
-
-        <div style="text-align:center; background-color: #f0d7e9">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-        <div class="card">
-            <div class="facebook">
-                <h1><b><a href="https://www.facebook.com/sandaitsanda/">Facebook Page :</a></b></h1>
-                <img src="social_media/facebook.png" alt="facebook" style="width:50%">
-            </div>
-        </div>
-        <div class="card">
-            <div class="instagram">
-                <h1><b><a href="https://www.instagram.com/it_sanda/">Instagram Grid :</a></b></h1>
-                <img src="social_media/instagram.png" alt="instagram" style="width:50%">
+            <img class="bordered-img-blog" src="images/empowerment.jpg" alt="empowerment" style="width:100%">
+            <div class="container-blog">
+                <h2 style="text-align: center"><b>Empowerment & Motivation</b></h2>
+                <p>
+                    <button class="button">Contact</button>
+                </p>
             </div>
         </div>
     </div>
 </div>
+</div>
+</div>
+<div class="rightcolumn">
+    <div class="card-aboutme">
+        <h1><b>About Me</b></h1>
+        <div class="aboutmeimg"><img class="bordered-img-about-me" src="blog_images/aboutme.png" alt="about-me" style="height:60%; width:60%"></div>
+        <p>Guest posts and not only.</p>
+        <p>There’s a new way of doing work and living. We have to prepare for the future. I’m homeschooling with you and working. We can do this together. That’s what today’s all about. </p>
+    </div>
+    <div class="card-email">
+        <h1><b>Subscribe to Newsletter</b></h1>
+
+        <form action="/action_page.php">
+            <div class="container-email">
+                <p>Find exactly what you need right now to reach your career goals and dreams by reading our blog posts and following the updates.</p>
+            </div>
+
+            <div class="container-email">
+                <label>
+                    <input type="text" placeholder="Name" name="name" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Email address" name="mail" required>
+                </label>
+                <label>
+                    <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                </label>
+            </div>
+
+            <div class="container-email">
+                <input type="submit" value="Subscribe">
+            </div>
+    </div>
+    <div class="card-popular-posts">
+        <h3>Popular Post</h3>
+        <div class="fakeimg">Image</div><br>
+        <div class="fakeimg">Image</div><br>
+        <div class="fakeimg">Image</div>
+    </div>
+    <div class="card-trending">
+        <h3>Popular Post</h3>
+        <div class="fakeimg">Image</div><br>
+        <div class="fakeimg">Image</div><br>
+        <div class="fakeimg">Image</div>
+    </div>
+    <div class="facebook">
+        <h1><b><a href="https://www.facebook.com/sandaitsanda/">Facebook Page :</a></b></h1>
+        <img src="social_media/facebook.png" alt="facebook" style="width:100%">
+        <p>
+            <b><a href="https://www.facebook.com/sandaitsanda/"
+                  target="_blank">
+                Facebook Page
+            </a></b>
+    </div>
+    <div class="instagram">
+        <h1><b><a href="https://www.instagram.com/it_sanda/">Instagram Grid :</a></b></h1>
+        <img src="social_media/instagram.png" alt="facebook" style="width:100%">
+        <p>
+            <b><a href="https://www.instagram.com/it_sanda/"
+                  target="_blank">
+                Instagram Page
+            </a></b>
+    </div>
+</div>
+</div>
 
 <div class="footer">
-    <footer>
-        <p><b>IT-Sanda</b></p>
-        <p><b>Contact information:</b></p>
-    </footer>
+    <h2>Footer</h2>
 </div>
 
 <script>
@@ -628,63 +767,27 @@
         elmnt.style.backgroundColor = color;
 
         /* Function for switching to other connected pages */
-        switch(pageName) {
+        switch (pageName) {
             case  'Homepage':
                 window.location.href = "./sanda_homepage.html";
                 break;
-            case 'About':
+            case  'About':
                 window.location.href = "./sanda_about_project.html";
                 break;
-            case 'Community':
-                window.location.href = "./sanda_community.html";
+            case 'Services':
+                window.location.href = "./sanda_services.html";
                 break;
             case 'Blog':
                 window.location.href = "./sanda_blog.html";
                 break;
-
+            case 'Community':
+                window.location.href = "./sanda_community.html";
+                break;
         }
     }
 
     /* Get the element with id="defaultOpen" and make it as default tab from navigation bar */
     document.getElementById("defaultOpen").click();
-
-    /* Function for slide show */
-
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    setInterval(function () {
-        plusSlides(slideIndex + 1);
-    }, 5000);
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("slide-show");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-
 </script>
 </body>
 </html>

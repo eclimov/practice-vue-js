@@ -20,6 +20,7 @@
 
         #logo {
             display: inline;
+            height: auto;
             width: 21%;
             text-align: center;
         }
@@ -56,6 +57,7 @@
         .tabnav {
             display: block;
             float: left;
+            height: auto;
             width: 16.66%;
             margin: 0;
             border: none;
@@ -72,6 +74,7 @@
         .tabnav:hover {
             display: block;
             float: left;
+            height: auto;
             width: 16.66%;
             margin: 0;
             border: none;
@@ -192,54 +195,51 @@
             background-color: #aaa;
         }
 
-        /* Add a card effect for articles */
-        .card {
-            display: block;
-            padding: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-        }
-
+        /* Grid for all services */
         .grid-container {
             display: grid;
-            width: 40%;
+            height: auto;
+            width: 50%;
             grid-template-columns: auto auto;
-            grid-gap: 10px;
             font-family: Laila, serif;
             font-size: 20px;
-            background-color: #523f8f;
+            color: #000000;
+            background-color: #c34397;
         }
 
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
+            color: #000000;
         }
 
         li a {
             display: block;
-            color: #000;
             text-decoration: none;
+            color: #000000;
         }
 
         li a:hover {
-            background-color: #555;
-            color: white;
-        }
-        .card-article1 {
             display: block;
+            color: #FFFFFF;
+            background-color: #071268;
+        }
+        /* Add a card effect for articles */
+        .card {
+            display: block;
+            height: auto;
+            width: auto;
             padding: 20px;
             margin-top: 20px;
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
-            background-color: #af7ca0;
         }
-
-        .card-article2 {
+        .card-article1 {
             display: block;
+            height: auto;
+            width: auto;
             padding: 20px;
             margin-top: 20px;
             margin-bottom: 20px;
@@ -249,8 +249,23 @@
             background-color: #071268;
         }
 
+        .card-article2 {
+            display: block;
+            height: auto;
+            width: auto;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #000000;
+            background-color: #af7ca0;
+        }
+
         .card-article3 {
             display: block;
+            height: auto;
+            width: auto;
             padding: 20px;
             margin-top: 20px;
             margin-bottom: 20px;
@@ -261,6 +276,8 @@
 
         .card-article4 {
             display: block;
+            height: auto;
+            width: auto;
             padding: 20px;
             margin-top: 20px;
             margin-bottom: 20px;
@@ -503,18 +520,18 @@
     <div class="navigation-bar" id="header-links">
         <button class="tabnav" onclick="openPage('Homepage', this, '#523f8f')"><b>HOMEPAGE</b></button>
         <button class="tabnav" onclick="openPage('About', this, '#c34397')"><b>ABOUT</b></button>
-        <button class="tabnav" onclick="openPage('Services', this, '#523f8f')"><b>SERVICES</b></button>
+        <button class="tabnav" onclick="openPage('Services', this, '#523f8f')" id="defaultOpen"><b>SERVICES</b></button>
         <button class="tabnav" onclick="openPage('Blog', this, '#c34397')"><b>BLOG</b></button>
-        <button class="tabnav" onclick="openPage('Community', this, '#523f8f')" id="defaultOpen"><b>COMMUNITY</b></button>
+        <button class="tabnav" onclick="openPage('Community', this, '#523f8f')"><b>COMMUNITY</b></button>
         <button class="tabnav" onclick="openPage('Podcast', this, '#c34397')"><b>PODCAST</b></button>
 
         <div id="Homepage" class="tabcontent"></div>
         <div id="About" class="tabcontent"></div>
-        <div id="Services" class="tabcontent"></div>
-        <div id="Blog" class="tabcontent"></div>
-        <div id="Community" class="tabcontent">
-            <p><i><q>We are taking over the world.</q></i></p>
+        <div id="Services" class="tabcontent">
+            <p><i><q>Know that there is no finish line; fortune favors action.</q></i></p>
         </div>
+        <div id="Blog" class="tabcontent"></div>
+        <div id="Community" class="tabcontent"></div>
         <div id="Podcast" class="tabcontent"></div>
     </div>
 </div>
@@ -523,15 +540,14 @@
     <div class="leftcolumn">
         <p></p>
         <div class="grid-container">
-            <div>Blog Categories</div>
+            <div>Services, provided by IT-Sanda:</div>
             <div>
                 <ul>
-                    <li><a href="#qualityassurance">Quality Assurance</a></li>
-                    <li><a href="#marketing">Marketing</a></li>
-                    <li><a href="#projectmanagement">Project Management</a></li>
-                    <li><a href="#technews">Tech News</a></li>
-                    <li><a href="#technews">Tech Events</a></li>
-                    <li><a href="#technews">Empowerment & Motivation</a></li>
+                    <li><a href="#qualityassurance">Quality Assurance & Testing of web products</a></li>
+                    <li><a href="#marketing">Content Marketing & Content Management</a></li>
+                    <li><a href="#projectmanagement">Translations</a></li>
+                    <li><a href="#technews">Project Management</a></li>
+                    <li><a href="#technews">Other</a></li>
                 </ul>
             </div>
         </div>
@@ -565,42 +581,7 @@
         </div>
         <div class="card-article1">
             <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article2">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article3">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article4">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article1">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article2">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
+            <h5>Title description, Dec 7, 2017</h5>
             <div class="fakeimg" style="height:200px;">Image</div>
             <p>Some text..</p>
             <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
@@ -713,6 +694,7 @@
             <div class="container-email">
                 <input type="submit" value="Subscribe">
             </div>
+        </form>
     </div>
     <div class="card-popular-posts">
         <h3>Popular Post</h3>
@@ -774,11 +756,11 @@
             case  'About':
                 window.location.href = "./sanda_about_project.html";
                 break;
-            case 'Services':
-                window.location.href = "./sanda_services.html";
-                break;
             case 'Blog':
                 window.location.href = "./sanda_blog.html";
+                break;
+            case 'Community':
+                window.location.href = "./sanda_community.html";
                 break;
             case 'Podcast':
                 window.location.href = "./sanda_podcast.html";

@@ -20,6 +20,7 @@
 
         #logo {
             display: inline;
+            height: auto;
             width: 21%;
             text-align: center;
         }
@@ -41,20 +42,23 @@
 
         /* Part of header which includes only navigation menu tabs */
         .navigation-bar {
+            display: inline;
             height: 100%;
-            width: 37%;
+            width: 48%;
             margin: 0;
             line-height: initial;
             font-family: Laila, serif;
-            font-size: 18px;
+            font-size: 20px;
             text-align: right;
-            color: black;
+            color: #000000;
         }
+
         /* Each navigation tab */
         .tabnav {
-            display: inline;
+            display: block;
             float: left;
-            width: 20%;
+            height: auto;
+            width: 16.66%;
             margin: 0;
             border: none;
             padding: 10px;
@@ -68,12 +72,18 @@
 
         /* Style for navigation tab while changing colors */
         .tabnav:hover {
-            display: inline;
-            width: 20%;
+            display: block;
+            float: left;
+            height: auto;
+            width: 16.66%;
+            margin: 0;
+            border: none;
+            padding: 10px;
             font-family: Laila, serif;
             font-size: 18px;
-            text-align: left;
+            text-align: center;
             color: #000000;
+            cursor: pointer;
         }
 
         /* Style the tab content (and add height:100% for full page content) */
@@ -96,16 +106,20 @@
             background-color: #c34397;
         }
 
+        #Services {
+            background-color: #523f8f;
+        }
+
         #Blog {
-            background-color: #af7ca0;
+            background-color: #c34397;
         }
 
         #Community {
-            background-color: #af7ca0;
+            background-color: #523f8f;
         }
 
         #Podcast {
-            background-color: #af7ca0;
+            background-color: #c34397;
         }
 
         /* Style for all titles */
@@ -176,6 +190,7 @@
         /* Welcome section */
         .card-welcome {
             display: block;
+            height: auto;
             width: 100%;
             padding: 20px;
             margin-top: 20px;
@@ -247,11 +262,13 @@
 
         .slide-show {
             display: none;
+            height: auto;
             width: 100%;
         }
 
         .card-slideshow {
             position: relative;
+            height: auto;
             width: 100%;
             font-family: Laila, serif;
             font-size: 20px;
@@ -314,9 +331,9 @@
             border-radius: 50%;
             transition: background-color 0.6s ease;
             cursor: pointer;
-            margin: 0 2px;
             height: 15px;
             width: 15px;
+            margin: 0 2px;
             background-color: #FFFFFF;
         }
 
@@ -564,14 +581,16 @@
         <div class="navigation-bar" id="header-links">
             <button class="tabnav" onclick="openPage('Homepage', this, '#523f8f')"><b>HOMEPAGE</b></button>
             <button class="tabnav" onclick="openPage('About', this, '#c34397')" id="defaultOpen"><b>ABOUT</b></button>
-            <button class="tabnav" onclick="openPage('Blog', this, '#af7ca0')"><b>BLOG</b></button>
-            <button class="tabnav" onclick="openPage('Community', this, '#af7ca0')"><b>COMMUNITY</b></button>
-            <button class="tabnav" onclick="openPage('Podcast', this, '#af7ca0')"><b>PODCAST</b></button>
+            <button class="tabnav" onclick="openPage('Services', this, '#523f8f')"><b>SERVICES</b></button>
+            <button class="tabnav" onclick="openPage('Blog', this, '#c34397')"><b>BLOG</b></button>
+            <button class="tabnav" onclick="openPage('Community', this, '#523f8f')"><b>COMMUNITY</b></button>
+            <button class="tabnav" onclick="openPage('Podcast', this, '#c34397')"><b>PODCAST</b></button>
 
             <div id="Homepage" class="tabcontent"></div>
             <div id="About" class="tabcontent">
                 <p><i><q>The only way to support a revolution is to make your own.</q></i></p>
             </div>
+            <div id="Services" class="tabcontent"></div>
             <div id="Blog" class="tabcontent"></div>
             <div id="Community" class="tabcontent"></div>
             <div id="Podcast" class="tabcontent"></div>
@@ -645,7 +664,9 @@
             <h1><b>Video:</b></h1><br>
         </div>
         <div class="card-ps">
-            <h1><b>P.S.</b></h1><br>
+            <h1><b>P.S.</b></h1>
+            <p>When you work with us at CCG, we can guarantee you will feel empowered, rejuvenated, excited, fulfilled and hopeful.</p>
+            <p>We are so proud our client’s “after” feeling powerful, strong, confident and committed after taking advantage of our job search and business growth community memberships.</p>
         </div>
     </div>
     <div class="rightcolumn">
@@ -670,72 +691,44 @@
         </div>
 
         <div class="card-contact-form">
-            <h1><b>Contact Form</b></h1>
-        <div class="contact-form">
-            <form name="htmlform" method="post" action="html_form_send.php">
-                <table width="350px">
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <label for="first_name">First Name*</label>
-                        </td>
-                        <td valign="top">
-                            <label>
-                                <input  type="text" name="first_name" maxlength="100" size="30">
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <label for="last_name">Last Name*</label>
-                        </td>
-                        <td valign="top">
-                            <label>
-                                <input  type="text" name="last_name" maxlength="100" size="30">
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <label for="email">Email Address*</label>
-                        </td>
-                        <td valign="top">
-                            <label>
-                                <input  type="text" name="email" maxlength="100" size="30">
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <label for="telephone">Subject*</label>
-                        </td>
-                        <td valign="top">
-                            <label>
-                                <input  type="text" name="telephone" maxlength="50" size="30">
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td valign="top">
-                            <label for="comments">Comments*</label>
-                        </td>
-                        <td valign="top">
-                            <label>
-                                <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
-                            </label>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="text-align:center">
-                            <input type="submit" value="Submit">   ( <a href="https://www.facebook.com/sandaitsanda/">Try Facebook Page :</a> )
-                        </td>
-                    </tr>
-                </table>
-            </form>
+            <div class="contact-form">
+                <h1><b>Contact Form</b></h1>
+                <form action="/action_page.php">
+                    <fieldset>
+                        <legend>Check the part / parts to which is related your question:</legend>
+                        <p><label for="reason1"><input value="freelance" type="checkbox" name="readon1">Freelance services</label></p>
+                        <p><label for="reason2"><input value="blog" type="checkbox" name="reason2"> Blog</label></p>
+                        <p><label for="reason3"><input value="community" type="checkbox" name="reason3"> Community</label></p>
+                        <p><label for="reason4"><input value="collaboration" type="checkbox" name="reason4" checked> Proposal of collaboration</label></p>
+                        <p><label for="reason5"><input value="other" type="checkbox" name="reason5"> Other</label></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Complete the form:</legend>
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" required><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" required><br><br>
+                        <label for="subject">Subject:</label><br>
+                        <input type="text" id="subject" name="subject" required><br><br>
+                        <p><label>
+                            <textarea name="message" style="width:200px; height:200px;">Introduce comment</textarea>
+                        </label></p>
+                        <label for="country">Choose your country:</label>
+                        <select id="country" name="country">
+                            <option value="moldova">Republic of Moldova</option>
+                            <option value="algeria">Algeria</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="australia">Australia</option>
+                            <option value="austria">Austria</option>
+                            <option value="azerbaijan">Azerbaijan</option>
+                            <option value="canada">Canada</option>
+                            <option value="russia">Russia</option>
+                        </select>
+                    </fieldset>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
-    </div>
-
 </div>
 </div>
 </div>
@@ -769,6 +762,9 @@
         switch(pageName) {
             case  'Homepage':
                 window.location.href = "./sanda_homepage.html";
+                break;
+            case 'Services':
+                window.location.href = "./sanda_services.html";
                 break;
             case 'Blog':
                 window.location.href = "./sanda_blog.html";
