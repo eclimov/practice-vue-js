@@ -225,17 +225,7 @@
             color: #FFFFFF;
             background-color: #071268;
         }
-        /* Add a card effect for articles */
-        .card {
-            display: block;
-            height: auto;
-            width: auto;
-            padding: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-        }
+
         .card-article1 {
             display: block;
             height: auto;
@@ -245,8 +235,8 @@
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
-            color: #FFFFFF;
-            background-color: #071268;
+            color: #000000;
+            background-color: #523f8f;
         }
 
         .card-article2 {
@@ -271,7 +261,8 @@
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
-            background-color: #c34397;
+            color: #FFFFFF;
+            background-color: #071268;
         }
 
         .card-article4 {
@@ -283,91 +274,7 @@
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
-            background-color: #523f8f;
-        }
-        /* Blog */
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        .card-blog {
-            display: block;
-            width: 100%;
-            padding: 50px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: #FFFFFF;
-            background-color: #071268;
-        }
-
-        .column-blog {
-            float: left;
-            margin-bottom: 16px;
-            padding: 0 8px;
-            width: 33.3%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: #000000;
-        }
-
-        .container-blog {
-            padding: 0 16px;
-            width: 100%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: #000000;
             background-color: #c34397;
-        }
-
-        .container-blog::after, .row-service::after {
-            display: table;
-            content: "";
-            clear: both;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: #000000;
-            background-color: #c34397;
-        }
-
-        .container-blog:hover {
-            width: 100%;
-            font-family: Laila, serif;
-            font-size: 20px;
-            color: #000000;
-            background-color: #523f8f;
-        }
-
-        @media screen and (max-width: 650px) {
-            .column-blog {
-                display: block;
-                width: 100%;
-            }
-        }
-
-        .button {
-            display: inline-block;
-            border: none;
-            outline: 0;
-            padding: 8px;
-            width: 100%;
-            text-align: center;
-            color: #FFFFFF;
-            background-color: #000000;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            width: 100%;
-            background-color: #555;
-        }
-
-        .bordered-img-blog {
-            width: 100%;
-            padding: 5px;
-            border: 5px solid #c34397;
-            background-color: #523f8f;
         }
 
         /* Section with information about creator */
@@ -388,6 +295,126 @@
             padding:5px;
             border: 5px solid #af7ca0;
             background-color:#071268;
+        }
+
+        /* Section with information about slide-show */
+        * {
+            box-sizing: border-box
+        }
+
+        .slide-show {
+            display: none;
+            height: auto;
+            width: 100%;
+        }
+        /*Slide-show - card*/
+        .card-slideshow {
+            position: relative;
+            height: auto;
+            width: 100%;
+            font-family: Laila, serif;
+            font-size: 20px;
+            background-color: #f0d7e9;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            width: 100%;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            user-select: none;
+            margin-top: -22px;
+            padding: 16px;
+            font-family: Laila, serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: #FFFFFF;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            width: 100%;
+            background-color: #000000;
+        }
+
+        /* Caption text */
+        .text {
+            position: absolute;
+            padding: 8px 12px;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            font-family: Laila, serif;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            position: absolute;
+            padding: 8px 12px;
+            font-family: Laila, serif;
+            font-size: 15px;
+            color: #000000;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            display: inline-block;
+            border-radius: 50%;
+            transition: background-color 0.6s ease;
+            cursor: pointer;
+            margin: 0 2px;
+            height: 15px;
+            width: 15px;
+            background-color: #c34397;
+        }
+
+        .active, .dot:hover {
+            background-color: #071268;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+
+        @media only screen and (max-width: 300px) {
+            .prev, .next, .text {
+                font-size: 11px
+            }
         }
 
         /* Section for e-mail newsletter*/
@@ -442,7 +469,7 @@
             background-color: #555;
         }
 
-        .card-popular-posts {
+        .card-freebies {
             display: block;
             padding: 50px;
             width: 100%;
@@ -451,8 +478,8 @@
             font-family: Laila, serif;
             font-size: 20px;
             text-align: center;
-            color: #FFFFFF;
-            background-color: #071268;
+            color: #000000;
+            background-color: #af7ca0;
         }
 
         .card-trending {
@@ -468,36 +495,16 @@
             background-color: #071268;
         }
 
-        .facebook {
-            display: block;
-            padding: 50px;
-            width: 100%;
-            margin-top: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: #FFFFFF;
-            background-color: #071268;
-        }
-
-        .instagram {
-            display: block;
-            padding: 50px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: #000000;
-            background-color: #c34397;
-        }
-
         /* Footer */
         .footer {
+            display: block;
+            height: auto;
+            width: 100%;
             padding: 20px;
-            text-align: center;
-            background: #ddd;
             margin-top: 20px;
+            font-family: Laila, serif;
+            text-align: left;
+            background: #af7ca0;
         }
 
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -586,83 +593,7 @@
             <p>Some text..</p>
             <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         </div>
-        <div class="card-blog">
-            <h1><b><a href="./sanda_blog.html"
-                      target="_blank">
-                Blog
-            </a></b></h1>
-            <p>
-                <div class="row-service">
-                    <div class="column-blog">
-                        <div class="card">
-                            <img class="bordered-img-blog" src="images/qa.jpg" alt="qa" style="width:100%">
-                            <div class="container-blog">
-                                <h2 style="text-align: center"><b>Quality Assurance</b></h2>
-            <p>
-                <button class="button">Contact</button>
-            </p>
-        </div>
-    </div>
-</div>
-<div class="column-blog">
-    <div class="card">
-        <img class="bordered-img-blog" src="images/project-management.jpg" alt="project-management" style="width:100%">
-        <div class="container-blog">
-            <h2 style="text-align: center"><b>Project Management</b></h2>
-            <p>
-                <button class="button">Contact</button>
-            </p>
-        </div>
-    </div>
-</div>
-<div class="column-blog">
-    <div class="card">
-        <img class="bordered-img-blog" src="images/marketing.jpg" alt="content-marketing" style="width:100%">
-        <div class="container-blog">
-            <h2 style="text-align: center"><b>Content Marketing</b></h2>
-            <p>
-                <button class="button">Contact</button>
-            </p>
-        </div>
-    </div>
-</div>
-</div>
-<div class="row-service">
-    <div class="column-blog">
-        <div class="card">
-            <img class="bordered-img-blog" src="images/news.jpg" alt="tech-news" style="width:100%">
-            <div class="container-blog">
-                <h2 style="text-align: center"><b>Tech News</b></h2>
-                <p>
-                    <button class="button">Contact</button>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="column-blog">
-        <div class="card">
-            <img class="bordered-img-blog" src="images/events.jpg" alt="events" style="width:100%">
-            <div class="container-blog">
-                <h2 style="text-align: center"><b>Events</b></h2>
-                <p>
-                    <button class="button">Contact</button>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="column-blog">
-        <div class="card">
-            <img class="bordered-img-blog" src="images/empowerment.jpg" alt="empowerment" style="width:100%">
-            <div class="container-blog">
-                <h2 style="text-align: center"><b>Empowerment & Motivation</b></h2>
-                <p>
-                    <button class="button">Contact</button>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+
 </div>
 <div class="rightcolumn">
     <div class="card-aboutme">
@@ -670,6 +601,30 @@
         <div class="aboutmeimg"><img class="bordered-img-about-me" src="blog_images/aboutme.png" alt="about-me" style="height:60%; width:60%"></div>
         <p>Guest posts and not only.</p>
         <p>There’s a new way of doing work and living. We have to prepare for the future. I’m homeschooling with you and working. We can do this together. That’s what today’s all about. </p>
+    </div>
+    <div class="card-slideshow">
+        <div class="slide-show fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="locals/barcelona.png" style="width:100%" alt="barcelona">
+            <div class="text">Barcelona</div>
+        </div>
+        <div class="slide-show fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="locals/ciocana.png" style="width:100%" alt="chisinau">
+            <div class="text">Chisinau</div>
+        </div>
+        <div class="slide-show fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="locals/odessa.jpg" style="width:100%" alt="odessa">
+            <div class="text">Odessa</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div style="text-align:center; background-color: #f0d7e9">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
     </div>
     <div class="card-email">
         <h1><b>Subscribe to Newsletter</b></h1>
@@ -696,41 +651,29 @@
             </div>
         </form>
     </div>
-    <div class="card-popular-posts">
-        <h3>Popular Post</h3>
+    <div class="card-freebies">
+        <h3>Freebies</h3>
         <div class="fakeimg">Image</div><br>
         <div class="fakeimg">Image</div><br>
         <div class="fakeimg">Image</div>
     </div>
     <div class="card-trending">
-        <h3>Popular Post</h3>
+        <h3 style="color: #FFFFFF">Freebies</h3>
         <div class="fakeimg">Image</div><br>
         <div class="fakeimg">Image</div><br>
         <div class="fakeimg">Image</div>
-    </div>
-    <div class="facebook">
-        <h1><b><a href="https://www.facebook.com/sandaitsanda/">Facebook Page :</a></b></h1>
-        <img src="social_media/facebook.png" alt="facebook" style="width:100%">
-        <p>
-            <b><a href="https://www.facebook.com/sandaitsanda/"
-                  target="_blank">
-                Facebook Page
-            </a></b>
-    </div>
-    <div class="instagram">
-        <h1><b><a href="https://www.instagram.com/it_sanda/">Instagram Grid :</a></b></h1>
-        <img src="social_media/instagram.png" alt="facebook" style="width:100%">
-        <p>
-            <b><a href="https://www.instagram.com/it_sanda/"
-                  target="_blank">
-                Instagram Page
-            </a></b>
     </div>
 </div>
 </div>
 
 <div class="footer">
-    <h2>Footer</h2>
+    <h2>IT-Sanda</h2>
+    <h4>Contact information:</h4>
+    <address style="text-align: left;">
+        Created by <a href="mailto:itsanda@gmail.com">IT-Sanda</a>.<br>
+        Visit our office at:<br>
+        Cioocana City<br>
+    </address>
 </div>
 
 <script>
@@ -770,6 +713,43 @@
 
     /* Get the element with id="defaultOpen" and make it as default tab from navigation bar */
     document.getElementById("defaultOpen").click();
+
+    /* Function for slide show */
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    setInterval(function () {
+        plusSlides(slideIndex + 1);
+    }, 5000);
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide-show");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
 </script>
 </body>
 </html>
