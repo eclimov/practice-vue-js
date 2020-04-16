@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: url('~@/assets/gothic_layout.jpg');
+  background-size: 98vw, auto;
+  height: 310vh;
+  width: 98vw;
 }
 
 #nav {
@@ -39,4 +43,5 @@
     }
   }
 }
+
 </style>
