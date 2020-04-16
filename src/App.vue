@@ -12,6 +12,9 @@
       </router-link> |
       <router-link :to="{ name: 'phantom' }">
         Phantom
+      </router-link> /
+      <router-link :to="{ name: 'sanda-example1' }">
+        Menu-Sanda
       </router-link>
     </div>
     <router-view />
@@ -39,7 +42,7 @@
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #9c2bb9;
+      color: #232ab9;
     }
   }
 }

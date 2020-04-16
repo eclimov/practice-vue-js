@@ -1,27 +1,35 @@
 <template>
   <div>
-    Phantom
-<!--    <img-->
-<!--      src="~@/assets/gothic_layout.jpg"-->
-<!--      alt="image"-->
-<!--    />-->
+    <!--Show link to Google if isGoogle. Show link to Yandex otherwise-->
+
+    <!--Enumerate Agile Club members here-->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Phantom'
+  name: 'Phantom',
+  data () {
+    return {
+      isGoogle: true,
+      agileClubMembers: [
+        'Sanda',
+        'Tanya',
+        'Evghenii',
+        'Eduard'
+      ]
+    }
+  }
 }
 </script>
 
 <style scoped>
+  body {
+    background: url('/public/Sjofn/assets/gothic_layout.jpg')
+  }
   div {
     font-family: "Blackadder ITC",fantasy;
     font-size: 50px;
     color: #732222;
-    /*background: url('~@/assets/gothic_layout.jpg');*/
-    /*background-size: 95vw, auto;*/
-    /*width: 95vw;*/
-    /*height: 310vh;*/
   }
 </style>
