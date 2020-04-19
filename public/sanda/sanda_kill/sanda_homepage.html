@@ -15,6 +15,7 @@
             width: 100%;
             justify-content: space-between;
             overflow: hidden;
+            font-style: normal;
             background-color: #af7ca0;
         }
 
@@ -26,6 +27,17 @@
             background-color: #af7ca0;
         }
 
+        /* Responsive header */
+        @media screen and (max-width: 500px) {
+            .header {
+                display: flex;
+                float: none;
+            }
+            #logo {
+                display: inline;
+            }
+        }
+
         /* Style for whole page */
         body, html {
             height: 100%;
@@ -33,6 +45,7 @@
             padding: 20px;
             font-family: Laila, serif;
             font-size: 18px;
+            font-style: normal;
             background: #f0d7e9;
         }
 
@@ -50,6 +63,7 @@
             line-height: initial;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: right;
             color: #000000;
         }
@@ -65,6 +79,7 @@
             padding: 10px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             color: #000000;
             background-color: #af7ca0;
@@ -82,6 +97,7 @@
             padding: 10px;
             font-family: Laila, serif;
             font-size: 18px;
+            font-style: normal;
             text-align: center;
             color: #000000;
             cursor: pointer;
@@ -94,8 +110,23 @@
             width: 100%;
             padding: 0 16px;
             font-family: Laila, serif;
+            font-style: normal;
             font-size: 18px;
             color: #000000;
+        }
+
+        @media screen and (max-width: 500px) {
+            .navigation-bar {
+                display: inline;
+            }
+
+            .tabnav {
+                display: block;
+                float: left;
+            }
+            .tabcontent {
+                display: block;
+            }
         }
 
         /* Colors for tabs */
@@ -128,6 +159,7 @@
             margin: 0;
             font-family: Laila, serif;
             font-size: 34px;
+            font-style: normal;
             text-align: center;
         }
 
@@ -155,10 +187,12 @@
 
         /* Remove of underline from links - sections of social networks */
         a:link {
+            font-style: normal;
             text-decoration: none;
         }
 
         a:hover {
+            font-style: normal;
             background-color: #af7ca0;
         }
 
@@ -170,6 +204,12 @@
             font-family: Laila, serif;
             font-size: 22px;
             background-color: #f0d7e9;
+        }
+
+        @media screen and (max-width: 500px) {
+            .leftcolumn {
+                float: none;
+            }
         }
 
         /* Right column */
@@ -199,6 +239,7 @@
             margin-top: 20px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: oblique;
             text-align: center;
             color: #000000;
             background-color: #523f8f;
@@ -244,7 +285,8 @@
             margin-top: 20px;
             font-family: Laila, serif;
             font-size: 20px;
-            text-align: center;
+            font-style: normal;
+            text-align: left;
             color: #FFFFFF;
             background-color: #071268;
         }
@@ -266,6 +308,7 @@
             width: 100%;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             background-color: #f0d7e9;
         }
 
@@ -286,7 +329,7 @@
             color: #FFFFFF;
         }
 
-        /* Position the "next button" to the right */
+        /* Position of the "next button" to the right */
         .next {
             right: 0;
             border-radius: 3px 0 0 3px;
@@ -330,7 +373,7 @@
             width: 15px;
             background-color: #c34397;
         }
-
+        /* Colors for dots */
         .active, .dot:hover {
             background-color: #071268;
         }
@@ -376,16 +419,18 @@
             padding-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             background-color: #523f8f;
         }
-
+        /* Column of each card - including image and text */
         .column-service {
             float: left;
             width: 25%;
             padding: 0 8px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             color: #000000;
             background-color: #523f8fc;
         }
@@ -396,13 +441,14 @@
                 display: block;
             }
         }
-
+        /* Container with text */
         .container-service {
             padding: 0 16px;
             height: auto;
             width: 100%;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             color: #000000;
             background-color: #af7ca0;
         }
@@ -413,28 +459,31 @@
             clear: both;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             color: #000000;
             background-color: #af7ca0;
         }
-
+        /* Color change while hover for container with text */
         .container-service:hover {
             width: 100%;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             color: #FFFFFF;
             background-color: #071268;
         }
-
+        /* Card alignment */
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             height: auto;
             width: 100%;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             color: #000000;
             background-color: #071268;
         }
-
+        /* Border for images of section "Services" */
         .bordered-img-service {
             width: 100%;
             padding: 5px;
@@ -473,6 +522,7 @@
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             color: #FFFFFF;
             background-color: #071268;
@@ -494,6 +544,7 @@
             width: 100%;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             color: #000000;
             background-color: #c34397;
         }
@@ -504,6 +555,7 @@
             clear: both;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             color: #000000;
             background-color: #c34397;
         }
@@ -557,6 +609,7 @@
             margin-top: 20px;
             font-family: Laila, serif;
             font-size: 18px;
+            font-style: normal;
             text-align: center;
             color: black;
             background-color: #c34397;
@@ -578,6 +631,7 @@
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: italic;
             text-align: left;
             color: #000000;
             background-color: #523f8f;
@@ -590,6 +644,7 @@
             width: 90%;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: left;
             color: #000000;
             background-color: #FFFFFF;
@@ -603,6 +658,7 @@
             border-left: none;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: left;
             color: #000000;
             background: #FFFFFF;
@@ -630,6 +686,7 @@
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 25px;
+            font-style: oblique;
             text-align: center;
             color: #000000;
             background-color: #af7ca0;
@@ -642,6 +699,7 @@
             width: 100%;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             color: #FFFFFF;
             background-color: #071268;
@@ -655,6 +713,7 @@
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             color: #000000;
             background-color: #c34397;
@@ -670,6 +729,7 @@
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             color: #000000;
             background-color: #c34397;
@@ -684,6 +744,7 @@
             margin-top: 20px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             color: #000000;
             background-color: #af7ca0;
@@ -697,6 +758,7 @@
             padding: 20px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: left;
             background-color: #af7ca0;
         }
@@ -712,6 +774,7 @@
             resize: vertical;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: left;
         }
 
@@ -721,6 +784,7 @@
             border-radius: 4px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             color: #FFFFFF;
             background-color: #000000;
@@ -730,6 +794,7 @@
         input[type=submit]:hover {
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             color: #FFFFFF;
             background-color: #555;
@@ -744,6 +809,7 @@
             margin-top: 20px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             color: #000000;
             background-color: #523f8f;
@@ -751,6 +817,7 @@
 
         form {
             font-family: Laila, serif;
+            font-style: normal;
         }
 
         .container-email {
@@ -768,16 +835,19 @@
             margin: 8px 0;
             border: 1px solid #523f8f;
             box-sizing: border-box;
+            font-style: normal;
         }
 
         input[type=checkbox] {
             margin-top: 16px;
+            font-style: normal;
         }
 
         input[type=submit] {
             border: none;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             color: #FFFFFF;
             background-color: #000000;
@@ -787,6 +857,7 @@
             opacity: 0.8;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
             text-align: center;
             background-color: #555;
         }
@@ -799,6 +870,7 @@
             padding: 20px;
             margin-top: 20px;
             font-family: Laila, serif;
+            font-style: normal;
             text-align: left;
             background: #af7ca0;
         }
@@ -859,13 +931,14 @@
             </div>
 
             <div class="card-aboutproject">
-                <h1 style="color: #c34397;"><b>IT-Sanda gives you...</b></h1>
-                <p>Freelance services of QA, Marketing, Translations etc.</p>
-                <p>Digital platform with focus on IT & tech, Marketing, Project Management etc.</p>
-                <p>Empowerment, Motivation, Inspiration in career and not only</p>
-                <p>Community & Networking</p>
+                <h1 style="color: #c34397"><b>IT-Sanda gives you...</b></h1>
+                <p style="text-align: center">A digital platform high standards of personal behavior, skill and grace.</p>
+                <p>It is crucial to understand yourself and your calling in  career transition or business start-up process.</p>
+                <p><li>Check services I propose as a freelances and contact me for more details.</li>
+                <p><li>Read <b><a href="./sanda_blog.html" target="_blank"> blog</a></b> posts you like most - about QA, tech, marketing, project management etc.</li>
+                <p><li>Join <b><a href="./sanda_community.html" target="_blank"> community</a></b> or follow the one, you like more - Tech Women or Business Babes.</li>
                 <br>
-                <p>So what are you wanna be today?</p>
+                <p style="text-align: center">Work can be = dream. So what are you wanna be today?</p>
             </div>
             <div class="card-slideshow">
                 <div class="slide-show fade">
@@ -984,7 +1057,7 @@
                                 <div class="container-blog">
                                     <h2 style="text-align: center"><b>Quality Assurance</b></h2>
                 <p>
-                    <button class="button">Contact</button>
+                    <button class="button">Choose category</button>
                 </p>
             </div>
         </div>
@@ -995,7 +1068,7 @@
             <div class="container-blog">
                 <h2 style="text-align: center"><b>Project Management</b></h2>
                 <p>
-                    <button class="button">Contact</button>
+                    <button class="button">Choose category</button>
                 </p>
             </div>
         </div>
@@ -1006,7 +1079,7 @@
             <div class="container-blog">
                 <h2 style="text-align: center"><b>Content Marketing</b></h2>
                 <p>
-                    <button class="button">Contact</button>
+                    <button class="button">Choose category</button>
                 </p>
             </div>
         </div>
@@ -1019,7 +1092,7 @@
                 <div class="container-blog">
                     <h2 style="text-align: center"><b>Tech News</b></h2>
                     <p>
-                        <button class="button">Contact</button>
+                        <button class="button">Choose category</button>
                     </p>
                 </div>
             </div>
@@ -1030,7 +1103,7 @@
                 <div class="container-blog">
                     <h2 style="text-align: center"><b>Events</b></h2>
                     <p>
-                        <button class="button">Contact</button>
+                        <button class="button">Choose category</button>
                     </p>
                 </div>
             </div>
@@ -1041,7 +1114,7 @@
                 <div class="container-blog">
                     <h2 style="text-align: center"><b>Empowerment & Motivation</b></h2>
                     <p>
-                        <button class="button">Contact</button>
+                        <button class="button">Choose category</button>
                     </p>
                 </div>
             </div>
@@ -1068,7 +1141,7 @@
             <h1><b>Search</b></h1>
             <form class="example" action="/action_page.php">
                 <label>
-                    <input type="text" placeholder="Search.." name="search">
+                    <input type="text" placeholder="Search through website" name="search" type="search">
                 </label>
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
@@ -1081,7 +1154,7 @@
             <h1><b><a href="https://www.facebook.com/sandaitsanda/">Facebook Page :</a></b></h1>
             <img src="social_media/facebook.png" alt="facebook" style="width:100%">
             <p>
-                <b><a href="https://www.facebook.com/sandaitsanda/"
+                <b><a style="font-style: italicp;00" href="https://www.facebook.com/sandaitsanda/"
                       target="_blank">
                     Facebook Page
                 </a></b>
@@ -1090,7 +1163,7 @@
             <h1><b><a href="https://www.instagram.com/it_sanda/">Instagram Grid :</a></b></h1>
             <img src="social_media/instagram.png" alt="instagram" style="width:100%">
             <p>
-                <b><a href="https://www.instagram.com/it_sanda/"
+                <b><a style="font-style: italic" href="https://www.instagram.com/it_sanda/"
                       target="_blank">
                     Instagram Page
                 </a></b>
@@ -1132,7 +1205,12 @@
                             <option value="azerbaijan">Azerbaijan</option>
                             <option value="belarus">Belarus</option>
                             <option value="belgia">Belgia</option>
+                            <option value="canada">Bulgaria</option>
                             <option value="canada">Canada</option>
+                            <option value="chile">Chile</option>
+                            <option value="china">China</option>
+                            <option value="croatia">Croatia</option>
+                            <option value="czechia">Czechia</option>
                             <option value="russia">Russia</option>
                             <option value="other">Other</option>
                         </select>
