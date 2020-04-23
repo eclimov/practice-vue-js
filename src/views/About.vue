@@ -5,6 +5,8 @@
     <Contacts
       :title="'My Contacts'"
       :contacts="['contact1', 'contact2']"
+      @my-custom-event-created="myCustomEventHandler1"
+      @my-custom-event-subscribed="myCustomEventHandler2"
     />
     <Gallery />
   </div>
@@ -19,6 +21,14 @@ export default {
   components: {
     Gallery,
     Contacts
+  },
+  methods: {
+    myCustomEventHandler1 (val) {
+      console.log('my-custom-event-created handled with value', val)
+    },
+    myCustomEventHandler2 () {
+      console.log('my-custom-event-subscribed handled without any value')
+    }
   }
 }
 </script>

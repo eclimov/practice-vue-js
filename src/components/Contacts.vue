@@ -7,6 +7,9 @@
     >
       {{ contact }}
     </div>
+    <button @click="$emit('my-custom-event-subscribed')">
+      Subscribe
+    </button>
   </div>
 </template>
 
@@ -22,6 +25,10 @@ export default {
       type: Array,
       required: true
     }
+  },
+  created () {
+    let someValue = 'qwerty'
+    this.$emit('my-custom-event-created', someValue)
   }
 }
 </script>
