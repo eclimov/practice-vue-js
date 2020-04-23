@@ -2,7 +2,10 @@
   <div class="about">
     <h1>This is an about page</h1>
 
-    <Contacts />
+    <Contacts
+      :title="'My Contacts'"
+      :contacts="['contact1', 'contact2']"
+    />
     <Gallery />
   </div>
 </template>
