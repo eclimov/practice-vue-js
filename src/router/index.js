@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import SmartphonePriceQuantityExample from '../views/eclimov/SmartphonePriceQuantityExample'
 import Example1 from '../views/sanda/Example1'
 import Phantom from '@/views/sjofn/Phantom'
+import LinksMenuEventsExample from '../views/eclimov/LinksMenuEventsExample'
 
 Vue.use(VueRouter)
 
@@ -25,6 +26,11 @@ const routes = [
     path: '/sjofn/phantom',
     name: 'phantom',
     component: Phantom
+  },
+  {
+    path: '/eclimov/eventHandlingExample',
+    name: 'event-handling-example',
+    component: LinksMenuEventsExample
   },
   {
     path: '/eclimov/example1',
