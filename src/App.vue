@@ -29,7 +29,7 @@
       @enter="enter"
       @afterEnter="afterEnter"
     >
-      <router-view />
+      <router-view :style="{ 'background-color': bgColor }" />
     </transition>
     <hr>
   </div>
@@ -40,14 +40,35 @@ export default {
   name: 'App',
   data () {
     return {
+      possiblebgColors: [
+        '#BF0449',
+        '#89C2D9',
+        '#04D960',
+        '#D97218',
+        '#BF4D0B',
+        '#04ADBF',
+        '#04BFBF',
+        '#025959',
+        '#A0A603',
+        '#F2E0C9'
+      ],
+      bgColor: null,
       prevHeight: 0
     }
   },
+  created () {
+    this.setBgColor()
+  },
   methods: {
+    setBgColor () {
+      this.bgColor = this.possiblebgColors[Math.floor(Math.random() * this.possiblebgColors.length)]
+    },
     beforeLeave (element) {
       this.prevHeight = getComputedStyle(element).height
     },
     enter (element) {
+      this.setBgColor()
+
       const { height } = getComputedStyle(element)
 
       element.style.height = this.prevHeight
