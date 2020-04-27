@@ -1,25 +1,27 @@
 <template>
   <div>
-    <div id="top-menu">
-      <a
-        v-for="link in links"
-        :key="link.text"
-        href=""
-        @mouseover="handleLinkMouseover(link)"
-        @mouseout="handleLinkMouseout"
-      >
-        {{ link.text }}
-      </a>
-    </div>
-
-    <transition name="fade">
-      <div
-        v-show="isDivTextShown"
-        id="my-colored-div"
-      >
-        {{ divText }}
+    <div class="container">
+      <div id="top-menu">
+        <a
+          v-for="link in links"
+          :key="link.text"
+          href=""
+          @mouseover="handleLinkMouseover(link)"
+          @mouseout="handleLinkMouseout"
+        >
+          {{ link.text }}
+        </a>
       </div>
-    </transition>
+
+      <transition name="fade">
+        <div
+          v-show="isDivTextShown"
+          id="my-colored-div"
+        >
+          {{ divText }}
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -72,5 +74,9 @@ export default {
   #my-colored-div {
     background-color: #ffbeb0;
     max-width: 300px;
+  }
+
+  .container {
+    min-height: 50px;
   }
 </style>

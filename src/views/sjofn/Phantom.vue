@@ -1,6 +1,5 @@
 <template>
   <div>
-    <hr>
     <!--Show link to Google if isGoogle. Show link to Yandex otherwise-->
     <a
       v-if="isGoogle"
@@ -24,7 +23,6 @@
         {{ agileClubMember }}
       </li>
     </ul>
-    <hr>
   </div>
 </template>
 
