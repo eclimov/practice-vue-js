@@ -34,14 +34,6 @@
 </template>
 
 <script>
-// TODO:
-// 1. Roll-back changes of the main 'index.html' to initial state
-// 2. Review 'router/index.js'
-// 3. Review Navigation bar links in 'App.vue'
-// 4. Review this VueJs component
-// 5. Review and fix all warnings in this component
-// 6. Note that there is no longer need to unfocus input to refresh the 'total'
-
 export default {
   name: 'SmartphonePriceQuantityExample',
   data () {
@@ -61,6 +53,10 @@ export default {
 <style scoped>
   table {
     border-collapse: collapse;
+  }
+
+  input {
+    width: 100px;
   }
 
   table, th, td {
