@@ -12,12 +12,14 @@
       </a>
     </div>
 
-    <div
-      id="my-colored-div"
-      :style="{display: divDisplayValue}"
-    >
-      {{ divText }}
-    </div>
+    <transition name="fade">
+      <div
+        v-show="isDivTextShown"
+        id="my-colored-div"
+      >
+        {{ divText }}
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -26,7 +28,7 @@ export default {
   name: 'SmartphonePriceQuantityExample',
   data () {
     return {
-      divDisplayValue: 'none',
+      isDivTextShown: false,
       divText: '',
       links: [
         {
@@ -50,11 +52,11 @@ export default {
   },
   methods: {
     handleLinkMouseover (link) {
-      this.divDisplayValue = 'block'
+      this.isDivTextShown = true
       this.divText = link.description
     },
     handleLinkMouseout () {
-      this.divDisplayValue = 'none'
+      this.isDivTextShown = false
     }
   }
 }
