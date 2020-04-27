@@ -40,7 +40,7 @@ export default {
   name: 'App',
   data () {
     return {
-      possiblebgColors: [
+      possibleBgColors: [
         '#BF0449',
         '#89C2D9',
         '#04D960',
@@ -61,7 +61,7 @@ export default {
   },
   methods: {
     setBgColor () {
-      this.bgColor = this.possiblebgColors[Math.floor(Math.random() * this.possiblebgColors.length)]
+      this.bgColor = this.possibleBgColors[Math.floor(Math.random() * this.possibleBgColors.length)]
     },
     beforeLeave (element) {
       this.prevHeight = getComputedStyle(element).height
