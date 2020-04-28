@@ -13,6 +13,9 @@
       <router-link :to="{ name: 'event-handling-example' }">
         LinksEventsExample
       </router-link> |
+      <router-link :to="{ name: 'watchers-example' }">
+        WatchersExample
+      </router-link> |
       <router-link :to="{ name: 'phantom' }">
         Phantom
       </router-link> /

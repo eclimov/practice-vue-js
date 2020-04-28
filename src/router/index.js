@@ -5,6 +5,7 @@ import SmartphonePriceQuantityExample from '../views/eclimov/SmartphonePriceQuan
 import Example1 from '../views/sanda/Example1'
 import Phantom from '@/views/sjofn/Phantom'
 import LinksMenuEventsExample from '../views/eclimov/LinksMenuEventsExample'
+import WatchersExample from '../views/eclimov/WatchersExample'
 
 Vue.use(VueRouter)
 
@@ -31,6 +32,11 @@ const routes = [
     path: '/eclimov/eventHandlingExample',
     name: 'event-handling-example',
     component: LinksMenuEventsExample
+  },
+  {
+    path: '/eclimov/watchersExample',
+    name: 'watchers-example',
+    component: WatchersExample
   },
   {
     path: '/eclimov/example1',
