@@ -6,6 +6,7 @@ import Example1 from '../views/sanda/Example1'
 import Phantom from '@/views/sjofn/Phantom'
 import LinksMenuEventsExample from '../views/eclimov/LinksMenuEventsExample'
 import WatchersExample from '../views/eclimov/WatchersExample'
+import EclimovCommonView from '../views/eclimov/EclimovCommonView'
 
 Vue.use(VueRouter)
 
@@ -29,19 +30,25 @@ const routes = [
     component: Phantom
   },
   {
-    path: '/eclimov/eventHandlingExample',
-    name: 'event-handling-example',
-    component: LinksMenuEventsExample
-  },
-  {
-    path: '/eclimov/watchersExample',
-    name: 'watchers-example',
-    component: WatchersExample
-  },
-  {
-    path: '/eclimov/example1',
-    name: 'smartphone-price-quantity-example',
-    component: SmartphonePriceQuantityExample
+    path: '/eclimov',
+    component: EclimovCommonView,
+    children: [ // Nested route/view mapping
+      {
+        path: 'eventHandlingExample', // /eclimov/eventHandlingExample
+        name: 'event-handling-example',
+        component: LinksMenuEventsExample
+      },
+      {
+        path: 'watchersExample', // /eclimov/watchersExample
+        name: 'watchers-example',
+        component: WatchersExample
+      },
+      {
+        path: 'example1', // /eclimov/example1
+        name: 'smartphone-price-quantity-example',
+        component: SmartphonePriceQuantityExample
+      }
+    ]
   },
   {
     path: '/sanda/example1',
@@ -51,7 +58,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'history', // or 'hash' (deprecated & bad practice)
   base: process.env.BASE_URL,
   routes
 })
