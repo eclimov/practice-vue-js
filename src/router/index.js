@@ -7,6 +7,7 @@ import Phantom from '@/views/sjofn/Phantom'
 import LinksMenuEventsExample from '../views/eclimov/LinksMenuEventsExample'
 import WatchersExample from '../views/eclimov/WatchersExample'
 import EclimovCommonView from '../views/eclimov/EclimovCommonView'
+import RouteWildcardExample from '../views/eclimov/RouteWildcardExample'
 
 Vue.use(VueRouter)
 
@@ -57,6 +58,14 @@ const routes = [
           title: 'Watchers'
         },
         component: WatchersExample
+      },
+      {
+        path: 'routeWildcard*',
+        name: 'route-wildcard-example',
+        meta: {
+          title: 'Route Wildcards'
+        },
+        component: RouteWildcardExample
       },
       {
         path: 'example1', // /eclimov/example1
