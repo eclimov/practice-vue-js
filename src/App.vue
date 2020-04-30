@@ -59,6 +59,11 @@ export default {
       prevHeight: 0
     }
   },
+  watch: {
+    '$route' (to, from) {
+      document.title = to.meta.title || 'Default page title'
+    }
+  },
   created () {
     this.setBgColor()
   },

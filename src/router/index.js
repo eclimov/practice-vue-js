@@ -14,11 +14,17 @@ const routes = [
   {
     path: '/',
     name: 'home',
+    meta: {
+      title: 'Home page'
+    },
     component: Home
   },
   {
     path: '/about',
     name: 'about',
+    meta: {
+      title: 'About'
+    },
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -27,6 +33,9 @@ const routes = [
   {
     path: '/sjofn/phantom',
     name: 'phantom',
+    meta: {
+      title: 'Phantom'
+    },
     component: Phantom
   },
   {
@@ -36,16 +45,25 @@ const routes = [
       {
         path: 'eventHandlingExample', // /eclimov/eventHandlingExample
         name: 'event-handling-example',
+        meta: {
+          title: 'Event Handling'
+        },
         component: LinksMenuEventsExample
       },
       {
         path: 'watchersExample', // /eclimov/watchersExample
         name: 'watchers-example',
+        meta: {
+          title: 'Watchers'
+        },
         component: WatchersExample
       },
       {
         path: 'example1', // /eclimov/example1
         name: 'smartphone-price-quantity-example',
+        meta: {
+          title: 'Computed Properties'
+        },
         component: SmartphonePriceQuantityExample
       }
     ]
@@ -53,6 +71,9 @@ const routes = [
   {
     path: '/sanda/example1',
     name: 'sanda-example1',
+    meta: {
+      title: 'Sanda Example'
+    },
     component: Example1
   }
 ]
