@@ -8,6 +8,7 @@ import LinksMenuEventsExample from '../views/eclimov/LinksMenuEventsExample'
 import WatchersExample from '../views/eclimov/WatchersExample'
 import EclimovCommonView from '../views/eclimov/EclimovCommonView'
 import RouteWildcardExample from '../views/eclimov/RouteWildcardExample'
+import RouteParamExample from '../views/eclimov/RouteParamExample'
 
 Vue.use(VueRouter)
 
@@ -66,6 +67,16 @@ const routes = [
           title: 'Route Wildcards'
         },
         component: RouteWildcardExample
+      },
+      {
+        path: 'user/:userId',
+        name: 'route-param-example',
+        props: true,
+        params: ['userId'],
+        meta: {
+          title: 'Route Params'
+        },
+        component: RouteParamExample
       },
       {
         path: 'example1', // /eclimov/example1

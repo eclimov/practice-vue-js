@@ -16,6 +16,12 @@
       <router-link :to="{ name: 'watchers-example' }">
         WatchersExample
       </router-link> |
+      <router-link :to="{ path: '/eclimov/routeWildcard*' }">
+        RouteWildcardExample
+      </router-link> |
+      <router-link :to="{ name: 'route-param-example', params: { userId: 1 } }">
+        RouteParamExample
+      </router-link> |
       <router-link :to="{ name: 'phantom' }">
         Phantom
       </router-link> /
