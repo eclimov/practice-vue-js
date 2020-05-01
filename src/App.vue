@@ -22,6 +22,9 @@
       <router-link :to="{ name: 'route-param-example', params: { userId: 1 } }">
         RouteParamExample
       </router-link> |
+      <router-link :to="{ name: 'lifecycle-hooks-example' }">
+        LifecycleHooksExample
+      </router-link> |
       <router-link :to="{ name: 'phantom' }">
         Phantom
       </router-link> /

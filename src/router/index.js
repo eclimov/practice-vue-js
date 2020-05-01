@@ -9,6 +9,7 @@ import WatchersExample from '../views/eclimov/WatchersExample'
 import EclimovCommonView from '../views/eclimov/EclimovCommonView'
 import RouteWildcardExample from '../views/eclimov/RouteWildcardExample'
 import RouteParamExample from '../views/eclimov/RouteParamExample'
+import LifecycleHooksExample from '../views/eclimov/LifecycleHooksExample'
 
 Vue.use(VueRouter)
 
@@ -85,6 +86,14 @@ const routes = [
           title: 'Computed Properties'
         },
         component: SmartphonePriceQuantityExample
+      },
+      {
+        path: 'lifecycleHooks',
+        name: 'lifecycle-hooks-example',
+        meta: {
+          title: 'Lifecycle Hooks'
+        },
+        component: LifecycleHooksExample
       }
     ]
   },
