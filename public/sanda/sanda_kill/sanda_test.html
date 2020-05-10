@@ -1,24 +1,215 @@
-<style>
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto auto auto auto;
-        grid-gap: 10px;
-        background-color: #2196F3;
-        padding: 10px;
-    }
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>Sanda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-</style>
-</head>
-<body>
+    <style>
+        /* Header - inclusively logo */
+        .header {
+            display: flex;
+            height: 10%;
+            width: 100%;
+            justify-content: space-between;
+            overflow: hidden;
+            font-style: normal;
+            background-color: #af7ca0;
+        }
 
-<h2>Blog categories</h2>
+        #logo {
+            display: inline;
+            height: auto;
+            width: 21%;
+            text-align: center;
+            background-color: #af7ca0;
+        }
 
-<div class="grid-container">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-</div>
+        /* Style for whole page */
+        body, html {
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+            font-family: Laila, serif;
+            font-size: 18px;
+            font-style: normal;
+            background: #f0d7e9;
+        }
+
+        /* Navigation bar for menu tabs */
+        {
+            box-sizing: border-box
+        }
+
+        /* Part of header which includes only navigation menu tabs */
+        .navigation-bar {
+            display: inline;
+            height: 100%;
+            width: 48%;
+            margin: 0;
+            line-height: initial;
+            font-family: Laila, serif;
+            font-size: 20px;
+            font-style: normal;
+            text-align: right;
+            color: #000000;
+        }
+
+        /* Each navigation tab */
+        .tabnav {
+            display: block;
+            float: left;
+            height: auto;
+            width: 16.66%;
+            margin: 0;
+            border: none;
+            padding: 10px;
+            font-family: Laila, serif;
+            font-size: 20px;
+            font-style: normal;
+            text-align: center;
+            color: #000000;
+            background-color: #af7ca0;
+            cursor: pointer;
+        }
+
+        /* Style for navigation tab while changing colors */
+        .tabnav:hover {
+            display: block;
+            float: left;
+            height: auto;
+            width: 16.66%;
+            margin: 0;
+            border: none;
+            padding: 10px;
+            font-family: Laila, serif;
+            font-size: 18px;
+            font-style: normal;
+            text-align: center;
+            color: #000000;
+            cursor: pointer;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            display: block;
+            height: 100%;
+            width: 100%;
+            padding: 0 16px;
+            font-family: Laila, serif;
+            font-style: normal;
+            font-size: 18px;
+            color: #000000;
+        }
+
+        @media screen and (max-width: 500px) {
+            .navigation-bar {
+                display: inline;
+            }
+
+            .tabnav {
+                display: block;
+                float: left;
+            }
+            .tabcontent {
+                display: block;
+            }
+        }
+
+        /* Colors for tabs */
+        #Homepage {
+            background-color: #523f8f;
+        }
+
+        #About {
+            background-color: #c34397;
+        }
+
+        #Services {
+            background-color: #523f8f;
+        }
+
+        #Blog {
+            background-color: #c34397;
+        }
+
+        #Community {
+            background-color: #523f8f;
+        }
+
+        #Podcast {
+            background-color: #c34397;
+        }
+
+        </style>
+        </head>
+
+        <body>
+        <div class="header">
+        <div>
+        <img id="logo" src="header/hi.jpg" alt="logo-it-sanda">
+        <span>Test</span>
+        </div>
+
+        <div class="navigation-bar" id="header-links">
+        <button class="tabnav" onclick="openPage('Homepage', this, '#523f8f')" id="defaultOpen"><b>HOMEPAGE</b></button>
+        <button class="tabnav" onclick="openPage('About', this, '#c34397')"><b>ABOUT</b></button>
+        <button class="tabnav" onclick="openPage('Services', this, '#523f8f')"><b>SERVICES</b></button>
+        <button class="tabnav" onclick="openPage('Blog', this, '#c34397')"><b>BLOG</b></button>
+        <button class="tabnav" onclick="openPage('Community', this, '#523f8f')"><b>COMMUNITY</b></button>
+        <button class="tabnav" onclick="openPage('Podcast', this, '#c34397')"><b>PODCAST</b></button>
+
+        <div id="Homepage" class="tabcontent">
+        <p><i><q>Home's not a place, it's a feeling.</q></i></p>
+        </div>
+        <div id="About" class="tabcontent"></div>
+        <div id="Services" class="tabcontent"></div>
+        <div id="Blog" class="tabcontent"></div>
+        <div id="Community" class="tabcontent"></div>
+        <div id="Podcast" class="tabcontent"></div>
+        </div>
+        </div>
+
+        <script>
+             /* Function for navigation tabs */
+         function openPage(pageName, elmnt, color) {
+            let i, tabcontent, tabnav;
+        tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        }
+        tabnav = document.getElementsByClassName("tablink");
+            for (i = 0; i < tabnav.length; i++) {
+        tabnav[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+
+        /* Switch to other connected pages */
+            switch (pageName) {
+            case  'About':
+            window.location.href = "./sanda_about_project.html";
+            break;
+            case 'Services':
+            window.location.href = "./sanda_services.html";
+            break;
+            case 'Blog':
+            window.location.href = "./sanda_blog.html";
+            break;
+            case 'Community':
+            window.location.href = "./sanda_community.html";
+            break;
+            case 'Podcast':
+            window.location.href = "./sanda_podcast.html";
+            break;
+        }
+        }
+
+        /* Get the element with id="defaultOpen" and make it as default tab from navigation bar */
+        document.getElementById("defaultOpen").click();
+        </script>
+
+        </body>
+        </html>

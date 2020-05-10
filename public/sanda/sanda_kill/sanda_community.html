@@ -15,13 +15,19 @@
             width: 100%;
             justify-content: space-between;
             overflow: hidden;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
             background-color: #af7ca0;
         }
 
         #logo {
             display: inline;
+            height: auto;
             width: 21%;
+            vertical-align: center;
             text-align: center;
+            background-color: #af7ca0;
         }
 
         /* Style for whole page */
@@ -31,6 +37,7 @@
             padding: 20px;
             font-family: Laila, serif;
             font-size: 18px;
+            font-style: normal;
             background: #f0d7e9;
         }
 
@@ -43,11 +50,16 @@
         .navigation-bar {
             display: inline;
             height: 100%;
-            width: 48%;
+            width: 50%;
             margin: 0;
             line-height: initial;
+            vertical-align: right;
+            horiz-align: center;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
+            font-variant: titling-caps;
+            font-weight: bold;
             text-align: right;
             color: #000000;
         }
@@ -56,12 +68,17 @@
         .tabnav {
             display: block;
             float: left;
+            height: auto;
             width: 16.66%;
-            margin: 0;
+            vertical-align: center;
+            horiz-align: center;
             border: none;
             padding: 10px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-style: normal;
+            font-variant: titling-caps;
+            font-weight: normal;
             text-align: center;
             color: #000000;
             background-color: #af7ca0;
@@ -72,12 +89,15 @@
         .tabnav:hover {
             display: block;
             float: left;
+            height: auto;
             width: 16.66%;
             margin: 0;
             border: none;
             padding: 10px;
             font-family: Laila, serif;
             font-size: 18px;
+            font-style: normal;
+            font-variant: titling-caps;
             text-align: center;
             color: #000000;
             cursor: pointer;
@@ -85,11 +105,13 @@
 
         /* Style the tab content (and add height:100% for full page content) */
         .tabcontent {
-            display: none;
+            display: block;
             height: 100%;
             width: 100%;
             padding: 0 16px;
             font-family: Laila, serif;
+            font-style: normal;
+            font-variant: titling-caps;
             font-size: 18px;
             color: #000000;
         }
@@ -124,6 +146,8 @@
             margin: 0;
             font-family: Laila, serif;
             font-size: 34px;
+            font-style: normal;
+            font-variant: normal;
             text-align: center;
         }
 
@@ -131,6 +155,7 @@
             margin: 0;
             font-family: Laila, serif;
             font-size: 30px;
+            font-variant: normal;
             text-align: left;
         }
 
@@ -138,6 +163,7 @@
             margin: 0;
             font-family: Laila, serif;
             font-size: 28px;
+            font-variant: normal;
             text-align: left;
             color: #000000;
         }
@@ -146,6 +172,7 @@
             margin: 0;
             font-family: Laila, serif;
             font-size: 20px;
+            font-variant: normal;
             text-align: left;
         }
         /* Remove of underline from links - sections of social networks */
@@ -199,34 +226,9 @@
             margin-top: 20px;
             margin-bottom: 20px;
             font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
             font-size: 20px;
-        }
-
-        .grid-container {
-            display: grid;
-            width: 40%;
-            grid-template-columns: auto auto;
-            grid-gap: 10px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            background-color: #523f8f;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        li a {
-            display: block;
-            color: #000;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #555;
-            color: white;
         }
         .card-article1 {
             display: block;
@@ -234,8 +236,11 @@
             margin-top: 20px;
             margin-bottom: 20px;
             font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
             font-size: 20px;
-            background-color: #af7ca0;
+            color: #FFFFFF;
+            background-color: #071268;
         }
 
         .card-article2 {
@@ -244,45 +249,30 @@
             margin-top: 20px;
             margin-bottom: 20px;
             font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
             font-size: 20px;
-            color: #FFFFFF;
-            background-color: #071268;
-        }
-
-        .card-article3 {
-            display: block;
-            padding: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
+            color: #000000;
             background-color: #c34397;
         }
 
-        .card-article4 {
-            display: block;
-            padding: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            background-color: #523f8f;
-        }
         /* Blog */
         *, *:before, *:after {
             box-sizing: inherit;
         }
 
-        .card-blog {
+        .card-communities {
             display: block;
             width: 100%;
             padding: 50px;
             margin-bottom: 20px;
             font-family: Laila, serif;
             font-size: 20px;
+            font-variant: normal;
+            font-style: normal;
             text-align: center;
-            color: #FFFFFF;
-            background-color: #071268;
+            color: #000000;
+            background-color: #523f8f;
         }
 
         .column-blog {
@@ -291,6 +281,8 @@
             padding: 0 8px;
             width: 33.3%;
             font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
             font-size: 20px;
             color: #000000;
         }
@@ -299,9 +291,11 @@
             padding: 0 16px;
             width: 100%;
             font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
             font-size: 20px;
             color: #000000;
-            background-color: #c34397;
+            background-color: #af7ca0;
         }
 
         .container-blog::after, .row-service::after {
@@ -309,17 +303,21 @@
             content: "";
             clear: both;
             font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
             font-size: 20px;
             color: #000000;
-            background-color: #c34397;
+            background-color: #af7ca0;
         }
 
         .container-blog:hover {
             width: 100%;
             font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
             font-size: 20px;
-            color: #000000;
-            background-color: #523f8f;
+            color: #FFFFFF;
+            background-color: #071268;
         }
 
         @media screen and (max-width: 650px) {
@@ -349,18 +347,21 @@
         .bordered-img-blog {
             width: 100%;
             padding: 5px;
-            border: 5px solid #c34397;
-            background-color: #523f8f;
+            border: 5px solid #af7ca0;
+            background-color: #071268;
         }
 
         /* Section with information about creator */
         .card-aboutme {
             display: block;
+            height: auto;
             width: 100%;
             padding: 20px;
             margin-top: 20px;
             font-family: Laila, serif;
             font-size: 18px;
+            font-style: normal;
+            font-variant: normal;
             text-align: center;
             color: black;
             background-color: #c34397;
@@ -373,55 +374,73 @@
             background-color:#071268;
         }
 
-        /* Section for e-mail newsletter*/
-        .card-email {
+        /* Section for current projects */
+        .card-contact-form {
             display: block;
+            height: auto;
             width: 100%;
             padding: 20px;
             margin-top: 20px;
             font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
             font-size: 20px;
             text-align: center;
             color: #000000;
-            background-color: #523f8f;
+            background-color: #af7ca0;
         }
 
-        form {
-            font-family: Laila, serif;
-        }
-
-        .container-email {
+        .contact-form {
+            display: block;
+            height: auto;
+            width: 100%;
+            border-radius: 5px;
             padding: 20px;
-            background-color: #523f8f;
+            font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
+            font-size: 20px;
+            text-align: left;
+            background-color: #af7ca0;
         }
 
-        input[type=text], input[type=submit] {
-            display: inline-block;
+        input[type=text], select, textarea {
             width: 100%;
             padding: 12px;
-            margin: 8px 0;
-            border: 1px solid #523f8f;
+            border: 1px solid #af7ca0;
+            border-radius: 4px;
             box-sizing: border-box;
-        }
-
-        input[type=checkbox] {
-            margin-top: 16px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
+            font-size: 20px;
+            text-align: left;
         }
 
         input[type=submit] {
+            padding: 12px 20px;
             border: none;
+            border-radius: 4px;
             font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
             font-size: 20px;
             text-align: center;
             color: #FFFFFF;
             background-color: #000000;
+            cursor: pointer;
         }
 
         input[type=submit]:hover {
-            opacity: 0.8;
             font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
             font-size: 20px;
             text-align: center;
+            color: #FFFFFF;
             background-color: #555;
         }
 
@@ -432,47 +451,12 @@
             margin-top: 20px;
             margin-bottom: 20px;
             font-family: Laila, serif;
+            font-variant: normal;
+            font-style: normal;
             font-size: 20px;
             text-align: center;
             color: #FFFFFF;
             background-color: #071268;
-        }
-
-        .card-trending {
-            display: block;
-            padding: 50px;
-            width: 100%;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: #FFFFFF;
-            background-color: #071268;
-        }
-
-        .facebook {
-            display: block;
-            padding: 50px;
-            width: 100%;
-            margin-top: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: #FFFFFF;
-            background-color: #071268;
-        }
-
-        .instagram {
-            display: block;
-            padding: 50px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: Laila, serif;
-            font-size: 20px;
-            text-align: center;
-            color: #000000;
-            background-color: #c34397;
         }
 
         /* Footer */
@@ -525,95 +509,22 @@
 
 <div class="row">
     <div class="leftcolumn">
-        <p></p>
-        <div class="grid-container">
-            <div>Blog Categories</div>
-            <div>
-                <ul>
-                    <li><a href="#qualityassurance">Quality Assurance</a></li>
-                    <li><a href="#marketing">Marketing</a></li>
-                    <li><a href="#projectmanagement">Project Management</a></li>
-                    <li><a href="#technews">Tech News</a></li>
-                    <li><a href="#technews">Tech Events</a></li>
-                    <li><a href="#technews">Empowerment & Motivation</a></li>
-                </ul>
-            </div>
-        </div>
         <div class="card-article1">
-            <h2>TITLE HEADING</h2>
+            <h2>FACEBOOK</h2>
             <h5>Title description, Dec 7, 2017</h5>
             <div class="fakeimg" style="height:200px;">Image</div>
             <p>Some text..</p>
             <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         </div>
         <div class="card-article2">
-            <h2>TITLE HEADING</h2>
+            <h2>INSTAGRAM</h2>
             <h5>Title description, Sep 2, 2017</h5>
             <div class="fakeimg" style="height:200px;">Image</div>
             <p>Some text..</p>
             <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         </div>
-        <div class="card-article3">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article4">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article1">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article2">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article3">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article4">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article1">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-article2">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <div class="card-blog">
-            <h1><b><a href="./sanda_blog.html"
-                      target="_blank">
-                Blog
-            </a></b></h1>
+        <div class="card-communities">
+            <h1><b>Communities</b></h1>
             <p>
                 <div class="row-service">
                     <div class="column-blog">
@@ -694,59 +605,71 @@
         <p>Guest posts and not only.</p>
         <p>There’s a new way of doing work and living. We have to prepare for the future. I’m homeschooling with you and working. We can do this together. That’s what today’s all about. </p>
     </div>
-    <div class="card-email">
-        <h1><b>Subscribe to Newsletter</b></h1>
-
-        <form action="/action_page.php">
-            <div class="container-email">
-                <p>Find exactly what you need right now to reach your career goals and dreams by reading our blog posts and following the updates.</p>
-            </div>
-
-            <div class="container-email">
-                <label>
-                    <input type="text" placeholder="Name" name="name" required>
-                </label>
-                <label>
-                    <input type="text" placeholder="Email address" name="mail" required>
-                </label>
-                <label>
-                    <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
-                </label>
-            </div>
-
-            <div class="container-email">
-                <input type="submit" value="Subscribe">
-            </div>
+    <div class="card-contact-form">
+        <div class="contact-form">
+            <h1><b>Contact Form</b></h1>
+            <form action="/action_page.php">
+                <fieldset>
+                    <legend>Check the part / parts to which is related your question:</legend>
+                    <p><label for="reason1"><input value="freelance" type="checkbox" name="readon1">Freelance
+                        services</label></p>
+                    <p><label for="reason2"><input value="blog" type="checkbox" name="reason2"> Blog</label></p>
+                    <p><label for="reason3"><input value="community" type="checkbox" name="reason3" checked> Community</label>
+                    </p>
+                    <p><label for="reason4"><input value="collaboration" type="checkbox" name="reason4">
+                        Proposal of collaboration</label></p>
+                    <p><label for="reason5"><input value="other" type="checkbox" name="reason5"> Other</label></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Complete the form:</legend>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" required><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" required><br><br>
+                    <label for="subject">Subject:</label><br>
+                    <input type="text" id="subject" name="subject" required><br><br>
+                    <p><label>
+                        <textarea name="message" style="width:350px; height:300px;">Introduce comment</textarea>
+                    </label></p>
+                    <label for="country">Choose your country:</label>
+                    <select id="country" name="country">
+                        <option value="moldova">Republic of Moldova</option>
+                        <option value="algeria">Algeria</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="australia">Australia</option>
+                        <option value="austria">Austria</option>
+                        <option value="azerbaijan">Azerbaijan</option>
+                        <option value="belarus">Belarus</option>
+                        <option value="belgia">Belgia</option>
+                        <option value="bulgaria">Bulgaria</option>
+                        <option value="canada">Canada</option>
+                        <option value="chile">Chile</option>
+                        <option value="china">China</option>
+                        <option value="croatia">Croatia</option>
+                        <option value="czechia">Czechia</option>
+                        <option value="egypt">Egypt</option>
+                        <option value="estonia">Estonia</option>
+                        <option value="finland">Finland</option>
+                        <option value="france">France</option>
+                        <option value="germany">Germany</option>
+                        <option value="greece">Greece</option>
+                        <option value="hungary">Hungary</option>
+                        <option value="india">India</option>
+                        <option value="ireland">Ireland</option>
+                        <option value="russia">Russia</option>
+                        <option value="saudiarabia">Saudi Arabia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </fieldset>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </div>
     <div class="card-popular-posts">
-        <h3>Popular Post</h3>
+        <h2>Popular Post</h2>
         <div class="fakeimg">Image</div><br>
         <div class="fakeimg">Image</div><br>
         <div class="fakeimg">Image</div>
-    </div>
-    <div class="card-trending">
-        <h3>Popular Post</h3>
-        <div class="fakeimg">Image</div><br>
-        <div class="fakeimg">Image</div><br>
-        <div class="fakeimg">Image</div>
-    </div>
-    <div class="facebook">
-        <h1><b><a href="https://www.facebook.com/sandaitsanda/">Facebook Page :</a></b></h1>
-        <img src="social_media/facebook.png" alt="facebook" style="width:100%">
-        <p>
-            <b><a href="https://www.facebook.com/sandaitsanda/"
-                  target="_blank">
-                Facebook Page
-            </a></b>
-    </div>
-    <div class="instagram">
-        <h1><b><a href="https://www.instagram.com/it_sanda/">Instagram Grid :</a></b></h1>
-        <img src="social_media/instagram.png" alt="facebook" style="width:100%">
-        <p>
-            <b><a href="https://www.instagram.com/it_sanda/"
-                  target="_blank">
-                Instagram Page
-            </a></b>
     </div>
 </div>
 </div>
