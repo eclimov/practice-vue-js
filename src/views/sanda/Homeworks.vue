@@ -1,0 +1,18 @@
+<template>
+  <div class="about">
+    <h1>This is an About page</h1>
+    <ul>
+      <li>
+        <router-link :to="{ name: 'sanda-homework1' }">
+          Homework1
+        </router-link>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  name: `Homeworks`
+}
+</script>

@@ -23,7 +23,9 @@
               Add 2 input fields with placeholders ‘a’ and ‘b’ accordingly.<br>
               Add button [Hypotenuse](should calculate hypotenuse from values, provided in the inputs and output result in an  ‘alert’ window).
             </li>
-            <li>Section 5. Pick a palette, make picture of it, put it in the same directory as the HTML file and display it in this section of the page. Add ‘Palette’ title to the image
+            <li>
+              Section 5. Pick a palette, make picture of it, put it in the same directory as the HTML file and display it in this section of the page. Add ‘Palette’ title to the image
+            </li>
           </ul>
         </li>
         Style your page (including background color and text color) with colors of palette you’ve picked
@@ -34,20 +36,35 @@
       <h1>Lista</h1>
       <ul>
         <li>
-          <a href="https://en.wikipedia.org/wiki/Hungary" target="_blank">Hungary</a>
+          <a
+            href="https://en.wikipedia.org/wiki/Hungary"
+            target="_blank"
+          >Hungary</a>
         </li>
 
         <li>
-          <a href="https://en.wikipedia.org/wiki/Austria" target="_blank">Austria</a>
+          <a
+            href="https://en.wikipedia.org/wiki/Austria"
+            target="_blank"
+          >Austria</a>
         </li>
         <li>
-          <a href="https://en.wikipedia.org/wiki/Monaco" target="_blank">Monaco</a>
+          <a
+            href="https://en.wikipedia.org/wiki/Monaco"
+            target="_blank"
+          >Monaco</a>
         </li>
         <li>
-          <a href="https://en.wikipedia.org/wiki/Argentina" target="_blank">Argentina</a>
+          <a
+            href="https://en.wikipedia.org/wiki/Argentina"
+            target="_blank"
+          >Argentina</a>
         </li>
         <li>
-          <a href="https://en.wikipedia.org/wiki/Chili" target="_blank">Chili</a>
+          <a
+            href="https://en.wikipedia.org/wiki/Chili"
+            target="_blank"
+          >Chili</a>
         </li>
       </ul>
       <hr>
@@ -67,7 +84,12 @@
 
     <div id="section4">
       <h1>Buttons</h1>
-      <button type="button" @click="console.log('Sanda!')">Name</button>
+      <button
+        type="button"
+        @click="printName()"
+      >
+        Name
+      </button>
 
       <br>
       <br>
@@ -75,7 +97,7 @@
         id="a"
         v-model="hypotenuseA"
         type="number"
-      placehlder="a"
+        placehlder="a"
       ><br>
       <input
         id="b"
@@ -94,7 +116,11 @@
 
     <div id="section5">
       <h1>Palette</h1>
-      <img title="colorpalette" src="@assets/palette.png" alt="You have Internet Explorer, sorry">
+      <img
+        title="colorpalette"
+        src="@/assets/palette.png"
+        alt="You have Internet Explorer, sorry"
+      >
       <hr>
     </div>
   </div>
@@ -102,21 +128,21 @@
 
 <script>
 export default {
-  name: 'Homework1'
+  name: 'Homework1',
   data () {
     return {
-      hypotenuseA: 3
+      hypotenuseA: 3,
       hypotenuseB: 4
-  }
+    }
   },
-}
   methods: {
     getHypotenuse () {
-  alert(Math.sqrt (x: this.hypotenuseA * this.hypotenuseA + this.hypotenuseB * this.hypotenuseB))
+      alert(Math.sqrt(this.hypotenuseA * this.hypotenuseA + this.hypotenuseB * this.hypotenuseB))
     },
-  printName () {
-  console.log('Sanda!')
-  },
+    printName () {
+      console.log('Sanda!')
+    }
+  }
 }
 </script>
 
