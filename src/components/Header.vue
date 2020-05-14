@@ -13,44 +13,50 @@
       id="header-links"
       class="navigation-bar"
     >
-      <button
-        id="defaultOpen"
-        class="tabnav"
-        onclick="openPage('Homepage', this, '#523f8f')"
-      >
-        <b>HOMEPAGE</b>
-      </button>
-      <button
-        class="tabnav"
-        onclick="openPage('About', this, '#c34397')"
-      >
-        <b>ABOUT</b>
-      </button>
-      <button
-        class="tabnav"
-        onclick="openPage('Services', this, '#523f8f')"
-      >
-        <b>SERVICES</b>
-      </button>
-      <button
-        class="tabnav"
-        onclick="openPage('Blog', this, '#c34397')"
-      >
-        <b>BLOG</b>
-      </button>
-      <button
-        class="tabnav"
-        onclick="openPage('Community', this, '#523f8f')"
-      >
-        <b>COMMUNITY</b>
-      </button>
-      <button
-        class="tabnav"
-        onclick="openPage('Podcast', this, '#c34397')"
-      >
-        <b>PODCAST</b>
-      </button>
-
+      <router-link :to="{name: 'home'}">
+        <button
+          class="tabnav"
+        >
+          <b>HOMEPAGE</b>
+        </button>
+      </router-link>
+      <router-link :to="{name: 'about'}">
+        <button
+          class="tabnav"
+        >
+          <b>ABOUT</b>
+        </button>
+      </router-link>
+      <router-link :to="{name: 'service'}">
+        <button
+          class="tabnav"
+        >
+          <b>SERVICES</b>
+        </button>
+      </router-link>
+      <router-link :to="{name: 'blog'}">
+        <button
+          class="tabnav"
+        >
+          <b>BLOG</b>
+        </button>
+      </router-link>
+      <router-link :to="{name: 'community'}">
+        <button
+          class="tabnav"
+          @click="openPage('Community', this, '#523f8f')"
+        >
+          <b>COMMUNITY</b>
+        </button>
+      </router-link>
+      <router-link :to="{name: 'podcast'}">
+        <button
+          class="tabnav"
+          @click="openPage('Podcast', this, '#c34397')"
+        >
+          <b>PODCAST</b>
+        </button>
+      </router-link>
       <div
         id="Homepage"
         class="tabcontent"
@@ -84,38 +90,6 @@
 <script>
 export default {
   name: 'Header'
-}
-/* Function for navigation tabs */
-function openPage (pageName, elmnt, color) {
-  let i, tabcontent, tabnav
-  tabcontent = document.getElementsByClassName('tabcontent')
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = 'none'
-  }
-  tabnav = document.getElementsByClassName('tablink')
-  for (i = 0; i < tabnav.length; i++) {
-    tabnav[i].style.backgroundColor = ''
-  }
-  document.getElementById(pageName).style.display = 'block'
-  elmnt.style.backgroundColor = color
-  /* Switch to other connected pages */
-  switch (pageName) {
-    case 'About':
-      window.location.href = './sanda_about_project.html'
-      break
-    case 'Services':
-      window.location.href = './sanda_services.html'
-      break
-    case 'Blog':
-      window.location.href = './sanda_blog.html'
-      break
-    case 'Community':
-      window.location.href = './sanda_community.html'
-      break
-    case 'Podcast':
-      window.location.href = './sanda_podcast.html'
-      break
-  }
 }
 </script>
 
@@ -252,16 +226,5 @@ function openPage (pageName, elmnt, color) {
 
   #Podcast {
     background-color: #c34397;
-  }
-
-  /* Remove of underline from links - sections of social networks */
-  a:link {
-    font-style: normal;
-    text-decoration: none;
-  }
-
-  a:hover {
-    font-style: normal;
-    background-color: #af7ca0;
   }
 </style>
