@@ -7,6 +7,16 @@
           Homework1
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'sanda-homework3' }">
+          Homework3
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'sanda-homework4' }">
+          Homework4
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
