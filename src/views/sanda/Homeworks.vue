@@ -17,6 +17,26 @@
           Homework4
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'sanda-homework4' }">
+          Homework4
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'sanda-practice1' }">
+          Practice1
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'sanda-practice4' }">
+          Practice4
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'sanda-practice4.4' }">
+          Practice4.4
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
