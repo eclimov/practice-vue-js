@@ -1,4 +1,6 @@
-<template />
+<template>
+  <div>Community</div>
+</template>
 
 <script>
 export default {

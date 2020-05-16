@@ -1,4 +1,6 @@
-<template />
+<template>
+  <div>Podcast</div>
+</template>
 
 <script>
 export default {
