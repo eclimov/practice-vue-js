@@ -37,6 +37,11 @@
           Practice4.2
         </router-link>
       </li>
+      <li>
+        <router-link :to="{ name: 'sanda-practice43' }">
+          Practice4.3
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
