@@ -5,9 +5,8 @@ import Homeworks from '../views/sanda/Homeworks'
 import Homework1 from '../views/sanda/Homework1'
 import Homework3 from '../views/sanda/Homework3'
 import Homework4 from '../views/sanda/Homework4'
-import Practice1 from '../views/sanda/Practice1'
-import Practice4 from '../views/sanda/Practice4'
-import Practice4_4 from '../views/sanda/Practice4.4'
+import Practice41 from '../views/sanda/Practice41'
+import Practice42 from '../views/sanda/Practice42'
 
 Vue.use(VueRouter)
 
@@ -50,28 +49,20 @@ const routes = [
     component: Homework4
   },
   {
-    path: '/sanda/practice1',
-    name: 'sanda-practice1',
+    path: '/sanda/practice41',
+    name: 'sanda-practice41',
     meta: {
-      title: 'Practice1'
+      title: 'Practice41'
     },
-    component: Practice1
+    component: Practice41
   },
   {
-    path: '/sanda/practice4',
-    name: 'sanda-practice4',
+    path: '/sanda/practice42',
+    name: 'sanda-practice42',
     meta: {
-      title: 'Practice4'
+      title: 'Practice42'
     },
-    component: Practice4
-  },
-  {
-    path: '/sanda/practice4.4',
-    name: 'sanda-practice4.4',
-    meta: {
-      title: 'Practice4.4'
-    },
-    component: Practice4_4
+    component: Practice42
   }
 ]
 

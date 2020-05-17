@@ -28,13 +28,13 @@
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'sanda-practice4' }">
-          Practice4
+        <router-link :to="{ name: 'sanda-practice41' }">
+          Practice4.1
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'sanda-practice4.4' }">
-          Practice4.4
+        <router-link :to="{ name: 'sanda-practice42' }">
+          Practice4.2
         </router-link>
       </li>
     </ul>
