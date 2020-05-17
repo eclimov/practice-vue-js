@@ -63,26 +63,6 @@
       >
         <p><i><q>Home's not a place, it's a feeling.</q></i></p>
       </div>
-      <div
-        id="About"
-        class="tabcontent"
-      />
-      <div
-        id="Services"
-        class="tabcontent"
-      />
-      <div
-        id="Blog"
-        class="tabcontent"
-      />
-      <div
-        id="Community"
-        class="tabcontent"
-      />
-      <div
-        id="Podcast"
-        class="tabcontent"
-      />
     </div>
   </div>
 </template>
@@ -97,7 +77,7 @@ export default {
   /* Header - inclusively logo */
   .header {
     display: flex;
-    height: 10%;
+    height: 100%;
     width: 100%;
     horiz-align: center;
     vertical-align: auto;
@@ -130,7 +110,6 @@ export default {
     display: inline;
     height: 100%;
     width: 50%;
-    margin: 0;
     horiz-align: center;
     vertical-align: right;
     line-height: initial;
