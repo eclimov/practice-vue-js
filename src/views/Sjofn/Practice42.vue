@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'Practice1',
+  name: 'Practice42',
   data () {
     return {
       genres: [
@@ -27,7 +27,7 @@ export default {
         isFireplace: true,
         ceilingsMinHeight: 5
       },
-      fictionCharacter: [
+      fictionCharacter:
         {
           gender: 'male',
           age: 25,
@@ -40,16 +40,6 @@ export default {
           isGood: true,
           isSuccessful: true
         }
-      ],
-      z: '',
-      a: '',
-      b: '',
-      m: '',
-      n: '',
-      l: '',
-      p: '',
-      min: '',
-      max: ''
     }
   },
 
@@ -57,7 +47,7 @@ export default {
     this.genres.push('Humour')
     this.disciplines.push('Drawing')
     console.log(this.genres.join(', ') + ', ' + this.disciplines.join(', '))
-    this.fictionCharacter['discipline'] = 'physical education' // мне кажется, здесь что-то не так. Не нравится, как отображается в консоли(
+    this.fictionCharacter['discipline'] = 'physical education'
     console.log(this.fictionCharacter)
     console.log(this.randomizePrice(100, 2000))
   },

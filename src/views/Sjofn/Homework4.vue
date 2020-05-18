@@ -132,7 +132,6 @@ export default {
   },
   methods: {
     negate (bool) {
-      // return !bool
       console.log(!(bool === 'true'))
     },
 
@@ -141,14 +140,7 @@ export default {
     },
 
     buildUserModel () {
-      let user = {
-        'name': this.name,
-        'age': this.age,
-        'gender': this.gender,
-        'eyeColor': this.eyeColor,
-        'hobbies': this.hobbies
-      }
-      console.log(user)
+      console.log({ 'name': this.name, 'age': this.age, 'gender': this.gender, 'eyeColor': this.eyeColor, 'hobbies': this.hobbies })
     },
     compare (a, b) {
       if (a < b) {

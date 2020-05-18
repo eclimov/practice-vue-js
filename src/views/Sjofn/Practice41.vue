@@ -6,16 +6,7 @@
 
 <script>
 export default {
-  name: 'Practice2',
-  data () {
-    return {
-      number: '',
-      one: '',
-      two: '',
-      three: '',
-      four: ''
-    }
-  },
+  name: 'Practice41',
   created () {
     this.getDatetime()
     this.getPowFive(5)

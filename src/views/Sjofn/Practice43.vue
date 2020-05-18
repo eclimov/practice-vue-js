@@ -6,20 +6,12 @@
 
 <script>
 export default {
-  name: 'Practice3',
-  data () {
-    return {
-      name: '',
-      min: '',
-      max: '',
-      a: ''
-    }
-  },
+  name: 'Practice43',
   created () {
     this.sayHello('Eduard')
-    this.generateRandomInt()
-    this.generateRandomIntInRange(1, 1000) // эта функция содержит загадочную ошибку( сама выбирает range, а если ввести значения в кавычках, то напишет правильно, а посчитает неверно
-    this.isEven(48)
+    console.log(this.generateRandomInt())
+    console.log(this.generateRandomIntInRange(1, 1000))
+    console.log(this.isEven(48))
     this.getTheBestDistrict()
 
     let randomNum = this.generateRandomInt()
