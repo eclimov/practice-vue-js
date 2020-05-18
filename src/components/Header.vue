@@ -15,6 +15,7 @@
     >
       <router-link :to="{name: 'home'}">
         <button
+          :style="{'background-color': ($route.name==='home' ? tabColors[$route.name] : '#af7ca0')}"
           class="tabnav"
         >
           <b>HOMEPAGE</b>
@@ -22,6 +23,7 @@
       </router-link>
       <router-link :to="{name: 'about'}">
         <button
+          :style="{'background-color': ($route.name==='about' ? tabColors[$route.name] : '#af7ca0')}"
           class="tabnav"
         >
           <b>ABOUT</b>
@@ -29,6 +31,7 @@
       </router-link>
       <router-link :to="{name: 'service'}">
         <button
+          :style="{'background-color': ($route.name==='service' ? tabColors[$route.name] : '#af7ca0')}"
           class="tabnav"
         >
           <b>SERVICES</b>
@@ -36,6 +39,7 @@
       </router-link>
       <router-link :to="{name: 'blog'}">
         <button
+          :style="{'background-color': ($route.name==='blog' ? tabColors[$route.name] : '#af7ca0')}"
           class="tabnav"
         >
           <b>BLOG</b>
@@ -43,22 +47,23 @@
       </router-link>
       <router-link :to="{name: 'community'}">
         <button
+          :style="{'background-color': ($route.name==='community' ? tabColors[$route.name] : '#af7ca0')}"
           class="tabnav"
-          @click="openPage('Community', this, '#523f8f')"
         >
           <b>COMMUNITY</b>
         </button>
       </router-link>
       <router-link :to="{name: 'podcast'}">
         <button
+          :style="{'background-color': ($route.name==='podcast' ? tabColors[$route.name] : '#af7ca0')}"
           class="tabnav"
-          @click="openPage('Podcast', this, '#c34397')"
         >
           <b>PODCAST</b>
         </button>
       </router-link>
       <div
         id="Homepage"
+        :style="{'background-color': tabColors[$route.name]}"
         class="tabcontent"
       >
         <p><i><q>Home's not a place, it's a feeling.</q></i></p>
@@ -69,8 +74,21 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  data () {
+    return {
+      tabColors: {
+        'home': '#523f8f',
+        'about': '#c34397',
+        'service': '#523f8f',
+        'blog': '#c34397',
+        'community': '#523f8f',
+        'podcast': '#c34397'
+      }
+    }
+  }
 }
+
 </script>
 
 <style scoped>
@@ -180,30 +198,5 @@ export default {
     font-variant: titling-caps;
     font-size: 18px;
     color: #000000;
-  }
-
-  /* Colors for tabs */
-  #Homepage {
-    background-color: #523f8f;
-  }
-
-  #About {
-    background-color: #c34397;
-  }
-
-  #Services {
-    background-color: #523f8f;
-  }
-
-  #Blog {
-    background-color: #c34397;
-  }
-
-  #Community {
-    background-color: #523f8f;
-  }
-
-  #Podcast {
-    background-color: #c34397;
   }
 </style>
