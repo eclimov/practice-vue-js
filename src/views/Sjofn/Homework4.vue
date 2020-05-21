@@ -67,13 +67,13 @@
     <div>
       Enter 2 <input
         id="a"
-        v-model="a"
+        v-model="number1"
         placeholder="numeric"
       > <input
         id="b"
-        v-model="b"
+        v-model="number2"
         placeholder="values"
-      > & <button @click="compare(a,b)">
+      > & <button @click="compare(number1, number2)">
         compare
       </button> them.
     </div>
@@ -126,8 +126,8 @@ export default {
       gender: '',
       eyeColor: '',
       hobbies: '',
-      a: '',
-      b: ''
+      number1: '',
+      number2: ''
     }
   },
   methods: {

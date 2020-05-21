@@ -89,23 +89,18 @@
       <hr>
       a:<br>
       <input
-        id="a"
-        type="number"
+        v-model="length"
         placeholder="length"
       >
       <br>
       b:<br>
       <input
-        id="b"
-        type="number"
+        v-model="height"
         placeholder="height"
       >
       <br>
       <br>
-      <button
-        id="calc"
-        @click="result()"
-      >
+      <button @click="result(length,height)">
         Hypotenuse
       </button>
       <br>
@@ -125,11 +120,17 @@
 <script>
 export default {
   name: 'Homework1',
+  data () {
+    return {
+      height: '',
+      length: ''
+    }
+  },
   methods: {
-    result () {
-      let a = document.getElementById('a').value
-      let b = document.getElementById('b').value
-      alert('The result is ' + Math.sqrt(Math.pow(parseInt(a), 2) + Math.pow(parseInt(b), 2)))
+    result (a, b) {
+      // let a = document.getElementById('a').value
+      // let b = document.getElementById('b').value
+      alert('The result is ' + Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)))
     }
   }
 }
