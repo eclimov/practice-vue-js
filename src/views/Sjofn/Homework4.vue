@@ -36,41 +36,34 @@
     <hr>
     <div>
       Enter <input
-        id="name"
-        v-model="name"
+        v-model="userName"
         placeholder="name"
       >,
       <input
-        id="age"
         v-model="age"
         placeholder="age"
       >,
       <input
-        id="gender"
         v-model="gender"
         placeholder="gender"
       >,
       <input
-        id="eyeColor"
         v-model="eyeColor"
         placeholder="eyeColor"
       >,
       <input
-        id="hobbies"
         v-model="hobbies"
         placeholder="hobbies"
-      > to <button @click="buildUserModel">
+      > to <button @click="buildUserModel(userName, age, gender, eyeColor, hobbies)">
         build
       </button> a User Model.
     </div>
     <hr>
     <div>
       Enter 2 <input
-        id="a"
         v-model="number1"
         placeholder="numeric"
       > <input
-        id="b"
         v-model="number2"
         placeholder="values"
       > & <button @click="compare(number1, number2)">
@@ -121,7 +114,7 @@ export default {
       bool: '',
       adjective: '',
       characterName: '',
-      name: '',
+      userName: '',
       age: '',
       gender: '',
       eyeColor: '',
@@ -139,9 +132,22 @@ export default {
       console.log(`${adjective} adventures of ${characterName}`)
     },
 
-    buildUserModel () {
-      console.log({ 'name': this.name, 'age': this.age, 'gender': this.gender, 'eyeColor': this.eyeColor, 'hobbies': this.hobbies })
+    // buildUserModel (userName, age, gender, eyeColor, hobbies) {
+    //   console.log(`${userName}, ${age}, ${gender}, ${eyeColor}, ${hobbies}`)
+    // },
+
+    buildUserModel (userName, age, gender, eyeColor, hobbies) {
+      let user = {
+        'userName': userName,
+        'age': age,
+        'gender': gender,
+        'eyeColor': eyeColor,
+        'hobbies': hobbies
+      }
+      console.log(user)
+      return user
     },
+
     compare (a, b) {
       if (a < b) {
         console.log(`${a} < ${b}`)

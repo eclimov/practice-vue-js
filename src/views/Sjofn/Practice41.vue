@@ -16,13 +16,7 @@ export default {
   methods: {
     getDatetime () {
       let currentDate = new Date()
-      let dateTime = currentDate.getDate() + '/' +
-    (currentDate.getMonth() + 1) + '/' +
-    currentDate.getFullYear() + ' ' +
-    currentDate.getHours() + ':' +
-    currentDate.getMinutes() + ':' +
-    currentDate.getSeconds()
-      console.log(dateTime)
+      console.log(`${currentDate.getDate()}/${(currentDate.getMonth() + 1)}/${currentDate.getFullYear()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`)
     },
 
     getPowFive (number) {

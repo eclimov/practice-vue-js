@@ -27,56 +27,29 @@ export default {
         isFireplace: true,
         ceilingsMinHeight: 5
       },
-      fictionCharacter:
-        {
-          gender: 'male',
-          age: 25,
-          firstName: 'Martin',
-          lastName: 'Corrigan',
-          author: 'James Hadley Chase',
-          country: 'United States',
-          language: 'English',
-          specialties: ['special agent', 'detective'],
-          isGood: true,
-          isSuccessful: true
-        }
+      fictionCharacter: {
+        gender: 'male',
+        age: 25,
+        firstName: 'Martin',
+        lastName: 'Corrigan',
+        author: 'James Hadley Chase',
+        country: 'United States',
+        language: 'English',
+        specialties: ['special agent', 'detective'],
+        isGood: true,
+        isSuccessful: true
+      }
     }
   },
 
   created () {
     this.genres.push('Humour')
     this.disciplines.push('Drawing')
-    console.log(this.genres.join(', ') + ', ' + this.disciplines.join(', '))
+    console.log(`${this.genres.join(', ')}, ${this.disciplines.join(', ')}`)
     this.fictionCharacter['discipline'] = 'physical education'
     console.log(this.fictionCharacter)
-    console.log(this.randomizePrice(100, 2000))
-  },
-
-  methods: {
-    getDatetime () {
-      console.log(new Date())
-    },
-
-    getPowFive (z) {
-      console.log(Math.pow(z, 5))
-    },
-
-    getSumAndDivide (a, b) {
-      console.log((a + b) / b)
-    },
-
-    finalCalculations (m, n, l, p) {
-      this.getPowFive(m)
-      this.getSumAndDivide(n, l)
-      console.log(Math.sqrt(p))
-    },
-
-    randomizePrice (min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min
-    }
   }
 }
-
 </script>
 
 <style scoped>

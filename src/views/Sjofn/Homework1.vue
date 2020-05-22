@@ -128,8 +128,6 @@ export default {
   },
   methods: {
     result (a, b) {
-      // let a = document.getElementById('a').value
-      // let b = document.getElementById('b').value
       alert('The result is ' + Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)))
     }
   }
