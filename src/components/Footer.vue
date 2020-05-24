@@ -25,6 +25,34 @@ export default {
     font-style: normal;
     font-variant: normal;
     text-align: left;
+    color: #000000;
     background: #af7ca0;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: Laila, serif;
+    font-size: 30px;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: left;
+  }
+  h4 {
+    margin: 0;
+    line-height: initial;
+    font-family: Laila, serif;
+    font-size: 20px;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  h4:hover {
+    margin: 0;
+    line-height: initial;
+    font-family: Laila, serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
   }
 </style>
