@@ -132,10 +132,6 @@ export default {
       console.log(`${adjective} adventures of ${characterName}`)
     },
 
-    // buildUserModel (userName, age, gender, eyeColor, hobbies) {
-    //   console.log(`${userName}, ${age}, ${gender}, ${eyeColor}, ${hobbies}`)
-    // },
-
     buildUserModel (userName, age, gender, eyeColor, hobbies) {
       let user = {
         'userName': userName,
