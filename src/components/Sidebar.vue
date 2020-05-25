@@ -1,8 +1,6 @@
 <template>
   <div>
     <AboutMe />
-  </div>
-  <div>
     <Search />
   </div>
 </template>

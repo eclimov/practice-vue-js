@@ -17,8 +17,8 @@ export default {
 <style scoped>
   .footer {
     display: block;
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
     padding: 20px;
     margin-top: 20px;
     font-family: Laila, serif;

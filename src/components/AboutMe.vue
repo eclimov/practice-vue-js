@@ -32,5 +32,18 @@ export default {
 </script>
 
 <style scoped>
-
+  .card-aboutme {
+    display: block;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: Laila, serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    text-align: center;
+    color: black;
+    background-color: #c34397;
+  }
 </style>

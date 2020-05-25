@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped>
-  container-search {
+  .container-search {
     display: block;
     width: 100%;
     padding: 50px;

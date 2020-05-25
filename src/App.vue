@@ -1,26 +1,19 @@
 <template>
   <div class="grid-container">
-    <Header class="header">
-      1<Header />
-      <div class="page-content">
-        2<div />
-        <div class="sidebar">
-          3<div />
-          <div class="footer">
-            4<Footer />
-          </div>
-        </div>
-      </div>
-    </header>
+    <Header class="header" />
+    <router-view class="page-content" />
+    <Sidebar class="sidebar" />
+    <Footer class="footer" />
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Sidebar from './components/Sidebar'
 export default {
   name: 'App',
-  components: { Header, Footer }
+  components: { Sidebar, Footer, Header }
 }
 </script>
 
@@ -35,7 +28,7 @@ export default {
 
   .grid-container {
     display: grid;
-    min-height: 100%;
+    min-height: 100vh;
     grid-template-columns: auto 25%;
     grid-template-rows: 100px auto 100px;
     grid-gap: 20px;
@@ -44,7 +37,6 @@ export default {
   .header {
     grid-column-start: 1;
     grid-column-end: 3;
-    background-color: #af7ca0;
   }
 
   .page-content {
@@ -52,10 +44,10 @@ export default {
   }
 
   .sidebar {
-    background-color: #c34397;
   }
 
   .footer {
-    background-color: #af7ca0;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 </style>
