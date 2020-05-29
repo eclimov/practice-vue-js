@@ -2,14 +2,18 @@
   <div>
     <AboutMe />
     <Search />
+    <Quote />
+    <Facebook />
   </div>
 </template>
 
 <script>
 import AboutMe from './AboutMe'
 import Search from './Search'
+import Quote from './Quote'
+import Facebook from './Facebook'
 export default {
-  components: { Search, AboutMe }
+  components: { Facebook, AboutMe, Search, Quote }
 }
 </script>
 

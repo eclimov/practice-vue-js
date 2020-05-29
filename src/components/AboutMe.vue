@@ -4,7 +4,7 @@
     <div class="aboutmeimg">
       <img
         class="bordered-img-about-me"
-        src="./assets/aboutme.png"
+        src="@/assets/aboutme.png"
         alt="about-me"
         style="height:60%; width:60%"
       >
@@ -32,18 +32,34 @@ export default {
 </script>
 
 <style scoped>
+  h1 {
+    font-family: Laila, serif;
+    font-size: 34px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: center;
+  }
   .card-aboutme {
     display: block;
     height: auto;
     width: auto;
     padding: 20px;
-    margin: 20px;
+    margin-top: 20px;
     font-family: Laila, serif;
     font-size: 18px;
     font-style: normal;
     font-variant: normal;
     text-align: center;
-    color: black;
+    color: #000000;
     background-color: #c34397;
+  }
+
+  /* Section for image of author */
+  .bordered-img-about-me {
+    width: 100%;
+    padding: 5px;
+    border: 5px solid #af7ca0;
+    background-color: #071268;
   }
 </style>

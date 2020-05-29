@@ -26,17 +26,25 @@ export default {
 </script>
 
 <style scoped>
+  h1 {
+    font-family: Laila, serif;
+    font-size: 34px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: center;
+  }
   .container-search {
     display: block;
-    width: 100%;
-    padding: 50px;
+    height: auto;
+    width: auto;
+    padding: 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
     font-family: Laila, serif;
-    font-size: 20px;
-    font-style: italic;
+    font-size: 18px;
+    font-style: normal;
     font-variant: normal;
-    text-align: left;
+    text-align: center;
     color: #000000;
     background-color: #523f8f;
   }
