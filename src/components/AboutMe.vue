@@ -4,7 +4,7 @@
     <div class="aboutmeimg">
       <img
         class="bordered-img-about-me"
-        src="blog_images/aboutme.png"
+        src="./assets/aboutme.png"
         alt="about-me"
         style="height:60%; width:60%"
       >
@@ -35,9 +35,9 @@ export default {
   .card-aboutme {
     display: block;
     height: auto;
-    width: 100%;
+    width: auto;
     padding: 20px;
-    margin-top: 20px;
+    margin: 20px;
     font-family: Laila, serif;
     font-size: 18px;
     font-style: normal;
