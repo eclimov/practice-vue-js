@@ -49,7 +49,7 @@ Requirements:
 - Section 1. Copy this homework’s task and represent it as italic text. Preserve structure (lists) and line breaks
 - Section 2. Enumerate your items in a list. Name of each item should be a link to an article in the internet. A link should open in a new tab
 - Section 3. Pick one of items and provide some information for it, in 2-3 sentences in a paragraph. Highlight 3 important words/phrases with special color, ‘underline’ and ‘bold’ styles, accordingly. Put the paragraph in a new ‘div’ with maximum width 300px (set this style via CSS)
-- Section 4. Add button [Name](should output your first name in console).
+- Section 4. Add button \[Name] (should output your first name in console).
 Add 2 input fields with placeholders ‘a’ and ‘b’ accordingly.
 Add button [Hypotenuse](should calculate hypotenuse from values, provided in the inputs and output result in an  ‘alert’ window). 
 - Section 5. Pick a palette, make picture of it, put it in the same directory as the HTML file and display it in this section of the page. Add ‘Palette’ title to the image
@@ -135,3 +135,14 @@ Print hello to Tanya in the console, if it is 'Rascani'.
 Print 'Who are you?' otherwise.  
 Reuse 'sayHello' function when implementing this point. Use switch/case approach  
 
+## Homework 5
+1. Create branch ‘{username}-hw5’
+2. Implement homeworks and practice tasks from previous lessons (everything described in README.md) in a “Vue.js” application. Acceptance criteria:
+    - Every task’s implementation is accessible via separate route: 
+‘/{username}/{taskName}’ - for homeworks and practical tasks 
+    - List of links to all of your implementations is placed on a separate view (‘/{username}’), which can be accessed via navigation bar at the top of the page:
+    - ‘Home’ view is not changed
+3. Update “README.md” with this homework
+4. Clean up ‘public’ directory (only ‘favicon.ico’ and ‘index.html’ files should remain)
+5. Create a pull request to ‘master’
+#####Deadline: 17.05.20 (inclusively)
