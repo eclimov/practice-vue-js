@@ -4,6 +4,9 @@
     <Search />
     <Quote />
     <Facebook />
+    <Instagram />
+    <Contact />
+    <Newsletter />
   </div>
 </template>
 
@@ -12,17 +15,13 @@ import AboutMe from './AboutMe'
 import Search from './Search'
 import Quote from './Quote'
 import Facebook from './Facebook'
+import Instagram from './Instagram'
+import Contact from './Contact'
+import Newsletter from './Newsletter'
 export default {
-  components: { Facebook, AboutMe, Search, Quote }
+  components: { Newsletter, Instagram, Facebook, AboutMe, Search, Quote, Contact }
 }
 </script>
 
 <style scoped>
-  .sidebar {
-    float: left;
-    padding-left: 20px;
-    font-family: Laila, serif;
-    font-size: 22px;
-    background-color: #f0d7e9;
-  }
 </style>

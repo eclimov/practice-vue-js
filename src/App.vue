@@ -1,7 +1,7 @@
 <template>
   <div class="grid-container">
     <Header class="header" />
-    <router-view class="page-content" />
+    <router-view />
     <Sidebar class="sidebar" />
     <Footer class="footer" />
   </div>
@@ -32,6 +32,8 @@ export default {
     grid-template-columns: auto 25%;
     grid-template-rows: 100px auto 100px;
     grid-gap: 20px;
+    padding: 20px;
+    background-color: #f0d7e9;
   }
 
   .header {

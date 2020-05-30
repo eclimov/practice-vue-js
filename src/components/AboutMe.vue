@@ -45,7 +45,6 @@ export default {
     height: auto;
     width: auto;
     padding: 20px;
-    margin-top: 20px;
     font-family: Laila, serif;
     font-size: 18px;
     font-style: normal;
