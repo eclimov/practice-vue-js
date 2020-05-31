@@ -174,7 +174,33 @@ export default {
     return {
       countries: [
         { value: 'moldova', content: 'Moldova' },
-        { value: 'argentina', content: 'Argentina' }
+        { value: 'argentina', content: 'Argentina' },
+        { value: 'australia', content: 'Australia' },
+        { value: 'austria', content: 'Austria' },
+        { value: 'belarus', content: 'Belarus' },
+        { value: 'belgia', content: 'Belgia' },
+        { value: 'bulgaria', content: 'Bulgaria' },
+        { value: 'canada', content: 'Canada' },
+        { value: 'china', content: 'China' },
+        { value: 'croatia', content: 'Croatia' },
+        { value: 'czechia', content: 'Czechia' },
+        { value: 'egypt', content: 'Egypt' },
+        { value: 'finland', content: 'Finland' },
+        { value: 'france', content: 'France' },
+        { value: 'germany', content: 'Germany' },
+        { value: 'greece', content: 'Finland' },
+        { value: 'hungary', content: 'Hungary' },
+        { value: 'india', content: 'India' },
+        { value: 'ireland', content: 'Ireland' },
+        { value: 'russia', content: 'Russia' },
+        { value: 'saudiarabia', content: 'Saudi Arabia' },
+        { value: 'serbia', content: 'Serbia' },
+        { value: 'singapore', content: 'Singapore' },
+        { value: 'slovakia', content: 'Slovakia' },
+        { value: 'slovenia', content: 'Slovenia' },
+        { value: 'spain', content: 'Spain' },
+        { value: 'sweden', content: 'Sweden' },
+        { value: 'switzerland', content: 'Switzerland' }
       ]
     }
   }
@@ -228,28 +254,29 @@ export default {
     text-align: left;
   }
 
-  input[type=text], input[type=submit] {
-    display: inline-block;
+  input[type=submit] {
     width: 100%;
     padding: 12px 20px;
-    margin-top: 10px;
     border: 1px solid #523f8f;
     border-radius: 4px;
+    box-sizing: border-box;
     font-family: Laila, serif;
     font-size: 20px;
     font-style: normal;
     font-variant: normal;
     text-align: center;
     color: #FFFFFF;
+    background-color: #000000;
     cursor: pointer;
   }
 
   input[type=submit]:hover {
-    opacity: 0.8;
     font-family: Laila, serif;
     font-size: 20px;
     font-style: normal;
+    font-variant: normal;
     text-align: center;
+    color: #FFFFFF;
     background-color: #555;
   }
 </style>

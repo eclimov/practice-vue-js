@@ -69,11 +69,6 @@ export default {
     background-color: #523f8f;
   }
 
-  form {
-    font-family: Laila, serif;
-    font-style: normal;
-  }
-
   .container-email {
     display: block;
     height: auto;
@@ -84,14 +79,20 @@ export default {
     background-color: #523f8f;
   }
 
-  input[type=text], input[type=submit] {
-    display: inline-block;
+  input[type=text] {
     width: 100%;
     padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #523f8f;
+    border: 1px solid #af7ca0;
+    border-radius: 4px;
     box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Laila, serif;
+    font-size: 20px;
     font-style: normal;
+    font-variant: normal;
+    text-align: left;
   }
 
   input[type=checkbox] {
@@ -100,21 +101,28 @@ export default {
   }
 
   input[type=submit] {
-    border: none;
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #523f8f;
+    border-radius: 4px;
+    box-sizing: border-box;
     font-family: Laila, serif;
     font-size: 20px;
     font-style: normal;
+    font-variant: normal;
     text-align: center;
     color: #FFFFFF;
     background-color: #000000;
+    cursor: pointer;
   }
 
   input[type=submit]:hover {
-    opacity: 0.8;
     font-family: Laila, serif;
     font-size: 20px;
     font-style: normal;
+    font-variant: normal;
     text-align: center;
+    color: #FFFFFF;
     background-color: #555;
   }
 </style>
