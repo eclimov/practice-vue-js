@@ -38,7 +38,7 @@ export default {
     font-variant: normal;
     font-weight: normal;
     text-align: center;
-    color: #FFFFFF;
+    color: #000000;
   }
   a {
     color: #000000;

@@ -29,30 +29,6 @@ export default {
 </script>
 
 <style scoped>
-  h1 {
-    font-family: Laila, serif;
-    font-size: 34px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    text-align: center;
-    color: #FFFFFF;
-  }
-  /* Remove of underline from links - sections of social networks */
-  a {
-    color: #FFFFFF;
-  }
-  a:link {
-    font-style: normal;
-    text-decoration: none;
-    color: #FFFFFF;
-  }
-
-  a:hover {
-    font-style: normal;
-    color: #FFFFFF;
-    background-color: #af7ca0;
-  }
   .facebook {
     display: block;
     height: auto;

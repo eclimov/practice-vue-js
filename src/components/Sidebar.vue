@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import AboutMe from './AboutMe'
-import Search from './Search'
-import Quote from './Quote'
-import Facebook from './Facebook'
-import Instagram from './Instagram'
-import Contact from './Contact'
-import Newsletter from './Newsletter'
+import AboutMe from './sidebar/AboutMe'
+import Search from './sidebar/Search'
+import Quote from './sidebar/Quote'
+import Facebook from './sidebar/Facebook'
+import Instagram from './sidebar/Instagram'
+import Contact from './sidebar/Contact'
+import Newsletter from './sidebar/Newsletter'
 export default {
   components: { Newsletter, Instagram, Facebook, AboutMe, Search, Quote, Contact }
 }
