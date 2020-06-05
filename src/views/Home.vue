@@ -2,6 +2,7 @@
   <div>
     <Welcome />
     <Description />
+    <SlideShow />
     <Services />
     <CurrentProject />
     <BlogCategories />
@@ -15,9 +16,10 @@ import Description from '../components/Description'
 import Services from '../components/Service'
 import CurrentProject from '../components/CurrentProject'
 import BlogCategories from '../components/BlogCategories'
+import SlideShow from '../components/SlideShow'
 export default {
   name: 'Home',
-  components: { BlogCategories, CurrentProject, Services, Description, Welcome }
+  components: { SlideShow, BlogCategories, CurrentProject, Services, Description, Welcome }
 }
 </script>
 
