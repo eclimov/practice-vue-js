@@ -42,25 +42,25 @@
       </div>
       <a
         class="prev"
-        onclick="plusSlides(-1)"
+        @click="plusSlides(-1)"
       >&#10094;</a>
       <a
         class="next"
-        onclick="plusSlides(1)"
+        @click="plusSlides(1)"
       >&#10095;</a>
     </div>
     <div style="text-align:center; background-color: #f0d7e9">
       <span
         class="dot"
-        onclick="currentSlide(1)"
+        @click="currentSlide(1)"
       />
       <span
         class="dot"
-        onclick="currentSlide(2)"
+        @click="currentSlide(2)"
       />
       <span
         class="dot"
-        onclick="currentSlide(3)"
+        @click="currentSlide(3)"
       />
     </div>
   </div>
@@ -74,7 +74,7 @@ export default {
       slideIndex: 1
     }
   },
-  created () {
+  mounted () {
     this.showSlides(this.slideIndex)
 
     setInterval(() => {
