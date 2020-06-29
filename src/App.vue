@@ -4,6 +4,9 @@
       <router-link to="/">
         Home
       </router-link> |
+      <router-link :to="{ name: 'eclimov' }">
+        eclimov
+      </router-link> |
       <router-link :to="{ name: 'sjofn' }">
         Sjofn
       </router-link> |

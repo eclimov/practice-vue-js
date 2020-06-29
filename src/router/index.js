@@ -15,6 +15,7 @@ import SanHomework4 from '../views/sanda/Homework4'
 import SanPractice41 from '../views/sanda/Practice41'
 import SanPractice42 from '../views/sanda/Practice42'
 import SanPractice43 from '../views/sanda/Practice43'
+import BackendCallExample from '../views/eclimov/BackendCallExample'
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/eclimov',
+    name: 'eclimov',
+    component: BackendCallExample
   },
   {
     path: '/sjofn',
