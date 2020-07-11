@@ -15,6 +15,7 @@ import SanHomework4 from '../views/sanda/Homework4'
 import SanPractice41 from '../views/sanda/Practice41'
 import SanPractice42 from '../views/sanda/Practice42'
 import SanPractice43 from '../views/sanda/Practice43'
+import Homework6 from '../views/Sjofn/Homework6'
 
 Vue.use(VueRouter)
 
@@ -43,6 +44,11 @@ const routes = [
     path: '/sjofn/hw4',
     name: 'sjofn-hw4',
     component: SjHomework4
+  },
+  {
+    path: '/sjofn/hw6',
+    name: 'sjofn-hw6',
+    component: Homework6
   },
   {
     path: '/sjofn/pr41',

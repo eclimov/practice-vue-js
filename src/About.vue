@@ -12,6 +12,9 @@
         <a href="">Homework4</a>
       </li>
       <li>
+        <a href="">Homework6</a>
+      </li>
+      <li>
         <a href="">Practice1</a>
       </li>
       <li>

@@ -19,6 +19,9 @@
       <router-link :to="{ name: 'sjofn-pr43' }">
         Practice 4-3
       </router-link> <hr>
+      <router-link :to="{ name: 'sjofn-hw6' }">
+        Homework 6
+      </router-link> <hr>
     </div>
     <router-view />
   </div>
