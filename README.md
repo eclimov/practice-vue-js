@@ -146,3 +146,19 @@ Reuse 'sayHello' function when implementing this point. Use switch/case approach
 4. Clean up ‘public’ directory (only ‘favicon.ico’ and ‘index.html’ files should remain)
 5. Create a pull request to ‘master’
 #####Deadline: 17.05.20 (inclusively)
+
+## Homework 6
+1. Create branch ‘<_username_>-_hw6_’. 
+2. Using ‘_axios_’ and the public APIs, implement one of the following points:
+- a. API: https://dog.ceo/dog-api/documentation/
+- Section 1: show a random dog image when the page is loaded.
+- Section 2: ‘_Breed’_ input field and [_Search_] button. The button is enabled only when the input is not empty. After the button is clicked, result images should be shown on the page.
+- b. API: http://www.recipepuppy.com/about/api/
+‘_Ingredients_’ and ‘_Query_’ input fields, [_Search_] button. The button is enabled only if at least one of the fields is not empty. After the button is clicked, all found recipes’ details (name, ingredients, thumbnail image if exists, etc.) should be shown on the page in a table.
+Note: for simplicity purposes, ignore ‘pagination’ parameter. 
+3.There should be loader that appears when API’s endpoint is called
+4. The [_Search_] button should be disabled during loading
+5. The implementation should be placed on route ‘/<username>/hw6’
+6. Update ‘_README.md_’ with the task of this homework
+7. Create pull request and follow the reviewer's suggestions (if any) until the branch is merged
+
