@@ -24,7 +24,8 @@
     </div>
 
     <button
-      :disabled="isLoading"
+      :disabled="isSearchButtonDisabled"
+<!--      :disabled="isLoading"-->
       @click="fetchRecipe"
     >
       Search
