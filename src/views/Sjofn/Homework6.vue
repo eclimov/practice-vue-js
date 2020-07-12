@@ -25,7 +25,6 @@
 
     <button
       :disabled="isSearchButtonDisabled"
-<!--      :disabled="isLoading"-->
       @click="fetchRecipe"
     >
       Search
@@ -95,7 +94,7 @@ export default {
   },
   computed: {
     isSearchButtonDisabled () {
-      return this.ingredients.length === 0 && this.dish.length === 0
+      return (this.ingredients.length === 0 && this.dish.length === 0) || (this.isLoading === true)
     }
   },
   methods: {
