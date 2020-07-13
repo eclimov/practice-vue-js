@@ -2,67 +2,74 @@
   <div>
     <h1>Dogs are the BEST!</h1>
 
-    <label for="dog">Dog: </label>
+    <img
+      v-if="randomImageSrc"
+      :src="randomImageSrc"
+    >
+
+    <hr>
+
     <input
-      id="dog"
-      v-model="dogs"
-      type="image"
-      placeholder="dog"
-      autofocus
+      v-model="breed"
+      placeholder="Breed"
+      type="text"
     >
 
     <button
       :disabled="isSearchButtonDisabled"
-      @click="search"
+      @click="search()"
     >
       Search
     </button>
 
-    <div>
-      id="results"
+    <div
+      v-for="image in images"
+      :key="image"
+    >
+      <img
+        :src="image"
       >
-      <Loader v-if="isLoading" />
-      <pre
-        v-else
-        {{
-        result
-        }}
-        <pre
-      />
     </div>
   </div>
-  <template />
+</template>
 
-  <script>
-    import axios from 'axios'
-    import Pacman from "../../components/Pacman";
-    export default {
-    name: 'Dogs',
-      components: {Pacman},
-    data() {
+<script>
+import axios from 'axios'
+export default {
+  name: 'Homework6',
+  data () {
     return {
-    breed: '',
-    isLoading: false,
-      result: ''
+      breed: '',
+      images: [],
+      isLoading: false,
+      randomImageSrc: null
     }
-    },
-    computed: {
+  },
+  computed: {
     isSearchButtonDisabled () {
-    return isDisabled = this.breed === ''
+      return this.isLoading || this.breed.trim() === ''
     }
+  },
+  created () {
+    this.fetchRandomImage()
+  },
+  methods: {
+    async search () {
+      this.isLoading = true
+      try {
+        const response = await axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://dog.ceo/api/breed/${this.breed}/images/`)
+        this.images = response.data.message
+      } catch (e) {
+        this.result = 'No results'
+      } finally {
+        this.isLoading = false
+      }
     },
-    methods: {
-    async search() {
-    this.isLoading = true
-    try {
-    const response = await axios.get(`https://dog.ceo/dog-api/documentation/$(this.breed)`)
-    this.breed = response.data.breed
-    } catch (e) {
-      this.result = 'No results'
-    } finally {
-    this.isLoading = false
+    async fetchRandomImage () {
+      const response = await axios.get(`https://dog.ceo/api/breeds/image/random`)
+      // console.log(response.data.message)
+      this.randomImageSrc = response.data.message
     }
-    }
-    }
-    }
-  </script>
+  }
+}
+</script>

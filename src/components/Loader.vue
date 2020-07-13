@@ -1,22 +1,25 @@
 <template>
-  <div class="loader">
-    <div class="circles">
-      <span class="one" />
-      <span class="two" />
-      <span class="three" />
-    </div>
-    <div class="pacman">
-      <span class="top" />
-      <span class="bottom" />
-      <span class="left" />
-      <div class="eye" />
+  <div>
+    <div class="loader">
+      <div class="circles">
+        <span class="one" />
+        <span class="two" />
+        <span class="three" />
+      </div>
+      <div class="pacman">
+        <span class="top" />
+        <span class="bottom" />
+        <span class="left" />
+        <div class="eye" />
+      </div>
     </div>
   </div>
 </template>
+
 <script>
-  export default {
-    name: 'LoaderPacman'
-  }
+export default {
+  name: 'Loader'
+}
 </script>
 <style>
   .loader{position:absolute;top:50%;left:50%;height:60px;width:160px;margin:0;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
