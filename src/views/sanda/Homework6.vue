@@ -22,6 +22,8 @@
       Search
     </button>
 
+    <Loader  />
+
     <div
       v-for="image in images"
       :key="image"
@@ -30,11 +32,6 @@
         :src="image"
       >
     </div>
-
-    <Loader v-if="isLoading" />
-    <pre v-else>
-      {{ result }}
-    </pre>
   </div>
 </template>
 
@@ -43,7 +40,7 @@ import axios from 'axios'
 import Loader from '../../components/Loader'
 export default {
   name: 'Homework6',
-  components: {Loader},
+  components: { Loader },
   data () {
     return {
       breed: '',

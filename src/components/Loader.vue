@@ -24,7 +24,7 @@ export default {
 <style>
   .loader{position:absolute;top:50%;left:50%;height:60px;width:160px;margin:0;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
   .circles{position:absolute;left:-5px;top:0;height:60px;width:180px}
-  .circles span{position:absolute;top:25px;height:12px;width:12px;border-radius:12px;background-color: #000000
+  .circles span{position:absolute;top:25px;height:12px;width:12px;border-radius:12px;background-color: #F2C53D;
   }
   .circles span.one{right:80px}
   .circles span.two{right:40px}
@@ -36,7 +36,7 @@ export default {
   .pacman .eye{position:absolute;top:10px;left:30px;height:7px;width:7px;border-radius:7px;background-color: #ffffff
   }
   .pacman span{position:absolute;top:0;left:0;height:60px;width:60px}
-  .pacman span::before{content:"";position:absolute;left:0;height:30px;width:60px;background-color: #000000
+  .pacman span::before{content:"";position:absolute;left:0;height:30px;width:60px;background-color: #F2C53D;
   }
   .pacman .top::before{top:0;border-radius:60px 60px 0px 0px}
   .pacman .bottom::before{bottom:0;border-radius:0px 0px 60px 60px}
