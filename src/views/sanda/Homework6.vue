@@ -30,13 +30,20 @@
         :src="image"
       >
     </div>
+
+    <Loader v-if="isLoading" />
+    <pre v-else>
+      {{ result }}
+    </pre>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import Loader from '../../components/Loader'
 export default {
   name: 'Homework6',
+  components: { Loader },
   data () {
     return {
       breed: '',
