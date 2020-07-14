@@ -22,15 +22,13 @@
       Search
     </button>
 
-    <Loader  />
-
+    <Loader v-if="isLoading" />
     <div
       v-for="image in images"
+      v-else
       :key="image"
     >
-      <img
-        :src="image"
-      >
+      <img :src="image">
     </div>
   </div>
 </template>
@@ -64,7 +62,7 @@ export default {
         const response = await axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://dog.ceo/api/breed/${this.breed}/images/`)
         this.images = response.data.message
       } catch (e) {
-        this.result = 'No results'
+        alert('No results')
       } finally {
         this.isLoading = false
       }
