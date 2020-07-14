@@ -30,8 +30,9 @@
       Search
     </button>
     <hr>
+    <Loader v-if="isLoading" />
     <table
-      v-if="results.length"
+      v-else-if="results.length"
       style="width:100%"
     >
       <tr>
@@ -65,22 +66,18 @@
           <img
             v-if="result.thumbnail.length"
             :src="result.thumbnail"
-          >
+            :alt="result.title">
         </td>
       </tr>
     </table>
-    <div
-      id="results"
-    >
-      <Loader v-if="isLoading" />
-      <pre v-else>{{ result }}</pre>
-    </div>
+    <span v-else>No Results</span>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import Loader from '../../components/Loader'
+
 export default {
   name: `Homework6`,
   components: { Loader },
@@ -114,5 +111,16 @@ export default {
 </script>
 
 <style scoped>
+  th {
+    background-color: #d9d9d9;
+  }
 
+  table, th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+
+  th {
+    max-width: 25%;
+  }
 </style>

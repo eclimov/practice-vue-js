@@ -25,7 +25,7 @@ export default {
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: #fff;
+    background: #4a2190;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
   .lds-ellipsis div:nth-child(1) {
