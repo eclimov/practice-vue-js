@@ -43,7 +43,7 @@ import axios from 'axios'
 import Loader from '../../components/Loader'
 export default {
   name: 'Homework6',
-  components: { Loader },
+  components: {Loader},
   data () {
     return {
       breed: '',

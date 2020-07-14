@@ -97,6 +97,21 @@ c. Create some test HTML page
         - ‘\<a> = \<b>’ in case when the numbers are equal  
 2. Create pull request and follow the reviewer's suggestions (if any) until the branch is merged  
 
+## Homework 6
+1. Create branch ‘<username>-hw6’. 
+2. Using ‘axios’ and the public APIs, implement one of the following points:
+    API: https://dog.ceo/dog-api/documentation/
+    Section 1: show a random dog image when the page is loaded.
+    Section 2: ‘Breed’ input field and [Search] button. The button is enabled only when the input is not empty. After the button is clicked, result images should be shown on the page.
+    API: http://www.recipepuppy.com/about/api/ ‘Ingredients’ and ‘Query’ input fields, [Search] button. The button is enabled only if at least one of the fields is not empty. After the button is clicked, all found recipes’ details (name, ingredients, thumbnail image if exists, etc.) should be shown on the page in a table.
+    Note: for simplicity purposes, ignore ‘pagination’ parameter. 
+3. There should be loader that appears when API’s endpoint is called
+4. The [Search] button should be disabled during loading
+5. The implementation should be placed on route ‘/<username>/hw6’
+6. Update ‘README.md’ with the task of this homework
+7. Create pull request and follow the reviewer's suggestions (if any) until the branch is merged
+
+
 ## Practice4-1
 1. Create a function 'getDatetime' that receives 0 arguments and prints current date and time in console (try to find, how to get datetime in Javascript, in Google)  
 2. Create a function 'getPowFive' that receives 1 argument (a numeric value), calculates the number to the power (степень) of 5 and prints the result in console (find in Google how to get power of number in Javascript).  
