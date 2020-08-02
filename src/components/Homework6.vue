@@ -24,6 +24,7 @@
 
     <Loader />
 
+    <Loader v-if="isLoading" />
     <div
       v-for="image in images"
       :key="image"
@@ -64,7 +65,7 @@ export default {
         const response = await axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://dog.ceo/api/breed/${this.breed}/images/`)
         this.images = response.data.message
       } catch (e) {
-        this.result = 'No results'
+        alert('No results')
       } finally {
         this.isLoading = false
       }
@@ -77,3 +78,5 @@ export default {
   }
 }
 </script>
+
+
