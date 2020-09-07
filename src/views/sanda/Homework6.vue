@@ -36,7 +36,7 @@
 
 <script>
 import axios from 'axios'
-import Loader from '../../components/Loader'
+import Loader from '../../components/sanda/Loader'
 export default {
   name: 'Homework6',
   components: { Loader },
