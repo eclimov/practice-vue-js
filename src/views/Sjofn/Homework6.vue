@@ -40,9 +40,6 @@
           Title
         </th>
         <th>
-          Link
-        </th>
-        <th>
           Ingredients
         </th>
         <th>
@@ -54,10 +51,12 @@
         :key="result.href"
       >
         <td>
-          {{ result.title }}
-        </td>
-        <td>
-          {{ result.href }}
+          <a
+            :href="result.href"
+            target="_blank"
+          >
+            {{ result.title }}
+          </a>
         </td>
         <td>
           {{ result.ingredients }}
@@ -66,7 +65,8 @@
           <img
             v-if="result.thumbnail.length"
             :src="result.thumbnail"
-            :alt="result.title">
+            :alt="result.title"
+          >
         </td>
       </tr>
     </table>
