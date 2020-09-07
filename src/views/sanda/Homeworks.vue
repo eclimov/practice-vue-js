@@ -23,6 +23,11 @@
         </router-link>
       </li>
       <li>
+        <router-link :to="{ name: 'sanda-homework6' }">
+          Homework6
+        </router-link>
+      </li>
+      <li>
         <router-link :to="{ name: 'sanda-practice41' }">
           Practice4.1
         </router-link>

@@ -12,6 +12,7 @@ import SanHomeworks from '../views/sanda/Homeworks'
 import SanHomework1 from '../views/sanda/Homework1'
 import SanHomework3 from '../views/sanda/Homework3'
 import SanHomework4 from '../views/sanda/Homework4'
+import SanHomework6 from '../views/sanda/Homework6'
 import SanPractice41 from '../views/sanda/Practice41'
 import SanPractice42 from '../views/sanda/Practice42'
 import SanPractice43 from '../views/sanda/Practice43'
@@ -96,6 +97,14 @@ const routes = [
       title: 'Homework4'
     },
     component: SanHomework4
+  },
+  {
+    path: '/sanda/homework6',
+    name: 'sanda-homework6',
+    meta: {
+      title: 'Homework6'
+    },
+    component: SanHomework6
   },
   {
     path: '/sanda/practice41',
