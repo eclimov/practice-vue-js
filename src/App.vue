@@ -7,7 +7,8 @@
       <router-link :to="{ name: 'sjofn' }">
         Sjofn
       </router-link> |
-      <router-link :to="{name: 'sanda-homeworks'}">Sanda</router-link>
+      <router-link :to="{name: 'sanda-homeworks'}">Sanda</router-link> |
+      <router-link :to="{name: 'eclimov'}">Eclimov</router-link>
     </div>
     <router-view />
   </div>

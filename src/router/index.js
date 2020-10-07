@@ -16,6 +16,7 @@ import SanHomework6 from '../views/sanda/Homework6'
 import SanPractice41 from '../views/sanda/Practice41'
 import SanPractice42 from '../views/sanda/Practice42'
 import SanPractice43 from '../views/sanda/Practice43'
+import BrowserStorageExample from '@/views/eclimov/BrowserStorageExample'
 import Homework6 from '../views/Sjofn/Homework6'
 
 Vue.use(VueRouter)
@@ -25,6 +26,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/eclimov',
+    name: 'eclimov',
+    component: BrowserStorageExample
   },
   {
     path: '/sjofn',
